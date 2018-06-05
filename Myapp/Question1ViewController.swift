@@ -1,10 +1,3 @@
-//
-//  Question1ViewController.swift
-//  Myapp
-//
-//  Created by 袖川航平 on 2018/06/02.
-//  Copyright © 2018 袖川航平. All rights reserved.
-//
 
 import UIKit
 
@@ -12,7 +5,20 @@ class Question1ViewController:UIViewController,
     UITableViewDataSource, UITableViewDelegate
     {
     
-    let emotions = ["喜","怒","哀","楽"]
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        tableView.delegate = self
+        tableView.dataSource = self
+    
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    
+    let emotions = ["喜/嬉しい、幸せ、めでたい","怒/不機嫌、腹立たしい、イライラ","哀/悲しい、苦しい、","楽/楽しい、満足"]
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -21,21 +27,19 @@ class Question1ViewController:UIViewController,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "choices", for: indexPath)
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "choices1")
+        
+        let details = emotions[indexPath.row].components(separatedBy: "/")
      
-        cell.textLabel!.text = emotions[indexPath.row]
+        cell.textLabel!.text = details[0]
+        cell.detailTextLabel!.text = details[1]
+        cell.backgroundColor = UIColor.rgb(r: 255, g: 255, b: 230, alpha: 1)
         
         return cell
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    
 
     @IBOutlet weak var tableView: UITableView!
     
