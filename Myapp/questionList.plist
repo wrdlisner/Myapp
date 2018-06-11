@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>喜</key>
+	<dict>
+		<key>joy1</key>
+		<string>どんな事がありましたか？</string>
+	</dict>
+	<key>怒</key>
+	<dict>
+		<key>angry1</key>
+		<string>どんな事がありましたか？</string>
+		<key>angry2</key>
+		<string>今日の出来事にタイトルを付けるとしたら何になりますか？</string>
+		<key>angry3</key>
+		<string>今と真逆の感情の時の自分は今のあなたにどんな言葉をかけそうですか？</string>
+		<key>angry4</key>
+		<string>明日の自分と話せるとしたらどんな言葉をかけますか？</string>
+	</dict>
+	<key>哀</key>
+	<dict>
+		<key>sad1</key>
+		<string>どんな事がありましたか？</string>
+		<key>sad2</key>
+		<string>今自分が一番行きたい場所はどんな景色が広がっていますか？</string>
+		<key>sad3</key>
+		<string>あなたの一番親しい人はあなたにどんな言葉をかけてくれそうですか？</string>
+		<key>sad4</key>
+		<string>深呼吸をして、明日の自分へのメッセージをしたためてください</string>
+	</dict>
+	<key>楽</key>
+	<dict>
+		<key>fun1</key>
+		<string>どんな事がありましたか？</string>
+		<key>fun2</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

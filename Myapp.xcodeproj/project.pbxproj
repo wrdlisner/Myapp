@@ -7,19 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4812BFD8961C25CEA791613F /* Pods_Myapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417CEE6BAFF894D0F4F5F98B /* Pods_Myapp.framework */; };
 		550889D120BE9FD000241F10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550889D020BE9FD000241F10 /* AppDelegate.swift */; };
 		550889D320BE9FD000241F10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550889D220BE9FD000241F10 /* ViewController.swift */; };
 		550889D620BE9FD000241F10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550889D420BE9FD000241F10 /* Main.storyboard */; };
 		550889D820BE9FD200241F10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550889D720BE9FD200241F10 /* Assets.xcassets */; };
 		550889DB20BE9FD200241F10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550889D920BE9FD200241F10 /* LaunchScreen.storyboard */; };
 		5511E5C420C2E1C100902854 /* Question1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511E5C320C2E1C100902854 /* Question1ViewController.swift */; };
+		5519FC6C20CA89B300E28D8F /* SwiftyOnboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519FC6920CA89B300E28D8F /* SwiftyOnboard.swift */; };
+		5519FC6D20CA89B300E28D8F /* SwiftyOnboardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519FC6A20CA89B300E28D8F /* SwiftyOnboardOverlay.swift */; };
+		5519FC6E20CA89B300E28D8F /* SwiftyOnboardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519FC6B20CA89B300E28D8F /* SwiftyOnboardPage.swift */; };
+		55202F4C20CC12D3009DEB85 /* Question3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55202F4B20CC12D3009DEB85 /* Question3ViewController.swift */; };
 		5535646120C0193B00090CA6 /* Hannari.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5535646020C0193B00090CA6 /* Hannari.otf */; };
 		5535646220C033E700090CA6 /* Hannari.otf in Sources */ = {isa = PBXBuildFile; fileRef = 5535646020C0193B00090CA6 /* Hannari.otf */; };
+		5536FF6E20C754FB0003A639 /* Question2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536FF6D20C754FB0003A639 /* Question2ViewController.swift */; };
+		5537DB6220C910210045BD41 /* questionList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5537DB6120C910210045BD41 /* questionList.plist */; };
 		55D1D5DA20BF6FFE00AA3B74 /* Myapp.app in Sources */ = {isa = PBXBuildFile; fileRef = 550889CD20BE9FD000241F10 /* Myapp.app */; };
 		55D9A34B20BF6A8B003087A6 /* myExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D9A34A20BF6A8B003087A6 /* myExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D593C86CDD79F190CDAC74B /* Pods-Myapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Myapp/Pods-Myapp.debug.xcconfig"; sourceTree = "<group>"; };
+		417CEE6BAFF894D0F4F5F98B /* Pods_Myapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Myapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		550889CD20BE9FD000241F10 /* Myapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		550889D020BE9FD000241F10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		550889D220BE9FD000241F10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,8 +37,15 @@
 		550889DA20BE9FD200241F10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550889DC20BE9FD200241F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5511E5C320C2E1C100902854 /* Question1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question1ViewController.swift; sourceTree = "<group>"; };
+		5519FC6920CA89B300E28D8F /* SwiftyOnboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboard.swift; sourceTree = "<group>"; };
+		5519FC6A20CA89B300E28D8F /* SwiftyOnboardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboardOverlay.swift; sourceTree = "<group>"; };
+		5519FC6B20CA89B300E28D8F /* SwiftyOnboardPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboardPage.swift; sourceTree = "<group>"; };
+		55202F4B20CC12D3009DEB85 /* Question3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question3ViewController.swift; sourceTree = "<group>"; };
 		5535646020C0193B00090CA6 /* Hannari.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hannari.otf; sourceTree = "<group>"; };
+		5536FF6D20C754FB0003A639 /* Question2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question2ViewController.swift; sourceTree = "<group>"; };
+		5537DB6120C910210045BD41 /* questionList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = questionList.plist; sourceTree = "<group>"; };
 		55D9A34A20BF6A8B003087A6 /* myExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myExtension.swift; sourceTree = "<group>"; };
+		8BEA04D1AEB89076EB3009E6 /* Pods-Myapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Myapp/Pods-Myapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4812BFD8961C25CEA791613F /* Pods_Myapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +65,8 @@
 			children = (
 				550889CF20BE9FD000241F10 /* Myapp */,
 				550889CE20BE9FD000241F10 /* Products */,
+				F394A937995A227CC6865178 /* Pods */,
+				A15ED130E192D07A74001C36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,13 +85,36 @@
 				550889D220BE9FD000241F10 /* ViewController.swift */,
 				55D9A34A20BF6A8B003087A6 /* myExtension.swift */,
 				550889D420BE9FD000241F10 /* Main.storyboard */,
+				55202F4B20CC12D3009DEB85 /* Question3ViewController.swift */,
+				5536FF6D20C754FB0003A639 /* Question2ViewController.swift */,
 				5511E5C320C2E1C100902854 /* Question1ViewController.swift */,
 				550889D720BE9FD200241F10 /* Assets.xcassets */,
 				550889D920BE9FD200241F10 /* LaunchScreen.storyboard */,
 				550889DC20BE9FD200241F10 /* Info.plist */,
+				5537DB6120C910210045BD41 /* questionList.plist */,
 				5535646020C0193B00090CA6 /* Hannari.otf */,
+				5519FC6920CA89B300E28D8F /* SwiftyOnboard.swift */,
+				5519FC6A20CA89B300E28D8F /* SwiftyOnboardOverlay.swift */,
+				5519FC6B20CA89B300E28D8F /* SwiftyOnboardPage.swift */,
 			);
 			path = Myapp;
+			sourceTree = "<group>";
+		};
+		A15ED130E192D07A74001C36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				417CEE6BAFF894D0F4F5F98B /* Pods_Myapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F394A937995A227CC6865178 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D593C86CDD79F190CDAC74B /* Pods-Myapp.debug.xcconfig */,
+				8BEA04D1AEB89076EB3009E6 /* Pods-Myapp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,9 +124,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 550889DF20BE9FD200241F10 /* Build configuration list for PBXNativeTarget "Myapp" */;
 			buildPhases = (
+				37DBA60CC60F7FCD0A50FF21 /* [CP] Check Pods Manifest.lock */,
 				550889C920BE9FD000241F10 /* Sources */,
 				550889CA20BE9FD000241F10 /* Frameworks */,
 				550889CB20BE9FD000241F10 /* Resources */,
+				C05B90AB81A0A8A6A99A570E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +179,7 @@
 			files = (
 				550889DB20BE9FD200241F10 /* LaunchScreen.storyboard in Resources */,
 				550889D820BE9FD200241F10 /* Assets.xcassets in Resources */,
+				5537DB6220C910210045BD41 /* questionList.plist in Resources */,
 				550889D620BE9FD000241F10 /* Main.storyboard in Resources */,
 				5535646120C0193B00090CA6 /* Hannari.otf in Resources */,
 			);
@@ -142,16 +187,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37DBA60CC60F7FCD0A50FF21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Myapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C05B90AB81A0A8A6A99A570E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Myapp/Pods-Myapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyOnboard/SwiftyOnboard.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyOnboard.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Myapp/Pods-Myapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		550889C920BE9FD000241F10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5511E5C420C2E1C100902854 /* Question1ViewController.swift in Sources */,
+				5519FC6C20CA89B300E28D8F /* SwiftyOnboard.swift in Sources */,
+				5519FC6E20CA89B300E28D8F /* SwiftyOnboardPage.swift in Sources */,
 				5535646220C033E700090CA6 /* Hannari.otf in Sources */,
 				55D1D5DA20BF6FFE00AA3B74 /* Myapp.app in Sources */,
+				5536FF6E20C754FB0003A639 /* Question2ViewController.swift in Sources */,
 				55D9A34B20BF6A8B003087A6 /* myExtension.swift in Sources */,
 				550889D320BE9FD000241F10 /* ViewController.swift in Sources */,
+				55202F4C20CC12D3009DEB85 /* Question3ViewController.swift in Sources */,
+				5519FC6D20CA89B300E28D8F /* SwiftyOnboardOverlay.swift in Sources */,
 				550889D120BE9FD000241F10 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +383,7 @@
 		};
 		550889E020BE9FD200241F10 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D593C86CDD79F190CDAC74B /* Pods-Myapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +402,7 @@
 		};
 		550889E120BE9FD200241F10 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BEA04D1AEB89076EB3009E6 /* Pods-Myapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
