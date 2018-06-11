@@ -1,5 +1,7 @@
 import UIKit
 
+var selected = ["喜を選んだあなたへ","怒を選んだあなたへ","哀を選んだあなたへ","楽を選んだあなたへ"]
+
 class Question2ViewController: UIViewController {
     
     @IBOutlet weak var name1: UILabel!
@@ -9,7 +11,7 @@ class Question2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        name1.text = emotions[passedIndex!]
+        name1.text = selected[passedIndex!]
         
     }
 
@@ -46,10 +48,22 @@ class Question2ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        
     }
     
-    
-    
-    
+    var selectedIndex:Int!
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         performSegue(withIdentifier: "segue3", sender: nil)
+        
+        selectedIndex = indexPath.row
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let move:Question3ViewController = segue.destination as! Question3ViewController
+        
+        move.passedIndex = selectedIndex
+        
+    }
 
 }

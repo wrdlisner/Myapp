@@ -1,7 +1,6 @@
 
 import UIKit
 
-
  var emotions = ["喜/嬉しい、幸せ、めでたい","怒/不機嫌、腹立たしい、イライラ","哀/悲しい、苦しい","楽/楽しい、満足"]
 
 class Question1ViewController:UIViewController,
@@ -40,7 +39,6 @@ class Question1ViewController:UIViewController,
     @IBOutlet weak var tableView: UITableView!
 
     var selectedIndex:Int!
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedIndex = indexPath.row
@@ -49,18 +47,9 @@ class Question1ViewController:UIViewController,
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        var move:Question2ViewController?
-        
-        if segue.destination is Question2ViewController {
-           
-            emotions[0] = "喜を選んだあなた"
-            emotions[1] = "怒を選んだあなた"
-            emotions[2] = "哀を選んだあなた"
-            emotions[3] = "楽を選んだあなた"
-            
-            move = segue.destination as? Question2ViewController
-            move?.passedIndex = selectedIndex
-        }
+        let move:Question2ViewController = segue.destination as! Question2ViewController
+  
+            move.passedIndex = selectedIndex
         
     }
     
