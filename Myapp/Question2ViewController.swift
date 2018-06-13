@@ -6,7 +6,7 @@ class Question2ViewController: UIViewController {
     
     @IBOutlet weak var name1: UILabel!
     
-    var passedIndex:Int? = nil
+        var passedIndex:Int? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,18 +51,12 @@ class Question2ViewController: UIViewController {
         
     }
     
-    var selectedIndex:Int!
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         performSegue(withIdentifier: "segue3", sender: nil)
-        
-        selectedIndex = indexPath.row
-    }
-
+    //3->4に遷移する際に落ちる理由の解明
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+
         let move:Question3ViewController = segue.destination as! Question3ViewController
-        
-        move.passedIndex = selectedIndex
+    
+        move.passedIndex = passedIndex
         
     }
 

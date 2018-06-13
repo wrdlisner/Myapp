@@ -39,16 +39,18 @@ class Question1ViewController:UIViewController,
     @IBOutlet weak var tableView: UITableView!
 
     var selectedIndex:Int!
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedIndex = indexPath.row
+        
         performSegue(withIdentifier: "segue2", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let move:Question2ViewController = segue.destination as! Question2ViewController
-  
+
             move.passedIndex = selectedIndex
         
     }

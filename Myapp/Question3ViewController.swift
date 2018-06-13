@@ -1,24 +1,35 @@
 import UIKit
 
-class Question3ViewController: UIViewController{
+let filePath = Bundle.main.path(forResource: "questionList", ofType:"plist" )
+let dic = NSDictionary(contentsOfFile:filePath!)
 
-    @IBOutlet weak var questionView: UITextField!
+    let dic1 = dic!["喜"] as! NSDictionary
+    let dic2 = dic!["怒"] as! NSDictionary
+    let dic3 = dic!["哀"] as! NSDictionary
+    let dic4 = dic!["楽"] as! NSDictionary
+
+
+
+class Question3ViewController: UIViewController{
+    
+    @IBOutlet weak var questionView: UITextView!
     
     var passedIndex:Int? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(passedIndex)
-        
-        var filePath = Bundle.main.path(forResource: "questionList", ofType:"plist" )
-        var dic = NSDictionary(contentsOfFile:filePath!)
-        print(dic)
-        
-        let dic0 = dic!["喜"] as! NSDictionary
-        
-        if passedIndex == 0 {
-            questionView.text = dic0["joy2"] as? String
+        switch passedIndex {
+        case 0:
+            questionView.text = dic1["joy2"] as? String
+        case 1:
+            questionView.text = dic2["angry2"] as? String
+        case 2:
+            questionView.text = dic3["sad2"] as? String
+        case 3:
+            questionView.text = dic4["fun2"] as? String
+        default:
+            print("nil")
         }
         
     }
@@ -54,10 +65,17 @@ class Question3ViewController: UIViewController{
         present(alertController, animated: true, completion: nil)
     }
     
-    
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let move:Question4ViewController = segue.destination as! Question4ViewController
+        
+        move.passedIndex = passedIndex
+        
     }
 
 }
