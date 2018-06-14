@@ -25,6 +25,8 @@
 		55D1D5DA20BF6FFE00AA3B74 /* Myapp.app in Sources */ = {isa = PBXBuildFile; fileRef = 550889CD20BE9FD000241F10 /* Myapp.app */; };
 		55D9A34B20BF6A8B003087A6 /* myExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D9A34A20BF6A8B003087A6 /* myExtension.swift */; };
 		55DB8ED320D1117700A2CB64 /* Question4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */; };
+		55DB8ED520D2562800A2CB64 /* Question5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */; };
+		55DB8ED720D2A7DE00A2CB64 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED620D2A7DE00A2CB64 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		5537DB6120C910210045BD41 /* questionList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = questionList.plist; sourceTree = "<group>"; };
 		55D9A34A20BF6A8B003087A6 /* myExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myExtension.swift; sourceTree = "<group>"; };
 		55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question4ViewController.swift; sourceTree = "<group>"; };
+		55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question5ViewController.swift; sourceTree = "<group>"; };
+		55DB8ED620D2A7DE00A2CB64 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8BEA04D1AEB89076EB3009E6 /* Pods-Myapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Myapp/Pods-Myapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +69,7 @@
 		550889C420BE9FCF00241F10 = {
 			isa = PBXGroup;
 			children = (
+				55DB8ED620D2A7DE00A2CB64 /* ResultViewController.swift */,
 				550889CF20BE9FD000241F10 /* Myapp */,
 				550889CE20BE9FD000241F10 /* Products */,
 				F394A937995A227CC6865178 /* Pods */,
@@ -87,6 +92,7 @@
 				550889D220BE9FD000241F10 /* ViewController.swift */,
 				55D9A34A20BF6A8B003087A6 /* myExtension.swift */,
 				550889D420BE9FD000241F10 /* Main.storyboard */,
+				55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */,
 				55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */,
 				55202F4B20CC12D3009DEB85 /* Question3ViewController.swift */,
 				5536FF6D20C754FB0003A639 /* Question2ViewController.swift */,
@@ -238,10 +244,12 @@
 				5519FC6C20CA89B300E28D8F /* SwiftyOnboard.swift in Sources */,
 				5519FC6E20CA89B300E28D8F /* SwiftyOnboardPage.swift in Sources */,
 				5535646220C033E700090CA6 /* Hannari.otf in Sources */,
+				55DB8ED520D2562800A2CB64 /* Question5ViewController.swift in Sources */,
 				55D1D5DA20BF6FFE00AA3B74 /* Myapp.app in Sources */,
 				5536FF6E20C754FB0003A639 /* Question2ViewController.swift in Sources */,
 				55D9A34B20BF6A8B003087A6 /* myExtension.swift in Sources */,
 				550889D320BE9FD000241F10 /* ViewController.swift in Sources */,
+				55DB8ED720D2A7DE00A2CB64 /* ResultViewController.swift in Sources */,
 				55202F4C20CC12D3009DEB85 /* Question3ViewController.swift in Sources */,
 				5519FC6D20CA89B300E28D8F /* SwiftyOnboardOverlay.swift in Sources */,
 				550889D120BE9FD000241F10 /* AppDelegate.swift in Sources */,

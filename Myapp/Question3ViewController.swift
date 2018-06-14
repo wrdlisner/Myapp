@@ -8,18 +8,14 @@ let dic = NSDictionary(contentsOfFile:filePath!)
     let dic3 = dic!["哀"] as! NSDictionary
     let dic4 = dic!["楽"] as! NSDictionary
 
-
-
 class Question3ViewController: UIViewController{
     
     @IBOutlet weak var questionView: UITextView!
     
-    var passedIndex:Int? = nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        switch passedIndex {
+        
+        switch choice {
         case 0:
             questionView.text = dic1["joy2"] as? String
         case 1:
@@ -70,12 +66,5 @@ class Question3ViewController: UIViewController{
         self.view.endEditing(true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let move:Question4ViewController = segue.destination as! Question4ViewController
-        
-        move.passedIndex = passedIndex
-        
-    }
 
 }

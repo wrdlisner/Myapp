@@ -5,12 +5,10 @@ class Question4ViewController: UIViewController {
 
     @IBOutlet weak var questionView: UITextView!
     
-    var passedIndex:Int? = nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        switch passedIndex {
+        switch choice {
         case 0:
             questionView.text = dic1["joy3"] as? String
         case 1:
@@ -23,10 +21,39 @@ class Question4ViewController: UIViewController {
             print("nil")
         }
     }
-
+    
+    @IBAction func alertButton(_ sender: Any){
+    
+        let alertController = UIAlertController(title: "Topに戻ります", message: nil, preferredStyle: .alert)
+        
+        let cancelAction:UIAlertAction = UIAlertAction(title: "戻らない", style: UIAlertActionStyle.default, handler:{
+            
+            (action:UIAlertAction!) -> Void in
+            
+        })
+        
+        let defaultAction1:UIAlertAction = UIAlertAction(title: "戻る", style: UIAlertActionStyle.default, handler:{
+            
+            (action:UIAlertAction!) -> Void in
+            
+            let controller = self.storyboard!.instantiateInitialViewController()
+            
+            self.show(controller!, sender: true)
+            
+        })
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(defaultAction1)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
 }

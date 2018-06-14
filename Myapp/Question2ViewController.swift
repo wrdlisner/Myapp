@@ -6,13 +6,10 @@ class Question2ViewController: UIViewController {
     
     @IBOutlet weak var name1: UILabel!
     
-        var passedIndex:Int? = nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        name1.text = selected[passedIndex!]
-        
+        name1.text = selected[choice]
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,15 +45,6 @@ class Question2ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-        
-    }
-    
-    //3->4に遷移する際に落ちる理由の解明
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        let move:Question3ViewController = segue.destination as! Question3ViewController
-    
-        move.passedIndex = passedIndex
         
     }
 

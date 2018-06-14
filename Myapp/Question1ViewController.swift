@@ -1,7 +1,7 @@
-
 import UIKit
 
  var emotions = ["喜/嬉しい、幸せ、めでたい","怒/不機嫌、腹立たしい、イライラ","哀/悲しい、苦しい","楽/楽しい、満足"]
+var choice:Int = -1
 
 class Question1ViewController:UIViewController,
     UITableViewDataSource, UITableViewDelegate
@@ -41,18 +41,10 @@ class Question1ViewController:UIViewController,
     var selectedIndex:Int!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        selectedIndex = indexPath.row
+
+        choice = indexPath.row
         
         performSegue(withIdentifier: "segue2", sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let move:Question2ViewController = segue.destination as! Question2ViewController
-
-            move.passedIndex = selectedIndex
-        
     }
     
     @IBAction func alertButton(_ sender: UIButton) {
