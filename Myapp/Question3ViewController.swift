@@ -8,6 +8,8 @@ let dic = NSDictionary(contentsOfFile:filePath!)
     let dic3 = dic!["哀"] as! NSDictionary
     let dic4 = dic!["楽"] as! NSDictionary
 
+var question3Answer = ""
+
 class Question3ViewController: UIViewController{
     
     @IBOutlet weak var questionView: UITextView!
@@ -30,6 +32,8 @@ class Question3ViewController: UIViewController{
         
     }
 
+    @IBOutlet weak var textField: UITextView!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -64,7 +68,9 @@ class Question3ViewController: UIViewController{
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        
+        question3Answer = textField.text!
+        
     }
     
-
 }

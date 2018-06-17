@@ -69,7 +69,6 @@
 		550889C420BE9FCF00241F10 = {
 			isa = PBXGroup;
 			children = (
-				55DB8ED620D2A7DE00A2CB64 /* ResultViewController.swift */,
 				550889CF20BE9FD000241F10 /* Myapp */,
 				550889CE20BE9FD000241F10 /* Products */,
 				F394A937995A227CC6865178 /* Pods */,
@@ -92,6 +91,7 @@
 				550889D220BE9FD000241F10 /* ViewController.swift */,
 				55D9A34A20BF6A8B003087A6 /* myExtension.swift */,
 				550889D420BE9FD000241F10 /* Main.storyboard */,
+				55DB8ED620D2A7DE00A2CB64 /* ResultViewController.swift */,
 				55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */,
 				55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */,
 				55202F4B20CC12D3009DEB85 /* Question3ViewController.swift */,

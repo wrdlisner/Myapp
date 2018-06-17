@@ -1,6 +1,8 @@
 
 import UIKit
 
+var question4Answer = ""
+
 class Question4ViewController: UIViewController {
 
     @IBOutlet weak var questionView: UITextView!
@@ -22,6 +24,8 @@ class Question4ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var textField: UITextView!
+    
     @IBAction func alertButton(_ sender: Any){
     
         let alertController = UIAlertController(title: "Topに戻ります", message: nil, preferredStyle: .alert)
@@ -37,7 +41,7 @@ class Question4ViewController: UIViewController {
             (action:UIAlertAction!) -> Void in
             
             let controller = self.storyboard!.instantiateInitialViewController()
-            
+    
             self.show(controller!, sender: true)
             
         })
@@ -54,6 +58,9 @@ class Question4ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        
+        question4Answer = textField.text!
+        
     }
 
 }

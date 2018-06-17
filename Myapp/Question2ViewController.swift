@@ -2,6 +2,8 @@ import UIKit
 
 var selected = ["喜を選んだあなたへ","怒を選んだあなたへ","哀を選んだあなたへ","楽を選んだあなたへ"]
 
+var question2Answer = ""
+
 class Question2ViewController: UIViewController {
     
     @IBOutlet weak var name1: UILabel!
@@ -16,7 +18,8 @@ class Question2ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-   
+    @IBOutlet weak var textField: UITextView!
+    
     @IBAction func alertButton(_ sender: UIButton) {
         
         let alertController = UIAlertController(title: "Topに戻ります", message: nil, preferredStyle: .alert)
@@ -45,6 +48,8 @@ class Question2ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        
+        question2Answer = textField.text!
         
     }
 

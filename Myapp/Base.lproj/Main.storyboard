@@ -268,6 +268,7 @@
                     </view>
                     <connections>
                         <outlet property="name1" destination="sTE-KK-MFx" id="Dpa-zL-U7a"/>
+                        <outlet property="textField" destination="Uh6-hU-uSW" id="sPS-4u-jxm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHy-UW-XtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -350,6 +351,7 @@
                     </view>
                     <connections>
                         <outlet property="questionView" destination="IMM-9P-nDs" id="r8y-nr-W49"/>
+                        <outlet property="textField" destination="6t7-T1-8fF" id="ubV-oA-lAf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFQ-BL-WJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -432,6 +434,7 @@
                     </view>
                     <connections>
                         <outlet property="questionView" destination="4Ie-Qc-CY2" id="0Iw-v7-XZl"/>
+                        <outlet property="textField" destination="M7d-Qv-4mf" id="PCo-oI-aGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejK-89-tDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -441,7 +444,7 @@
         <!--Result View Controller-->
         <scene sceneID="7Q0-6d-s4w">
             <objects>
-                <viewController id="5Fd-pW-RbG" customClass="ResultViewController" customModule="Myapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultView" id="5Fd-pW-RbG" customClass="ResultViewController" customModule="Myapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dm9-vh-kwW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -453,25 +456,33 @@
                                 <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vd-3P-axF">
-                                <rect key="frame" x="273" y="583" width="61" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日のあなたのこころぐは以下のようになりました" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCJ-yl-7yj">
+                                <rect key="frame" x="15" y="127" width="345" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="14"/>
-                                <state key="normal" title="Topに戻る"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rW-o1-kEb">
-                                <rect key="frame" x="45" y="583" width="140" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="14"/>
-                                <state key="normal" title="過去のこころぐを見る"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日のあなたのこころぐは以下のようになりました。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCJ-yl-7yj">
-                                <rect key="frame" x="31" y="124" width="313" height="13"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTn-y6-3dg">
+                                <rect key="frame" x="258" y="563" width="102" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
+                                <state key="normal" title="トップに戻る">
+                                    <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertButton:" destination="IdJ-Th-g2f" eventType="touchUpInside" id="JQD-yk-mIm"/>
+                                    <action selector="alertButton:" destination="r1E-KO-JE7" eventType="touchUpInside" id="Ylh-bo-mD1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rW-o1-kEb">
+                                <rect key="frame" x="15" y="563" width="119" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
+                                <state key="normal" title="過去ろぐを見る">
+                                    <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="0H0-ak-LEz"/>
@@ -479,7 +490,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zH-Yb-5A3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6249" y="34"/>
+            <point key="canvasLocation" x="6248.8000000000002" y="33.733133433283363"/>
         </scene>
         <!--Question5 View Controller-->
         <scene sceneID="adu-mK-g6K">
@@ -542,8 +553,7 @@
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="resultAlert:" destination="IdJ-Th-g2f" eventType="touchUpInside" id="QDc-CP-ltr"/>
-                                    <segue destination="5Fd-pW-RbG" kind="show" id="sTW-t7-93A"/>
+                                    <action selector="resultAlert:" destination="IdJ-Th-g2f" eventType="touchUpInside" id="Y08-Pc-XXh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -552,6 +562,7 @@
                     </view>
                     <connections>
                         <outlet property="questionView" destination="DKX-Cn-Tic" id="Mie-9s-mIu"/>
+                        <outlet property="textField" destination="wPr-GU-LAX" id="tsL-X8-Goc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsX-rR-mbX" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,5 +1,7 @@
 import UIKit
 
+var question5Answer = ""
+
 class Question5ViewController: UIViewController {
     @IBOutlet weak var questionView: UITextView!
     
@@ -19,7 +21,11 @@ class Question5ViewController: UIViewController {
         default:
             print("nil")
         }
+        
+
     }
+    
+    @IBOutlet weak var textField: UITextView!
     
     @IBAction func alertButton(_ sender: UIButton) {
     
@@ -53,7 +59,7 @@ class Question5ViewController: UIViewController {
     
     
     @IBAction func resultAlert(_ sender: UIButton) {
-    
+        
     let alertController = UIAlertController(title: "こころぐを記録します", message: nil, preferredStyle: .alert)
     
     let cancelAction:UIAlertAction = UIAlertAction(title: "戻る", style: UIAlertActionStyle.default, handler:{
@@ -63,13 +69,14 @@ class Question5ViewController: UIViewController {
     })
     
     let defaultAction1:UIAlertAction = UIAlertAction(title: "ろぐを見る", style: UIAlertActionStyle.default, handler:{
-        
+
         (action:UIAlertAction!) -> Void in
         
-        //アラートからの遷移が上手くいかない死にたい
-        let controller = ResultViewController()
-
-        self.show(controller, sender: true)
+        let storyboard: UIStoryboard = self.storyboard!
+        
+        let ResultView = storyboard.instantiateViewController(withIdentifier: "ResultView")
+        
+        self.present(ResultView, animated: true, completion: nil)
         
     })
     
@@ -82,6 +89,8 @@ class Question5ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        
+        question5Answer = textField.text!
         
     }
     

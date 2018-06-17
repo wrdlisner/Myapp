@@ -1,6 +1,7 @@
 import UIKit
 
  var emotions = ["喜/嬉しい、幸せ、めでたい","怒/不機嫌、腹立たしい、イライラ","哀/悲しい、苦しい","楽/楽しい、満足"]
+
 var choice:Int = -1
 
 class Question1ViewController:UIViewController,
