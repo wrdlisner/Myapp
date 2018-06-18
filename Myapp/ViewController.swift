@@ -1,17 +1,16 @@
 import UIKit
 
+import SwiftyOnboard
+
 class ViewController: UIViewController {
-    
-//    var swiftyOnboard: SwiftyOnboard!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 //        let swiftyOnboard = SwiftyOnboard(frame: view.frame)
 //        view.addSubview(swiftyOnboard)
-//        swiftyOnboard.dataSource = self as? SwiftyOnboardDataSource
-    
-        
+//        swiftyOnboard.dataSource = self
+
     }
     
     override func didReceiveMemoryWarning() {

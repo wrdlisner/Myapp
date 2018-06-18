@@ -14,14 +14,14 @@ extension UIColor {
     }
 }
 
-extension ViewController: SwiftyOnboardDataSource {
-    
-    func swiftyOnboardNumberOfPages(_ swiftyOnboard: SwiftyOnboard) -> Int {
-        return 3
-    }
-    
-    func swiftyOnboardPageForIndex(_ swiftyOnboard: SwiftyOnboard, index: Int) -> SwiftyOnboardPage? {
-        let page = SwiftyOnboardPage()
-        return page
-    }
-}
+//extension ViewController: SwiftyOnboardDataSource {
+//    
+//    func swiftyOnboardNumberOfPages(_ swiftyOnboard: SwiftyOnboard) -> Int {
+//        return 3
+//    }
+//    
+//    func swiftyOnboardPageForIndex(_ swiftyOnboard: SwiftyOnboard, index: Int) -> SwiftyOnboardPage? {
+//        let page = SwiftyOnboardPage()
+//        return page
+//    }
+//}
