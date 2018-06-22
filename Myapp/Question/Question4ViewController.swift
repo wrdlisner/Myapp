@@ -1,27 +1,33 @@
+
 import UIKit
 
-var selected = ["喜を選んだあなたへ","怒を選んだあなたへ","哀を選んだあなたへ","楽を選んだあなたへ"]
+var question4Answer = ""
 
-var question2Answer = ""
+class Question4ViewController: UIViewController {
 
-class Question2ViewController: UIViewController {
-    
-    @IBOutlet weak var name1: UILabel!
+    @IBOutlet weak var questionView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        name1.text = selected[choice]
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        switch choice {
+        case 0:
+            questionView.text = dic1["joy3"] as? String
+        case 1:
+            questionView.text = dic2["angry3"] as? String
+        case 2:
+            questionView.text = dic3["sad3"] as? String
+        case 3:
+            questionView.text = dic4["fun3"] as? String
+        default:
+            print("nil")
+        }
     }
     
     @IBOutlet weak var textField: UITextView!
     
-    @IBAction func alertButton(_ sender: UIButton) {
-        
+    @IBAction func alertButton(_ sender: Any){
+    
         let alertController = UIAlertController(title: "Topに戻ります", message: nil, preferredStyle: .alert)
         
         let cancelAction:UIAlertAction = UIAlertAction(title: "戻らない", style: UIAlertActionStyle.default, handler:{
@@ -35,7 +41,7 @@ class Question2ViewController: UIViewController {
             (action:UIAlertAction!) -> Void in
             
             let controller = self.storyboard!.instantiateInitialViewController()
-            
+    
             self.show(controller!, sender: true)
             
         })
@@ -46,10 +52,18 @@ class Question2ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         
-        question2Answer = textField.text!
+        question4Answer = textField.text!
+        
+    }
+    
+    @IBAction func backtoQ4(segue:UIStoryboardSegue){
         
     }
 

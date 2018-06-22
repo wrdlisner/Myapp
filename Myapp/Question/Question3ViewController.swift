@@ -1,33 +1,46 @@
-
 import UIKit
 
-var question4Answer = ""
+let filePath = Bundle.main.path(forResource: "questionList", ofType:"plist" )
+let dic = NSDictionary(contentsOfFile:filePath!)
 
-class Question4ViewController: UIViewController {
+    let dic1 = dic!["喜"] as! NSDictionary
+    let dic2 = dic!["怒"] as! NSDictionary
+    let dic3 = dic!["哀"] as! NSDictionary
+    let dic4 = dic!["楽"] as! NSDictionary
 
+var question3Answer = ""
+
+class Question3ViewController: UIViewController{
+    
     @IBOutlet weak var questionView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         switch choice {
         case 0:
-            questionView.text = dic1["joy3"] as? String
+            questionView.text = dic1["joy2"] as? String
         case 1:
-            questionView.text = dic2["angry3"] as? String
+            questionView.text = dic2["angry2"] as? String
         case 2:
-            questionView.text = dic3["sad3"] as? String
+            questionView.text = dic3["sad2"] as? String
         case 3:
-            questionView.text = dic4["fun3"] as? String
+            questionView.text = dic4["fun2"] as? String
         default:
             print("nil")
         }
+        
     }
-    
+
     @IBOutlet weak var textField: UITextView!
     
-    @IBAction func alertButton(_ sender: Any){
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
     
+    @IBAction func alertButton(_ sender: UIButton) {
+        
         let alertController = UIAlertController(title: "Topに戻ります", message: nil, preferredStyle: .alert)
         
         let cancelAction:UIAlertAction = UIAlertAction(title: "戻らない", style: UIAlertActionStyle.default, handler:{
@@ -41,7 +54,7 @@ class Question4ViewController: UIViewController {
             (action:UIAlertAction!) -> Void in
             
             let controller = self.storyboard!.instantiateInitialViewController()
-    
+            
             self.show(controller!, sender: true)
             
         })
@@ -52,15 +65,16 @@ class Question4ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         
-        question4Answer = textField.text!
+        question3Answer = textField.text!
         
     }
-
+    
+    @IBAction func backtoQ3(segue:UIStoryboardSegue){
+        
+    }
+    
 }

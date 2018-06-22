@@ -22,7 +22,9 @@
 		5535646220C033E700090CA6 /* Hannari.otf in Sources */ = {isa = PBXBuildFile; fileRef = 5535646020C0193B00090CA6 /* Hannari.otf */; };
 		5536FF6E20C754FB0003A639 /* Question2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536FF6D20C754FB0003A639 /* Question2ViewController.swift */; };
 		5537DB6220C910210045BD41 /* questionList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5537DB6120C910210045BD41 /* questionList.plist */; };
-		55D1D5DA20BF6FFE00AA3B74 /* Myapp.app in Sources */ = {isa = PBXBuildFile; fileRef = 550889CD20BE9FD000241F10 /* Myapp.app */; };
+		559E095120DA61AC00451B4C /* SwiftyOnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E095020DA61AC00451B4C /* SwiftyOnboardViewController.swift */; };
+		559E095720DA7B5A00451B4C /* result.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 559E095520DA7B5A00451B4C /* result.xcdatamodeld */; };
+		55D1D5DA20BF6FFE00AA3B74 /* Kokolog.app in Sources */ = {isa = PBXBuildFile; fileRef = 550889CD20BE9FD000241F10 /* Kokolog.app */; };
 		55D9A34B20BF6A8B003087A6 /* myExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D9A34A20BF6A8B003087A6 /* myExtension.swift */; };
 		55DB8ED320D1117700A2CB64 /* Question4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */; };
 		55DB8ED520D2562800A2CB64 /* Question5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */; };
@@ -32,7 +34,7 @@
 /* Begin PBXFileReference section */
 		3D593C86CDD79F190CDAC74B /* Pods-Myapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Myapp/Pods-Myapp.debug.xcconfig"; sourceTree = "<group>"; };
 		417CEE6BAFF894D0F4F5F98B /* Pods_Myapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Myapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		550889CD20BE9FD000241F10 /* Myapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		550889CD20BE9FD000241F10 /* Kokolog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kokolog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		550889D020BE9FD000241F10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		550889D220BE9FD000241F10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		550889D520BE9FD000241F10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		5535646020C0193B00090CA6 /* Hannari.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hannari.otf; sourceTree = "<group>"; };
 		5536FF6D20C754FB0003A639 /* Question2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question2ViewController.swift; sourceTree = "<group>"; };
 		5537DB6120C910210045BD41 /* questionList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = questionList.plist; sourceTree = "<group>"; };
+		559E095020DA61AC00451B4C /* SwiftyOnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyOnboardViewController.swift; sourceTree = "<group>"; };
+		559E095620DA7B5A00451B4C /* result.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = result.xcdatamodel; sourceTree = "<group>"; };
 		55D9A34A20BF6A8B003087A6 /* myExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myExtension.swift; sourceTree = "<group>"; };
 		55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question4ViewController.swift; sourceTree = "<group>"; };
 		55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question5ViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +83,7 @@
 		550889CE20BE9FD000241F10 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				550889CD20BE9FD000241F10 /* Myapp.app */,
+				550889CD20BE9FD000241F10 /* Kokolog.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,26 +91,52 @@
 		550889CF20BE9FD000241F10 /* Myapp */ = {
 			isa = PBXGroup;
 			children = (
+				550889D420BE9FD000241F10 /* Main.storyboard */,
 				550889D020BE9FD000241F10 /* AppDelegate.swift */,
+				559E095020DA61AC00451B4C /* SwiftyOnboardViewController.swift */,
 				550889D220BE9FD000241F10 /* ViewController.swift */,
 				55D9A34A20BF6A8B003087A6 /* myExtension.swift */,
-				550889D420BE9FD000241F10 /* Main.storyboard */,
+				559E095220DA6B0400451B4C /* Question */,
 				55DB8ED620D2A7DE00A2CB64 /* ResultViewController.swift */,
+				550889D720BE9FD200241F10 /* Assets.xcassets */,
+				550889D920BE9FD200241F10 /* LaunchScreen.storyboard */,
+				550889DC20BE9FD200241F10 /* Info.plist */,
+				5537DB6120C910210045BD41 /* questionList.plist */,
+				559E095520DA7B5A00451B4C /* result.xcdatamodeld */,
+				559E095320DA6B3300451B4C /* SwiftyOnboard */,
+				559E095420DA6B4D00451B4C /* font */,
+			);
+			path = Myapp;
+			sourceTree = "<group>";
+		};
+		559E095220DA6B0400451B4C /* Question */ = {
+			isa = PBXGroup;
+			children = (
 				55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */,
 				55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */,
 				55202F4B20CC12D3009DEB85 /* Question3ViewController.swift */,
 				5536FF6D20C754FB0003A639 /* Question2ViewController.swift */,
 				5511E5C320C2E1C100902854 /* Question1ViewController.swift */,
-				550889D720BE9FD200241F10 /* Assets.xcassets */,
-				550889D920BE9FD200241F10 /* LaunchScreen.storyboard */,
-				550889DC20BE9FD200241F10 /* Info.plist */,
-				5537DB6120C910210045BD41 /* questionList.plist */,
-				5535646020C0193B00090CA6 /* Hannari.otf */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		559E095320DA6B3300451B4C /* SwiftyOnboard */ = {
+			isa = PBXGroup;
+			children = (
 				5519FC6920CA89B300E28D8F /* SwiftyOnboard.swift */,
 				5519FC6A20CA89B300E28D8F /* SwiftyOnboardOverlay.swift */,
 				5519FC6B20CA89B300E28D8F /* SwiftyOnboardPage.swift */,
 			);
-			path = Myapp;
+			path = SwiftyOnboard;
+			sourceTree = "<group>";
+		};
+		559E095420DA6B4D00451B4C /* font */ = {
+			isa = PBXGroup;
+			children = (
+				5535646020C0193B00090CA6 /* Hannari.otf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 		A15ED130E192D07A74001C36 /* Frameworks */ = {
@@ -129,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		550889CC20BE9FD000241F10 /* Myapp */ = {
+		550889CC20BE9FD000241F10 /* Kokolog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 550889DF20BE9FD200241F10 /* Build configuration list for PBXNativeTarget "Myapp" */;
+			buildConfigurationList = 550889DF20BE9FD200241F10 /* Build configuration list for PBXNativeTarget "Kokolog" */;
 			buildPhases = (
 				37DBA60CC60F7FCD0A50FF21 /* [CP] Check Pods Manifest.lock */,
 				550889C920BE9FD000241F10 /* Sources */,
@@ -143,9 +173,9 @@
 			);
 			dependencies = (
 			);
-			name = Myapp;
+			name = Kokolog;
 			productName = Myapp;
-			productReference = 550889CD20BE9FD000241F10 /* Myapp.app */;
+			productReference = 550889CD20BE9FD000241F10 /* Kokolog.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -163,7 +193,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 550889C820BE9FCF00241F10 /* Build configuration list for PBXProject "Myapp" */;
+			buildConfigurationList = 550889C820BE9FCF00241F10 /* Build configuration list for PBXProject "Kokolog" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -176,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				550889CC20BE9FD000241F10 /* Myapp */,
+				550889CC20BE9FD000241F10 /* Kokolog */,
 			);
 		};
 /* End PBXProject section */
@@ -242,10 +272,12 @@
 			files = (
 				5511E5C420C2E1C100902854 /* Question1ViewController.swift in Sources */,
 				5519FC6C20CA89B300E28D8F /* SwiftyOnboard.swift in Sources */,
+				559E095120DA61AC00451B4C /* SwiftyOnboardViewController.swift in Sources */,
 				5519FC6E20CA89B300E28D8F /* SwiftyOnboardPage.swift in Sources */,
 				5535646220C033E700090CA6 /* Hannari.otf in Sources */,
 				55DB8ED520D2562800A2CB64 /* Question5ViewController.swift in Sources */,
-				55D1D5DA20BF6FFE00AA3B74 /* Myapp.app in Sources */,
+				55D1D5DA20BF6FFE00AA3B74 /* Kokolog.app in Sources */,
+				559E095720DA7B5A00451B4C /* result.xcdatamodeld in Sources */,
 				5536FF6E20C754FB0003A639 /* Question2ViewController.swift in Sources */,
 				55D9A34B20BF6A8B003087A6 /* myExtension.swift in Sources */,
 				550889D320BE9FD000241F10 /* ViewController.swift in Sources */,
@@ -434,7 +466,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		550889C820BE9FCF00241F10 /* Build configuration list for PBXProject "Myapp" */ = {
+		550889C820BE9FCF00241F10 /* Build configuration list for PBXProject "Kokolog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				550889DD20BE9FD200241F10 /* Debug */,
@@ -443,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		550889DF20BE9FD200241F10 /* Build configuration list for PBXNativeTarget "Myapp" */ = {
+		550889DF20BE9FD200241F10 /* Build configuration list for PBXNativeTarget "Kokolog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				550889E020BE9FD200241F10 /* Debug */,
@@ -453,6 +485,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		559E095520DA7B5A00451B4C /* result.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				559E095620DA7B5A00451B4C /* result.xcdatamodel */,
+			);
+			currentVersion = 559E095620DA7B5A00451B4C /* result.xcdatamodel */;
+			path = result.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 550889C520BE9FCF00241F10 /* Project object */;
 }

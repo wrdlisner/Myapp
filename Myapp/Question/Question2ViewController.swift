@@ -1,43 +1,24 @@
 import UIKit
 
-let filePath = Bundle.main.path(forResource: "questionList", ofType:"plist" )
-let dic = NSDictionary(contentsOfFile:filePath!)
+var selected = ["喜を選んだあなたへ","怒を選んだあなたへ","哀を選んだあなたへ","楽を選んだあなたへ"]
 
-    let dic1 = dic!["喜"] as! NSDictionary
-    let dic2 = dic!["怒"] as! NSDictionary
-    let dic3 = dic!["哀"] as! NSDictionary
-    let dic4 = dic!["楽"] as! NSDictionary
+var question2Answer = ""
 
-var question3Answer = ""
-
-class Question3ViewController: UIViewController{
+class Question2ViewController: UIViewController {
     
-    @IBOutlet weak var questionView: UITextView!
+    @IBOutlet weak var name1: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch choice {
-        case 0:
-            questionView.text = dic1["joy2"] as? String
-        case 1:
-            questionView.text = dic2["angry2"] as? String
-        case 2:
-            questionView.text = dic3["sad2"] as? String
-        case 3:
-            questionView.text = dic4["fun2"] as? String
-        default:
-            print("nil")
-        }
-        
+        name1.text = selected[choice]
     }
 
-    @IBOutlet weak var textField: UITextView!
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
+    
+    @IBOutlet weak var textField: UITextView!
     
     @IBAction func alertButton(_ sender: UIButton) {
         
@@ -65,12 +46,15 @@ class Question3ViewController: UIViewController{
         present(alertController, animated: true, completion: nil)
     }
     
-
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         
-        question3Answer = textField.text!
+        question2Answer = textField.text!
         
     }
     
+    @IBAction func backtoQ2(segue:UIStoryboardSegue){
+    
+    }
+
 }

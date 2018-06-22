@@ -139,6 +139,7 @@ public class SwiftyOnboard: UIView, UIScrollViewDelegate {
                     viewFrame.origin.x = self.frame.width * CGFloat(index)
                     view.frame = viewFrame
                     self.pages.append(view)
+                    print(view.imageView.frame)
                 }
             }
             containerView.contentSize = CGSize(width: self.frame.width * CGFloat(pageCount), height: self.frame.height)

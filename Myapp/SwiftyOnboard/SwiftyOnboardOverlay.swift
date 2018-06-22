@@ -10,6 +10,8 @@ import UIKit
 
 open class SwiftyOnboardOverlay: UIView {
     
+    
+    
     open var pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.currentPage = 0
@@ -19,14 +21,14 @@ open class SwiftyOnboardOverlay: UIView {
     
     open var continueButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Continue", for: .normal)
+        button.setTitle("次へ", for: .normal)
         button.contentHorizontalAlignment = .center
         return button
     }()
     
     open var skipButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Skip", for: .normal)
+        button.setTitle("スキップ", for: .normal)
         button.contentHorizontalAlignment = .right
         return button
     }()
@@ -52,8 +54,8 @@ open class SwiftyOnboardOverlay: UIView {
     open func set(style: SwiftyOnboardStyle) {
         switch style {
         case .light:
-            continueButton.setTitleColor(.white, for: .normal)
-            skipButton.setTitleColor(.white, for: .normal)
+            continueButton.setTitleColor(UIColor.rgb(r: 64, g: 64, b: 64, alpha: 1), for: .normal)
+            skipButton.setTitleColor(UIColor.rgb(r: 64, g: 64, b: 64, alpha: 1), for: .normal)
             pageControl.currentPageIndicatorTintColor = UIColor.white
         case .dark:
             continueButton.setTitleColor(.black, for: .normal)
@@ -63,11 +65,11 @@ open class SwiftyOnboardOverlay: UIView {
     }
     
     open func page(count: Int) {
-        pageControl.numberOfPages = count
+        pageControl.numberOfPages = 3
     }
     
     open func currentPage(index: Int) {
-        pageControl.currentPage = index
+        pageControl.currentPage = 1
     }
     
     func setUp() {

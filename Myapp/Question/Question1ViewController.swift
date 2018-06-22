@@ -75,5 +75,8 @@ class Question1ViewController:UIViewController,
         
     }
     
+    @IBAction func backtoQ1(segue:UIStoryboardSegue){
+        
+    }
 
 }

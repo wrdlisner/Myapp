@@ -2,7 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Myapp.xcodeproj">
+      location = "group:Results+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Results+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/kohei/Documents/Programing/Nexseed/iOSBatch42/Myapp/Kokolog.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

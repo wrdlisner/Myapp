@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,10 +16,25 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Swifty Onboard View Controller-->
+        <scene sceneID="R8e-bw-cdW">
+            <objects>
+                <viewController id="oDw-Gn-tyf" customClass="SwiftyOnboardViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rcq-NW-Src">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rQj-XR-zs3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySe-P6-ngM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="34"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Myapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="topPage" id="BYZ-38-t0r" customClass="ViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +137,7 @@
         <!--Question1 View Controller-->
         <scene sceneID="FDl-3p-c9X">
             <objects>
-                <viewController id="6bB-dv-XOX" customClass="Question1ViewController" customModule="Myapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6bB-dv-XOX" customClass="Question1ViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ppW-Ur-7j0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,13 +199,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eoa-6i-SB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bz2-9Q-ofX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1849" y="34"/>
         </scene>
         <!--Question2 View Controller-->
         <scene sceneID="oix-oH-jWb">
             <objects>
-                <viewController id="V8Z-z6-YrM" customClass="Question2ViewController" customModule="Myapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V8Z-z6-YrM" customClass="Question2ViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="haw-Ph-oZO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +265,7 @@
                                 <rect key="frame" x="44" y="228" width="286" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.90207248263888884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsU-Wj-zMh">
@@ -259,7 +276,7 @@
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6bB-dv-XOX" kind="show" id="fB4-fx-T0l"/>
+                                    <segue destination="bz2-9Q-ofX" kind="unwind" unwindAction="backtoQ1WithSegue:" id="lqM-Cw-e0Z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -272,13 +289,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHy-UW-XtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gRw-Zq-sRd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2719" y="34"/>
         </scene>
         <!--Question3-->
         <scene sceneID="tDQ-5W-kXh">
             <objects>
-                <viewController title="Question3" id="uta-jY-J8B" customClass="Question3ViewController" customModule="Myapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Question3" id="uta-jY-J8B" customClass="Question3ViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DRH-Mx-yH2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,7 +352,7 @@
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="V8Z-z6-YrM" kind="show" id="mOk-bZ-0TO"/>
+                                    <segue destination="gRw-Zq-sRd" kind="unwind" unwindAction="backtoQ2WithSegue:" id="jc7-V9-i7R"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IMM-9P-nDs">
@@ -355,13 +373,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFQ-BL-WJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kGF-GI-pt3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3568.8000000000002" y="33.733133433283363"/>
         </scene>
         <!--Question4 View Controller-->
         <scene sceneID="YuB-zn-Hnz">
             <objects>
-                <viewController id="r1E-KO-JE7" customClass="Question4ViewController" customModule="Myapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="r1E-KO-JE7" customClass="Question4ViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vba-O9-hgi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,7 +404,7 @@
                                 <rect key="frame" x="45" y="228" width="286" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iS-NZ-ZSo">
@@ -418,7 +437,7 @@
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uta-jY-J8B" kind="show" id="2Zg-ih-psb"/>
+                                    <segue destination="kGF-GI-pt3" kind="unwind" unwindAction="backtoQ3WithSegue:" id="GBD-Fq-ihh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="残り1問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwn-Ui-Ozk">
@@ -438,168 +457,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejK-89-tDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ucO-KF-CvM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4394" y="34"/>
-        </scene>
-        <!--Result View Controller-->
-        <scene sceneID="7Q0-6d-s4w">
-            <objects>
-                <viewController storyboardIdentifier="ResultView" id="5Fd-pW-RbG" customClass="ResultViewController" customModule="Myapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dm9-vh-kwW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1800"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOl-cj-dqD">
-                                <rect key="frame" x="162" y="65" width="50" height="25"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日のあなたのこころぐは以下のようになりました" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCJ-yl-7yj">
-                                <rect key="frame" x="15" y="127" width="345" height="15"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
-                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Do-JV-Vvw">
-                                <rect key="frame" x="0.0" y="187" width="375" height="1469"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsr-op-gs5">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1469"/>
-                                        <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VVu-s9-jNA">
-                                                <rect key="frame" x="67" y="1220" width="240" height="220"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UpC-8e-CX8">
-                                                <rect key="frame" x="67" y="209" width="240" height="220"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NvD-kI-HWv">
-                                                <rect key="frame" x="67" y="548" width="240" height="220"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問1の回答" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-GG-ylL">
-                                                <rect key="frame" x="130" y="67" width="115" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="21"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wni-IV-8fK">
-                                                <rect key="frame" x="166" y="165" width="42" height="17"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
-                                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGf-Bl-oWz">
-                                                <rect key="frame" x="166" y="507" width="42" height="17"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
-                                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lId-rd-hgn">
-                                                <rect key="frame" x="67" y="882" width="240" height="220"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZO7-9r-8Yn">
-                                                <rect key="frame" x="166" y="1172" width="42" height="17"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
-                                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="qsr-op-gs5" firstAttribute="centerX" secondItem="2Do-JV-Vvw" secondAttribute="centerX" id="5Ik-79-o2m"/>
-                                    <constraint firstAttribute="bottom" secondItem="qsr-op-gs5" secondAttribute="bottom" id="VnH-rO-lls"/>
-                                    <constraint firstItem="qsr-op-gs5" firstAttribute="top" secondItem="2Do-JV-Vvw" secondAttribute="top" id="bvF-Nz-Gfs"/>
-                                    <constraint firstAttribute="trailing" secondItem="qsr-op-gs5" secondAttribute="trailing" id="nGs-Dc-Sh2"/>
-                                    <constraint firstItem="qsr-op-gs5" firstAttribute="centerY" secondItem="2Do-JV-Vvw" secondAttribute="centerY" id="sCA-ud-hc2"/>
-                                    <constraint firstItem="qsr-op-gs5" firstAttribute="leading" secondItem="2Do-JV-Vvw" secondAttribute="leading" id="x8m-Gy-Xsx"/>
-                                </constraints>
-                            </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="質問1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng3-zV-CQN">
-                                <rect key="frame" x="166" y="200" width="42" height="17"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
-                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTn-y6-3dg">
-                                <rect key="frame" x="257" y="1722" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
-                                <state key="normal" title="トップに戻る">
-                                    <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="alertButton:" destination="5Fd-pW-RbG" eventType="touchUpInside" id="8Q1-cM-yKu"/>
-                                    <action selector="alertButton:" destination="IdJ-Th-g2f" eventType="touchUpInside" id="JQD-yk-mIm"/>
-                                    <action selector="alertButton:" destination="r1E-KO-JE7" eventType="touchUpInside" id="Ylh-bo-mD1"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="質問4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2p-Wl-Nyd">
-                                <rect key="frame" x="166" y="1022" width="42" height="17"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
-                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rW-o1-kEb">
-                                <rect key="frame" x="15" y="1696" width="119" height="29"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
-                                <state key="normal" title="過去ろぐを見る">
-                                    <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="2Do-JV-Vvw" firstAttribute="centerX" secondItem="BCJ-yl-7yj" secondAttribute="centerX" id="5JS-Ys-w9e"/>
-                            <constraint firstItem="2Do-JV-Vvw" firstAttribute="centerX" secondItem="SOl-cj-dqD" secondAttribute="centerX" id="MpX-Ya-CUW"/>
-                            <constraint firstAttribute="bottom" secondItem="2Do-JV-Vvw" secondAttribute="bottom" constant="144" id="Tgx-nb-BNA"/>
-                            <constraint firstItem="2Do-JV-Vvw" firstAttribute="top" secondItem="BCJ-yl-7yj" secondAttribute="bottom" constant="45" id="TrQ-Uh-BOb"/>
-                            <constraint firstItem="2Do-JV-Vvw" firstAttribute="centerX" secondItem="T2p-Wl-Nyd" secondAttribute="centerX" id="YQx-UB-Zni"/>
-                            <constraint firstItem="2Do-JV-Vvw" firstAttribute="top" secondItem="Dm9-vh-kwW" secondAttribute="top" constant="187" id="cS4-U1-Aja"/>
-                            <constraint firstItem="2Do-JV-Vvw" firstAttribute="top" secondItem="BCJ-yl-7yj" secondAttribute="bottom" id="hY7-Mc-mZl"/>
-                            <constraint firstItem="2Do-JV-Vvw" firstAttribute="centerX" secondItem="ng3-zV-CQN" secondAttribute="centerX" id="lCv-mY-KuN"/>
-                            <constraint firstItem="7rW-o1-kEb" firstAttribute="top" secondItem="2Do-JV-Vvw" secondAttribute="bottom" constant="40" id="mav-Xy-WIh"/>
-                            <constraint firstItem="2Do-JV-Vvw" firstAttribute="leading" secondItem="Dm9-vh-kwW" secondAttribute="leading" id="sOT-hp-L1Z"/>
-                            <constraint firstAttribute="trailing" secondItem="2Do-JV-Vvw" secondAttribute="trailing" id="tF8-6h-CQP"/>
-                            <constraint firstItem="7rW-o1-kEb" firstAttribute="top" secondItem="2Do-JV-Vvw" secondAttribute="bottom" id="tFr-Ot-MZg"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="0H0-ak-LEz"/>
-                    </view>
-                    <size key="freeformSize" width="375" height="1800"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2zH-Yb-5A3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6248.8000000000002" y="33.283358320839582"/>
         </scene>
         <!--Question5 View Controller-->
         <scene sceneID="adu-mK-g6K">
             <objects>
-                <viewController id="IdJ-Th-g2f" customClass="Question5ViewController" customModule="Myapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IdJ-Th-g2f" customClass="Question5ViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MyC-jt-MVz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -623,7 +488,7 @@
                                 <rect key="frame" x="45" y="228" width="286" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EER-AP-wqM">
@@ -646,7 +511,7 @@
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="r1E-KO-JE7" kind="show" id="6xD-B7-ZAi"/>
+                                    <segue destination="ucO-KF-CvM" kind="unwind" unwindAction="backtoQ4WithSegue:" id="vKI-H9-mJ1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obe-3Z-V5C">
@@ -763,6 +628,219 @@
             </objects>
             <point key="canvasLocation" x="1332" y="858"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="4tI-Af-Uoo">
+            <objects>
+                <viewController storyboardIdentifier="ResultView" id="wM7-32-Vgm" customClass="ResultViewController" customModule="Kokolog" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EWV-JW-Goq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grL-gg-wcm">
+                                <rect key="frame" x="0.0" y="50" width="375" height="25"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日のあなたのこころぐは以下のようになりました" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KR3-qD-dRP">
+                                <rect key="frame" x="0.0" y="85" width="375" height="15"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
+                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5U-4U-Q50">
+                                <rect key="frame" x="0.0" y="120" width="375" height="446"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="g1t-Bo-HXf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="447.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh4-Nl-BmN">
+                                                <rect key="frame" x="166.5" y="0.0" width="42" height="17"/>
+                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
+                                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問1の回答" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4S-sx-aCQ">
+                                                <rect key="frame" x="130.5" y="31" width="114.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNf-iI-TgO">
+                                                <rect key="frame" x="166.5" y="66" width="42" height="17"/>
+                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
+                                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yen-CD-Es7" userLabel="Text View2">
+                                                <rect key="frame" x="50.5" y="97" width="274" height="100"/>
+                                                <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="PTa-Q2-6dH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHB-ei-3ew">
+                                                <rect key="frame" x="166.5" y="211" width="42" height="17"/>
+                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
+                                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6s-JN-AWY" userLabel="Text View3">
+                                                <rect key="frame" x="50.5" y="242" width="274" height="38.5"/>
+                                                <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uec-VM-SNl">
+                                                <rect key="frame" x="166.5" y="294.5" width="42" height="17"/>
+                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
+                                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h71-Fh-caR" userLabel="Text View4">
+                                                <rect key="frame" x="50.5" y="325.5" width="274" height="38.5"/>
+                                                <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnC-jr-gQi">
+                                                <rect key="frame" x="166.5" y="378" width="42" height="17"/>
+                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
+                                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEv-JC-3Fm" userLabel="Text View5">
+                                                <rect key="frame" x="50.5" y="409" width="274" height="38.5"/>
+                                                <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="h71-Fh-caR" firstAttribute="trailing" secondItem="Yen-CD-Es7" secondAttribute="trailing" id="4Va-3k-qzr"/>
+                                            <constraint firstItem="KEv-JC-3Fm" firstAttribute="leading" secondItem="Yen-CD-Es7" secondAttribute="leading" id="69T-yd-xpw"/>
+                                            <constraint firstItem="L6s-JN-AWY" firstAttribute="trailing" secondItem="Yen-CD-Es7" secondAttribute="trailing" id="8Aj-RI-ghx"/>
+                                            <constraint firstItem="L6s-JN-AWY" firstAttribute="leading" secondItem="Yen-CD-Es7" secondAttribute="leading" id="Hfi-At-s7Z"/>
+                                            <constraint firstItem="h71-Fh-caR" firstAttribute="leading" secondItem="Yen-CD-Es7" secondAttribute="leading" id="dKS-ue-xnE"/>
+                                            <constraint firstItem="Yen-CD-Es7" firstAttribute="width" secondItem="g1t-Bo-HXf" secondAttribute="width" multiplier="0.73" id="njj-s5-d05"/>
+                                            <constraint firstItem="KEv-JC-3Fm" firstAttribute="trailing" secondItem="Yen-CD-Es7" secondAttribute="trailing" id="rtD-Nx-xCq"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="g1t-Bo-HXf" secondAttribute="trailing" id="Jjw-ty-MmA"/>
+                                    <constraint firstItem="g1t-Bo-HXf" firstAttribute="leading" secondItem="e5U-4U-Q50" secondAttribute="leading" id="RXe-yF-rKP"/>
+                                    <constraint firstAttribute="bottom" secondItem="g1t-Bo-HXf" secondAttribute="bottom" constant="20" symbolic="YES" id="jHl-Ss-ggb"/>
+                                    <constraint firstItem="g1t-Bo-HXf" firstAttribute="top" secondItem="e5U-4U-Q50" secondAttribute="top" id="rkB-RZ-avW"/>
+                                    <constraint firstItem="g1t-Bo-HXf" firstAttribute="width" secondItem="e5U-4U-Q50" secondAttribute="width" id="wLV-dm-cBm"/>
+                                </constraints>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Coy-je-yzW">
+                                <rect key="frame" x="0.0" y="605" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDh-hb-Fqk">
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
+                                        <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
+                                        <state key="normal" title="過去ろぐを見る">
+                                            <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAU-E2-gFs">
+                                        <rect key="frame" x="164.5" y="0.0" width="68.5" height="50"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nv-bw-Ndy">
+                                        <rect key="frame" x="234" y="0.0" width="141" height="50"/>
+                                        <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
+                                        <state key="normal" title="トップに戻る">
+                                            <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="alertButton:" destination="wM7-32-Vgm" eventType="touchUpInside" id="fK4-Kx-IlG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Coy-je-yzW" secondAttribute="trailing" id="RIO-vq-V3o"/>
+                            <constraint firstItem="KR3-qD-dRP" firstAttribute="leading" secondItem="ce9-0P-Cjw" secondAttribute="leading" id="SrV-5s-bJl"/>
+                            <constraint firstItem="e5U-4U-Q50" firstAttribute="trailing" secondItem="ce9-0P-Cjw" secondAttribute="trailing" id="UFS-4L-Xrh"/>
+                            <constraint firstItem="grL-gg-wcm" firstAttribute="trailing" secondItem="ce9-0P-Cjw" secondAttribute="trailing" id="XuF-Zc-QVd"/>
+                            <constraint firstItem="KR3-qD-dRP" firstAttribute="top" secondItem="grL-gg-wcm" secondAttribute="bottom" constant="10" id="ZSH-EU-jyR"/>
+                            <constraint firstItem="Coy-je-yzW" firstAttribute="leading" secondItem="ce9-0P-Cjw" secondAttribute="leading" id="ghg-ig-CCN"/>
+                            <constraint firstItem="e5U-4U-Q50" firstAttribute="leading" secondItem="ce9-0P-Cjw" secondAttribute="leading" id="i1h-95-Vmh"/>
+                            <constraint firstItem="Coy-je-yzW" firstAttribute="width" secondItem="ce9-0P-Cjw" secondAttribute="width" id="jjn-R7-1Z5"/>
+                            <constraint firstItem="e5U-4U-Q50" firstAttribute="top" secondItem="KR3-qD-dRP" secondAttribute="bottom" constant="20" id="jsh-f6-6r6"/>
+                            <constraint firstItem="e5U-4U-Q50" firstAttribute="height" secondItem="EWV-JW-Goq" secondAttribute="height" multiplier="446/667" id="jvm-dK-UqK"/>
+                            <constraint firstItem="KR3-qD-dRP" firstAttribute="trailing" secondItem="ce9-0P-Cjw" secondAttribute="trailing" id="kHF-KT-Sfh"/>
+                            <constraint firstAttribute="bottom" secondItem="Coy-je-yzW" secondAttribute="bottom" constant="12" id="kUA-Wi-FvE"/>
+                            <constraint firstItem="grL-gg-wcm" firstAttribute="leading" secondItem="ce9-0P-Cjw" secondAttribute="leading" id="nay-hS-3I2"/>
+                            <constraint firstItem="e5U-4U-Q50" firstAttribute="width" secondItem="EWV-JW-Goq" secondAttribute="width" id="rZL-H7-d8Q"/>
+                            <constraint firstItem="grL-gg-wcm" firstAttribute="top" secondItem="ce9-0P-Cjw" secondAttribute="top" constant="30" id="t6x-E8-nh6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ce9-0P-Cjw"/>
+                    </view>
+                    <connections>
+                        <outlet property="Q1answer" destination="h4S-sx-aCQ" id="WcT-pT-u6g"/>
+                        <outlet property="Q2answer" destination="Yen-CD-Es7" id="dPb-Rq-r4t"/>
+                        <outlet property="Q3answer" destination="L6s-JN-AWY" id="Nkj-8x-5HZ"/>
+                        <outlet property="Q4answer" destination="h71-Fh-caR" id="2Kh-9a-nRJ"/>
+                        <outlet property="Q5answer" destination="KEv-JC-3Fm" id="qdw-hI-EgB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jp-2I-uZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6124" y="34"/>
+        </scene>
     </scenes>
     <resources>
         <image name="top1" width="234" height="202"/>
@@ -771,10 +849,4 @@
         <image name="top4" width="228" height="196"/>
         <image name="topEar" width="116" height="180"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="6xD-B7-ZAi"/>
-        <segue reference="2Zg-ih-psb"/>
-        <segue reference="mOk-bZ-0TO"/>
-        <segue reference="fB4-fx-T0l"/>
-    </inferredMetricsTieBreakers>
 </document>

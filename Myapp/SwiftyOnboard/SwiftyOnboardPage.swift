@@ -48,8 +48,8 @@ open class SwiftyOnboardPage: UIView {
     func set(style: SwiftyOnboardStyle) {
         switch style {
         case .light:
-            title.textColor = .white
-            subTitle.textColor = .white
+            title.textColor = UIColor.rgb(r: 64, g: 64, b: 64, alpha: 1)
+            subTitle.textColor = UIColor.rgb(r: 64, g: 64, b: 64, alpha: 1)
         case .dark:
             title.textColor = .black
             subTitle.textColor = .black
