@@ -77,8 +77,9 @@
 		550889C420BE9FCF00241F10 = {
 			isa = PBXGroup;
 			children = (
+				55B9560320DE0DCD00DE787E /* Results+CoreDataProperties copy.swift */,
+				55B9560420DE0DCE00DE787E /* Results+CoreDataClass copy.swift */,
 				550889CF20BE9FD000241F10 /* Myapp */,
-				55B9560720DE0DDC00DE787E /* CoreDate */,
 				550889CE20BE9FD000241F10 /* Products */,
 				F394A937995A227CC6865178 /* Pods */,
 				A15ED130E192D07A74001C36 /* Frameworks */,
@@ -142,15 +143,6 @@
 				5535646020C0193B00090CA6 /* Hannari.otf */,
 			);
 			path = font;
-			sourceTree = "<group>";
-		};
-		55B9560720DE0DDC00DE787E /* CoreDate */ = {
-			isa = PBXGroup;
-			children = (
-				55B9560320DE0DCD00DE787E /* Results+CoreDataProperties copy.swift */,
-				55B9560420DE0DCE00DE787E /* Results+CoreDataClass copy.swift */,
-			);
-			path = CoreDate;
 			sourceTree = "<group>";
 		};
 		A15ED130E192D07A74001C36 /* Frameworks */ = {
