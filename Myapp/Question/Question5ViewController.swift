@@ -72,6 +72,8 @@ class Question5ViewController: UIViewController {
 
             (action:UIAlertAction!) -> Void in
             
+            self.saveKokolog()
+            
             let storyboard: UIStoryboard = self.storyboard!
             
             let ResultView = storyboard.instantiateViewController(withIdentifier: "ResultView")
@@ -84,56 +86,37 @@ class Question5ViewController: UIViewController {
         alertController.addAction(defaultAction1)
         
         present(alertController, animated: true, completion: nil)
-        
-        
+    }
+    
+    func saveKokolog() {
         var test: [NSManagedObject] = []
         
-            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-                return
-            }
-            
-            let managedContext = appDelegate.persistentContainer.viewContext
-            
-            let entity = NSEntityDescription.entity(forEntityName: "Results",
-                                                    in: managedContext)!
-            
-            let result = NSManagedObject(entity: entity,
-                                         insertInto: managedContext)
-            
-            result.setValue(Date(), forKeyPath: "date")
-            result.setValue(choice, forKeyPath: "question1")
-            result.setValue(question2Answer, forKeyPath: "question2")
-            result.setValue(question3Answer, forKeyPath: "question3")
-            result.setValue(question4Answer, forKeyPath: "question4")
-            result.setValue(question5Answer, forKeyPath: "question5")
-            result.setValue(Date(), forKeyPath: "viewDate")
-            
-            do {
-                try managedContext.save()
-                test.append(result)
-            } catch let error as NSError {
-                print("Could not save. \(error), \(error.userInfo)")
-            }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
         
-//        var fetchedArray: [NSManagedObject] = []
-//
-//        func viewWillAppear(_ animated: Bool) {
-//            super.viewWillAppear(animated)
-//
-//            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-//                return
-//            }
-//            
-//            let managedContext = appDelegate.persistentContainer.viewContext
-//
-//            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
-//            do {
-//                fetchedArray = try managedContext.fetch(fetchRequest)
-//            } catch let error as NSError {
-//                print("Could not fetch. \(error), \(error.userInfo)")
-//            }
-//
-//        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Results",
+                                                in: managedContext)!
+        
+        let result = NSManagedObject(entity: entity,
+                                     insertInto: managedContext)
+        
+        result.setValue(Date(), forKeyPath: "date")
+        result.setValue(choice, forKeyPath: "question1")
+        result.setValue(question2Answer, forKeyPath: "question2")
+        result.setValue(question3Answer, forKeyPath: "question3")
+        result.setValue(question4Answer, forKeyPath: "question4")
+        result.setValue(question5Answer, forKeyPath: "question5")
+        result.setValue(Date(), forKeyPath: "viewDate")
+        
+        do {
+            try managedContext.save()
+            test.append(result)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

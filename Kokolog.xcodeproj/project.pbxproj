@@ -24,6 +24,8 @@
 		5537DB6220C910210045BD41 /* questionList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5537DB6120C910210045BD41 /* questionList.plist */; };
 		559E095120DA61AC00451B4C /* SwiftyOnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E095020DA61AC00451B4C /* SwiftyOnboardViewController.swift */; };
 		559E095720DA7B5A00451B4C /* result.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 559E095520DA7B5A00451B4C /* result.xcdatamodeld */; };
+		55B9560520DE0DCE00DE787E /* Results+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B9560320DE0DCD00DE787E /* Results+CoreDataProperties copy.swift */; };
+		55B9560620DE0DCE00DE787E /* Results+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B9560420DE0DCE00DE787E /* Results+CoreDataClass copy.swift */; };
 		55D1D5DA20BF6FFE00AA3B74 /* Kokolog.app in Sources */ = {isa = PBXBuildFile; fileRef = 550889CD20BE9FD000241F10 /* Kokolog.app */; };
 		55D9A34B20BF6A8B003087A6 /* myExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D9A34A20BF6A8B003087A6 /* myExtension.swift */; };
 		55DB8ED320D1117700A2CB64 /* Question4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */; };
@@ -51,6 +53,8 @@
 		5537DB6120C910210045BD41 /* questionList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = questionList.plist; sourceTree = "<group>"; };
 		559E095020DA61AC00451B4C /* SwiftyOnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyOnboardViewController.swift; sourceTree = "<group>"; };
 		559E095620DA7B5A00451B4C /* result.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = result.xcdatamodel; sourceTree = "<group>"; };
+		55B9560320DE0DCD00DE787E /* Results+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Results+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		55B9560420DE0DCE00DE787E /* Results+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Results+CoreDataClass copy.swift"; sourceTree = "<group>"; };
 		55D9A34A20BF6A8B003087A6 /* myExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myExtension.swift; sourceTree = "<group>"; };
 		55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question4ViewController.swift; sourceTree = "<group>"; };
 		55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question5ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				550889CF20BE9FD000241F10 /* Myapp */,
+				55B9560720DE0DDC00DE787E /* CoreDate */,
 				550889CE20BE9FD000241F10 /* Products */,
 				F394A937995A227CC6865178 /* Pods */,
 				A15ED130E192D07A74001C36 /* Frameworks */,
@@ -137,6 +142,15 @@
 				5535646020C0193B00090CA6 /* Hannari.otf */,
 			);
 			path = font;
+			sourceTree = "<group>";
+		};
+		55B9560720DE0DDC00DE787E /* CoreDate */ = {
+			isa = PBXGroup;
+			children = (
+				55B9560320DE0DCD00DE787E /* Results+CoreDataProperties copy.swift */,
+				55B9560420DE0DCE00DE787E /* Results+CoreDataClass copy.swift */,
+			);
+			path = CoreDate;
 			sourceTree = "<group>";
 		};
 		A15ED130E192D07A74001C36 /* Frameworks */ = {
@@ -271,12 +285,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5511E5C420C2E1C100902854 /* Question1ViewController.swift in Sources */,
+				55B9560520DE0DCE00DE787E /* Results+CoreDataProperties copy.swift in Sources */,
 				5519FC6C20CA89B300E28D8F /* SwiftyOnboard.swift in Sources */,
 				559E095120DA61AC00451B4C /* SwiftyOnboardViewController.swift in Sources */,
 				5519FC6E20CA89B300E28D8F /* SwiftyOnboardPage.swift in Sources */,
 				5535646220C033E700090CA6 /* Hannari.otf in Sources */,
 				55DB8ED520D2562800A2CB64 /* Question5ViewController.swift in Sources */,
 				55D1D5DA20BF6FFE00AA3B74 /* Kokolog.app in Sources */,
+				55B9560620DE0DCE00DE787E /* Results+CoreDataClass copy.swift in Sources */,
 				559E095720DA7B5A00451B4C /* result.xcdatamodeld in Sources */,
 				5536FF6E20C754FB0003A639 /* Question2ViewController.swift in Sources */,
 				55D9A34B20BF6A8B003087A6 /* myExtension.swift in Sources */,
