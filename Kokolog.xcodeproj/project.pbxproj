@@ -31,6 +31,7 @@
 		55DB8ED320D1117700A2CB64 /* Question4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */; };
 		55DB8ED520D2562800A2CB64 /* Question5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */; };
 		55DB8ED720D2A7DE00A2CB64 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED620D2A7DE00A2CB64 /* ResultViewController.swift */; };
+		55E79BBA20DF1C5F0094E5BE /* logSaveDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E79BB920DF1C5F0094E5BE /* logSaveDateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question4ViewController.swift; sourceTree = "<group>"; };
 		55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question5ViewController.swift; sourceTree = "<group>"; };
 		55DB8ED620D2A7DE00A2CB64 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		55E79BB920DF1C5F0094E5BE /* logSaveDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logSaveDateViewController.swift; sourceTree = "<group>"; };
 		8BEA04D1AEB89076EB3009E6 /* Pods-Myapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Myapp/Pods-Myapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,8 +99,9 @@
 		550889CF20BE9FD000241F10 /* Myapp */ = {
 			isa = PBXGroup;
 			children = (
-				550889D420BE9FD000241F10 /* Main.storyboard */,
 				550889D020BE9FD000241F10 /* AppDelegate.swift */,
+				550889D420BE9FD000241F10 /* Main.storyboard */,
+				55E79BB920DF1C5F0094E5BE /* logSaveDateViewController.swift */,
 				559E095020DA61AC00451B4C /* SwiftyOnboardViewController.swift */,
 				550889D220BE9FD000241F10 /* ViewController.swift */,
 				55D9A34A20BF6A8B003087A6 /* myExtension.swift */,
@@ -290,6 +293,7 @@
 				55D9A34B20BF6A8B003087A6 /* myExtension.swift in Sources */,
 				550889D320BE9FD000241F10 /* ViewController.swift in Sources */,
 				55DB8ED720D2A7DE00A2CB64 /* ResultViewController.swift in Sources */,
+				55E79BBA20DF1C5F0094E5BE /* logSaveDateViewController.swift in Sources */,
 				55202F4C20CC12D3009DEB85 /* Question3ViewController.swift in Sources */,
 				5519FC6D20CA89B300E28D8F /* SwiftyOnboardOverlay.swift in Sources */,
 				550889D120BE9FD000241F10 /* AppDelegate.swift in Sources */,

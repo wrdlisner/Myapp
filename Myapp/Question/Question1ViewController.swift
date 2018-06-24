@@ -26,7 +26,7 @@ class Question1ViewController:UIViewController,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "choices1")
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "choices")
         
         let details = emotions[indexPath.row].components(separatedBy: "/")
      
