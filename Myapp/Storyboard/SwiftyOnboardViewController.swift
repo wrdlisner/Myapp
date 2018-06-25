@@ -19,13 +19,12 @@ class SwiftyOnboardViewController: UIViewController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+    
         swiftyOnboard = SwiftyOnboard(frame: view.frame, style: .light)
         view.addSubview(swiftyOnboard)
         swiftyOnboard.dataSource = self
         swiftyOnboard.delegate = self
-        
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -74,7 +73,7 @@ class SwiftyOnboardViewController: UIViewController,
     
     func swiftyOnboardPageForIndex(_ swiftyOnboard: SwiftyOnboard, index: Int) -> SwiftyOnboardPage? {
         let view = SwiftyOnboardPage()
-        print(#function)
+       
         //Set the image on the page:
         view.imageView.image = UIImage(named: "onboard\(index)")
         view.frame.size = CGSize(width: 15, height: 10)
@@ -91,14 +90,12 @@ class SwiftyOnboardViewController: UIViewController,
         view.subTitle.text = subTitleArray[index]
         
         //Return the page for the given index:
-        print(view.frame)
         return view
     }
     
     func swiftyOnboardOverlayForPosition(_ swiftyOnboard: SwiftyOnboard, overlay: SwiftyOnboardOverlay, for position: Double) {
         let currentPage = round(position)
         overlay.pageControl.currentPage = Int(currentPage)
-        print(Int(currentPage))
         overlay.continueButton.tag = Int(position)
         
         if currentPage == 0.0 || currentPage == 1.0 {
@@ -117,6 +114,8 @@ class SwiftyOnboardViewController: UIViewController,
         
         let goTopPage = storyboard?.instantiateViewController(withIdentifier: "topPage")
         self.present(goTopPage!, animated: true, completion: nil)
+        UserDefaults.standard.set(true, forKey: "openApp")
         
     }
+
 }

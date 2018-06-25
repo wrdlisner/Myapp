@@ -13,7 +13,7 @@ class Question1ViewController:UIViewController,
     
         tableView.delegate = self
         tableView.dataSource = self
-    
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,5 +78,5 @@ class Question1ViewController:UIViewController,
     @IBAction func backtoQ1(segue:UIStoryboardSegue){
         
     }
-
+    
 }

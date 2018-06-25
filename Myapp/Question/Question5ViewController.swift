@@ -90,19 +90,19 @@ class Question5ViewController: UIViewController {
     
     func saveKokolog() {
         var test: [NSManagedObject] = []
-        
+
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-        
+
         let managedContext = appDelegate.persistentContainer.viewContext
-        
+
         let entity = NSEntityDescription.entity(forEntityName: "Results",
                                                 in: managedContext)!
-        
+
         let result = NSManagedObject(entity: entity,
                                      insertInto: managedContext)
-        
+
         result.setValue(Date(), forKeyPath: "date")
         result.setValue(choice, forKeyPath: "question1")
         result.setValue(question2Answer, forKeyPath: "question2")
@@ -110,7 +110,7 @@ class Question5ViewController: UIViewController {
         result.setValue(question4Answer, forKeyPath: "question4")
         result.setValue(question5Answer, forKeyPath: "question5")
         result.setValue(Date(), forKeyPath: "viewDate")
-        
+
         do {
             try managedContext.save()
             test.append(result)

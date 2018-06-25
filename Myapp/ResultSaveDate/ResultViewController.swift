@@ -2,6 +2,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
+    @IBOutlet weak var saveTime: UILabel!
     @IBOutlet weak var Q1answer: UILabel!
     @IBOutlet weak var Q2answer: UITextView!
     @IBOutlet weak var Q3answer: UITextView!
@@ -33,10 +34,19 @@ class ResultViewController: UIViewController {
         
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         print(urls[urls.count-1] as URL)
+
+        let df = DateFormatter()
+        df.dateFormat = "yyyy年MM月dd日(EEEEE) H時m分"
+        df.locale = Locale(identifier: "ja_JP")
+        
+        let now = Date()
+        saveTime.text = df.string(from: now)
+        
     }
 
+
     @IBAction func alertButton(_ sender: UIButton) {
-    
+        
         let alertController = UIAlertController(title: "Topに戻ります", message: nil, preferredStyle: .alert)
         
         let cancelAction:UIAlertAction = UIAlertAction(title: "戻らない", style: UIAlertActionStyle.default, handler:{
