@@ -63,13 +63,12 @@ class logSaveDateViewController: UIViewController,UITableViewDelegate,UITableVie
         cell.textLabel?.text = "\(kokolog.question1)"
         
         let df = DateFormatter()
-        df.dateFormat = "yyyy年MM月dd日(EEEEE)"
+        df.dateFormat = "yyyy年MM月dd日(EEEEE) H時m分"
         df.locale = Locale(identifier: "ja_JP")
         
         cell.detailTextLabel?.text = "\(String(describing: kokolog.date!))"
         cell.detailTextLabel?.text = df.string(from: kokolog.date! as Date)
         cell.detailTextLabel?.textColor = UIColor.rgb(r: 64, g: 64, b: 64, alpha: 1)
-        
         
         switch kokolog.question1 {
         case 0:
@@ -84,8 +83,23 @@ class logSaveDateViewController: UIViewController,UITableViewDelegate,UITableVie
             print("nil")
         }
         
-        
         return cell
+    }
+    
+    var selectedIndex:Date?
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedIndex = readKokolog[indexPath.row].date! as Date
+        performSegue(withIdentifier: "toDetail", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        let dateCatch:DetailSaveDateViewController = segue.destination as!
+        DetailSaveDateViewController
+
+        dateCatch.passedIndex = selectedIndex
     }
     
 }

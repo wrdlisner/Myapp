@@ -1,4 +1,5 @@
 import UIKit
+import CoreData
 
 class ResultViewController: UIViewController {
     
@@ -8,6 +9,25 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var Q3answer: UITextView!
     @IBOutlet weak var Q4answer: UITextView!
     @IBOutlet weak var Q5answer: UITextView!
+    
+    var readKokolog: [Results] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
+        do {
+            readKokolog = try managedContext.fetch(fetchRequest) as! [Results]
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +63,6 @@ class ResultViewController: UIViewController {
         saveTime.text = df.string(from: now)
         
     }
-
 
     @IBAction func alertButton(_ sender: UIButton) {
         
