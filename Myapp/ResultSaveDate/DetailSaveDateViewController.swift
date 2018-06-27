@@ -11,11 +11,13 @@ class DetailSaveDateViewController: UIViewController {
     @IBOutlet weak var Q5answer: UITextView!
     @IBOutlet weak var myStackView: UIStackView!
     
+//    startChange
+//    endChange
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        viewKokolog()
-
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +37,7 @@ class DetailSaveDateViewController: UIViewController {
         
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
         
-        fetchRequest.predicate = NSPredicate(format: "date = 'Date'")
+        fetchRequest.predicate = NSPredicate(format: "date = %@",passedIndex! as CVarArg)
         
         do {
             readKokolog = try managedContext.fetch(fetchRequest) as! [Results]
@@ -44,8 +46,10 @@ class DetailSaveDateViewController: UIViewController {
                 
         }
         
+        viewKokolog()
+        
     }
-
+    
     var passedIndex:Date? = nil
     
     func viewKokolog() {
@@ -56,11 +60,13 @@ class DetailSaveDateViewController: UIViewController {
 
         saveTime.text = "\(String(describing: readKokolog[0].date!))"
         saveTime.text = df.string(from: readKokolog[0].date! as Date)
+        saveTime.font = UIFont(name: "HannariMincho", size: 18)
         
         Q2answer.text = readKokolog[0].question2
         Q3answer.text = readKokolog[0].question3
         Q4answer.text = readKokolog[0].question4
         Q5answer.text = readKokolog[0].question5
+        Q1answer.textColor = UIColor.rgb(r: 242, g: 162, b: 160, alpha: 1)
         
         switch readKokolog[0].question1 {
         case 0:
@@ -76,6 +82,5 @@ class DetailSaveDateViewController: UIViewController {
         }
      
     }
-    
     
 }

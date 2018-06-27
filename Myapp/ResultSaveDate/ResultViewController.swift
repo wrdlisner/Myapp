@@ -61,7 +61,7 @@ class ResultViewController: UIViewController {
         
         let now = Date()
         saveTime.text = df.string(from: now)
-        
+        saveTime.font = UIFont.systemFont(ofSize: 17)
     }
 
     @IBAction func alertButton(_ sender: UIButton) {

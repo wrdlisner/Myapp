@@ -50,7 +50,7 @@ class Question1ViewController:UIViewController,
     
     @IBAction func alertButton(_ sender: UIButton) {
         
-        let alertController = UIAlertController(title: "Topに戻ります", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "トップに戻ります", message: nil, preferredStyle: .alert)
         
         let cancelAction:UIAlertAction = UIAlertAction(title: "戻らない", style: UIAlertActionStyle.default, handler:{
             

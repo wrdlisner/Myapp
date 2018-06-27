@@ -5,5 +5,10 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         
     }
-
+    
+    @IBAction func backtoTopfromLog(segue:UIStoryboardSegue){
+    }
+    
+//    @IBAction func backtoTopfromDetail(segue:UIStoryboardSegue){
+//    }
 }
