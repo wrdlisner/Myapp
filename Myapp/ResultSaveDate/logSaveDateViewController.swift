@@ -86,32 +86,7 @@ class logSaveDateViewController: UIViewController,UITableViewDelegate,UITableVie
         
         return cell
     }
-    
-//    func deleteKokolog() {
-//        let appDelegate:AppDelegate = (UIApplication.shared.delegate as? AppDelegate)!
-//
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//
-//        let fetchRequest:NSFetchRequest<Results> = readKokolog.fetchRequest()
-//
-//        do {
-//            readKokolog = try managedContext.fetch(fetchRequest)
-//
-//            for result in fetchRequest {
-//                // １件ずつ取り出し
-//                let question1:Int16 = result.value(forKey: "question1") as? Int16
-//                let date:Date? = result.value(forKey: "Date") as? Date
-//
-//            managedContext.delete(result)
-//        } catch let error as NSError {
-//            print("Could not fetch. \(error), \(error.userInfo)")
-//        }
-//
-//    }
-//
-    
-    
-    
+
     var selectedIndex:Date?
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -122,10 +97,12 @@ class logSaveDateViewController: UIViewController,UITableViewDelegate,UITableVie
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        let dateCatch:DetailSaveDateViewController = segue.destination as!
-        DetailSaveDateViewController
-
-        dateCatch.passedIndex = selectedIndex
+        if segue.identifier == "toDetail" {
+            let dateCatch:DetailSaveDateViewController = segue.destination as!
+            DetailSaveDateViewController
+       
+            dateCatch.passedIndex = selectedIndex
+        }
     }
     
 }

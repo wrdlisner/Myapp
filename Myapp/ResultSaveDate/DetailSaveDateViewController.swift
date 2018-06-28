@@ -2,7 +2,7 @@ import UIKit
 import CoreData
 
 class DetailSaveDateViewController: UIViewController {
-  
+    
     @IBOutlet weak var saveTime: UILabel!
     @IBOutlet weak var Q1answer: UILabel!
     @IBOutlet weak var Q2answer: UITextView!
@@ -11,13 +11,12 @@ class DetailSaveDateViewController: UIViewController {
     @IBOutlet weak var Q5answer: UITextView!
     @IBOutlet weak var myStackView: UIStackView!
     
-//    startChange
-//    endChange
+    @IBOutlet weak var editLabel: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-      
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,7 +79,51 @@ class DetailSaveDateViewController: UIViewController {
         default:
             print("nil")
         }
-     
+    }
+    
+    var editKokolog : [Results]  = []
+
+    @IBAction func editButton(_ sender: UIButton) {
+        
+        Q2answer.isEditable = true
+        Q2answer.isUserInteractionEnabled = true
+        Q3answer.isEditable = true
+        Q3answer.isUserInteractionEnabled = true
+        Q4answer.isEditable = true
+        Q4answer.isUserInteractionEnabled = true
+        Q5answer.isEditable = true
+        Q5answer.isUserInteractionEnabled = true
+
+        editLabel.setTitle("完了", for: .normal)
+        
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+            
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
+            
+            fetchRequest.predicate = NSPredicate(format: "date = %@",passedIndex! as CVarArg)
+        
+        do {
+             editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
+            
+            try managedContext.save()
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+    }
+    
+    @IBAction func deleteButton(_ sender: UIButton) {
+        
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 }

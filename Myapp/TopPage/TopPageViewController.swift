@@ -9,6 +9,7 @@ class ViewController: UIViewController{
     @IBAction func backtoTopfromLog(segue:UIStoryboardSegue){
     }
     
-//    @IBAction func backtoTopfromDetail(segue:UIStoryboardSegue){
-//    }
+    @IBAction func backtoTopfromDetail(segue:UIStoryboardSegue){
+    }
+
 }
