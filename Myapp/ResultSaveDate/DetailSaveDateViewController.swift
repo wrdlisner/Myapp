@@ -13,12 +13,21 @@ class DetailSaveDateViewController: UIViewController {
     
     @IBOutlet weak var editLabel: UIButton!
     
+    //tapCount整数の設定
+    var tapCount: Int! = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        self.resetCount()
+        
     }
-
+    
+    //tapCountの初期化
+    func resetCount() {
+        self.tapCount = 0
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -82,8 +91,8 @@ class DetailSaveDateViewController: UIViewController {
     }
     
     var editKokolog : [Results]  = []
-
-    @IBAction func editButton(_ sender: UIButton) {
+    
+    @IBAction func editButton(_ sender: Any) {
         
         Q2answer.isEditable = true
         Q2answer.isUserInteractionEnabled = true
@@ -94,7 +103,17 @@ class DetailSaveDateViewController: UIViewController {
         Q5answer.isEditable = true
         Q5answer.isUserInteractionEnabled = true
 
-        editLabel.setTitle("完了", for: .normal)
+        // タップ回数を加算
+        self.tapCount +=
+        
+        //タップ回数に応じて表示文字と処理を切り替える
+        //"編集"をタップしたら"完了"が表示され、"完了"がタップされたら"編集"が表示されて、coredateを保存する"editDoneKokolog"を呼び出す
+        if ( tapCount % 2 == 0 ){
+            editLabel.setTitle("完了", for: .normal)
+        } else {
+            editLabel.setTitle("編集", for: .normal)
+            editDoneKokolog()
+        }
         
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -109,12 +128,33 @@ class DetailSaveDateViewController: UIViewController {
         do {
              editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
             
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+    }
+    
+    func editDoneKokolog() {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
+        
+        fetchRequest.predicate = NSPredicate(format: "date = %@",passedIndex! as CVarArg)
+        
+        do {
+            editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
+            
             try managedContext.save()
             
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
-        
+    
     }
     
     @IBAction func deleteButton(_ sender: UIButton) {
