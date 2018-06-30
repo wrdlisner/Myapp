@@ -4,38 +4,27 @@ import CoreData
 class DetailSaveDateViewController: UIViewController {
     
     @IBOutlet weak var saveTime: UILabel!
+    @IBOutlet weak var Q1question: UILabel!
     @IBOutlet weak var Q1answer: UILabel!
+    @IBOutlet weak var Q2question: UILabel!
     @IBOutlet weak var Q2answer: UITextView!
+    @IBOutlet weak var Q3question: UILabel!
     @IBOutlet weak var Q3answer: UITextView!
+    @IBOutlet weak var Q4question: UILabel!
     @IBOutlet weak var Q4answer: UITextView!
+    @IBOutlet weak var Q5question: UILabel!
     @IBOutlet weak var Q5answer: UITextView!
     @IBOutlet weak var myStackView: UIStackView!
     
     @IBOutlet weak var editLabel: UIButton!
     
-    //tapCount整数の設定
-    var tapCount: Int! = 0
+    var readKokolog: [Results] = []
+    var tapCount: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         self.resetCount()
-        
-    }
-    
-    //tapCountの初期化
-    func resetCount() {
-        self.tapCount = 0
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    var readKokolog: [Results] = []
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -49,15 +38,26 @@ class DetailSaveDateViewController: UIViewController {
         
         do {
             readKokolog = try managedContext.fetch(fetchRequest) as! [Results]
-             } catch let error as NSError {
+        } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
-                
+            
         }
         
         viewKokolog()
         
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        print(urls[urls.count-1] as URL)
+        
     }
     
+    func resetCount() {
+        self.tapCount = 1
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
     var passedIndex:Date? = nil
     
     func viewKokolog() {
@@ -79,42 +79,55 @@ class DetailSaveDateViewController: UIViewController {
         switch readKokolog[0].question1 {
         case 0:
             Q1answer.text = "喜"
+            Q2question.text = dic1["joy1"] as? String
+            Q3question.text = dic1["joy2"] as? String
+            Q4question.text = dic1["joy3"] as? String
+            Q5question.text = dic1["joy4"] as? String
         case 1:
             Q1answer.text = "怒"
+            Q2question.text = dic2["angry1"] as? String
+            Q3question.text = dic2["angry2"] as? String
+            Q4question.text = dic2["angry3"] as? String
+            Q5question.text = dic2["angry4"] as? String
         case 2:
             Q1answer.text = "哀"
+            Q2question.text = dic3["sad1"] as? String
+            Q3question.text = dic3["sad2"] as? String
+            Q4question.text = dic3["sad3"] as? String
+            Q5question.text = dic3["sad4"] as? String
         case 3:
             Q1answer.text = "楽"
+            Q2question.text = dic4["fun1"] as? String
+            Q3question.text = dic4["fun2"] as? String
+            Q4question.text = dic4["fun3"] as? String
+            Q5question.text = dic4["fun4"] as? String
         default:
             print("nil")
         }
+        
+        Q1question.numberOfLines = 0
+        Q1question.sizeToFit()
+        Q1question.lineBreakMode = NSLineBreakMode.byCharWrapping
+        Q2question.numberOfLines = 0
+        Q2question.sizeToFit()
+        Q2question.lineBreakMode = NSLineBreakMode.byCharWrapping
+        Q3question.numberOfLines = 0
+        Q3question.sizeToFit()
+        Q3question.lineBreakMode = NSLineBreakMode.byCharWrapping
+        Q4question.numberOfLines = 0
+        Q4question.sizeToFit()
+        Q4question.lineBreakMode = NSLineBreakMode.byCharWrapping
+        Q5question.numberOfLines = 0
+        Q5question.sizeToFit()
+        Q5question.lineBreakMode = NSLineBreakMode.byCharWrapping
     }
     
     var editKokolog : [Results]  = []
     
     @IBAction func editButton(_ sender: Any) {
-        
-        Q2answer.isEditable = true
-        Q2answer.isUserInteractionEnabled = true
-        Q3answer.isEditable = true
-        Q3answer.isUserInteractionEnabled = true
-        Q4answer.isEditable = true
-        Q4answer.isUserInteractionEnabled = true
-        Q5answer.isEditable = true
-        Q5answer.isUserInteractionEnabled = true
 
-        // タップ回数を加算
-        self.tapCount +=
-        
-        //タップ回数に応じて表示文字と処理を切り替える
-        //"編集"をタップしたら"完了"が表示され、"完了"がタップされたら"編集"が表示されて、coredateを保存する"editDoneKokolog"を呼び出す
-        if ( tapCount % 2 == 0 ){
-            editLabel.setTitle("完了", for: .normal)
-        } else {
-            editLabel.setTitle("編集", for: .normal)
-            editDoneKokolog()
-        }
-        
+        self.tapCount += 1
+
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
@@ -125,13 +138,47 @@ class DetailSaveDateViewController: UIViewController {
             
             fetchRequest.predicate = NSPredicate(format: "date = %@",passedIndex! as CVarArg)
         
+        if ( tapCount % 2 == 0 ){
+            editLabel.setTitle("完了", for: .normal)
+            editLabel.setTitleColor(UIColor.rgb(r: 246, g: 165, b: 50, alpha: 1), for: .normal)
+            
+            Q2answer.isEditable = true
+            Q2answer.isUserInteractionEnabled = true
+            Q3answer.isEditable = true
+            Q3answer.isUserInteractionEnabled = true
+            Q4answer.isEditable = true
+            Q4answer.isUserInteractionEnabled = true
+            Q5answer.isEditable = true
+            Q5answer.isUserInteractionEnabled = true
+            
+        } else {
+            editLabel.setTitle("編集", for: .normal)
+            editLabel.setTitleColor(UIColor.rgb(r: 242, g: 162, b: 160, alpha: 1), for: .normal)
+            
+            Q2answer.isEditable = false
+            Q2answer.isUserInteractionEnabled = false
+            Q3answer.isEditable = false
+            Q3answer.isUserInteractionEnabled = false
+            Q4answer.isEditable = false
+            Q4answer.isUserInteractionEnabled = false
+            Q5answer.isEditable = false
+            Q5answer.isUserInteractionEnabled = false
+        }
+        
         do {
-             editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
+         
+            editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
+            
+            try managedContext.save()
             
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
         
+        editDoneKokolog()
     }
     
     func editDoneKokolog() {
@@ -142,19 +189,19 @@ class DetailSaveDateViewController: UIViewController {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
-        
-        fetchRequest.predicate = NSPredicate(format: "date = %@",passedIndex! as CVarArg)
+//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
+//
+//        fetchRequest.predicate = NSPredicate(format: "date = %@",passedIndex! as CVarArg)
         
         do {
-            editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
+//            editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
             
+            Q2answer.text = "テスト"
             try managedContext.save()
-            
+       
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
-    
     }
     
     @IBAction func deleteButton(_ sender: UIButton) {

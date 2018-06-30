@@ -904,10 +904,15 @@
                     </view>
                     <connections>
                         <outlet property="Q1answer" destination="h4S-sx-aCQ" id="WcT-pT-u6g"/>
+                        <outlet property="Q1question" destination="Fh4-Nl-BmN" id="WhC-Re-Obz"/>
                         <outlet property="Q2answer" destination="Yen-CD-Es7" id="dPb-Rq-r4t"/>
+                        <outlet property="Q2question" destination="jNf-iI-TgO" id="8Dx-FU-Y23"/>
                         <outlet property="Q3answer" destination="L6s-JN-AWY" id="Nkj-8x-5HZ"/>
+                        <outlet property="Q3question" destination="jHB-ei-3ew" id="9JM-Xf-nyj"/>
                         <outlet property="Q4answer" destination="h71-Fh-caR" id="2Kh-9a-nRJ"/>
+                        <outlet property="Q4question" destination="uec-VM-SNl" id="1Up-ng-yfW"/>
                         <outlet property="Q5answer" destination="KEv-JC-3Fm" id="qdw-hI-EgB"/>
+                        <outlet property="Q5question" destination="CnC-jr-gQi" id="ave-2t-lHa"/>
                         <outlet property="saveTime" destination="ql3-7l-djY" id="rdP-KC-sGQ"/>
                     </connections>
                 </viewController>
@@ -1135,10 +1140,15 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Q1answer" destination="TS3-gz-csu" id="ufr-Kd-msf"/>
+                        <outlet property="Q1question" destination="Qiu-bt-Zw1" id="sLL-bj-sd8"/>
                         <outlet property="Q2answer" destination="QkK-iw-99l" id="1Nz-yk-MXe"/>
+                        <outlet property="Q2question" destination="Q6h-En-M1y" id="eQG-zI-DUy"/>
                         <outlet property="Q3answer" destination="B2f-6P-3D3" id="vMu-jZ-l05"/>
+                        <outlet property="Q3question" destination="p7h-Gr-w8G" id="XO9-Kc-gAK"/>
                         <outlet property="Q4answer" destination="0b0-Ey-6j3" id="QC2-oV-3I3"/>
+                        <outlet property="Q4question" destination="12c-dt-ukK" id="45W-IR-mZm"/>
                         <outlet property="Q5answer" destination="fP5-qZ-n8p" id="Zuq-yU-ixQ"/>
+                        <outlet property="Q5question" destination="8QN-lL-yyg" id="dcr-yi-Fjl"/>
                         <outlet property="editLabel" destination="dyS-QR-d7k" id="3nj-1f-6Gs"/>
                         <outlet property="myStackView" destination="XVi-Kf-KVh" id="noc-gF-h7E"/>
                         <outlet property="saveTime" destination="Xgs-qS-kmJ" id="icG-Bt-Bs2"/>
