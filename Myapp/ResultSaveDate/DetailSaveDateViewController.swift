@@ -189,28 +189,80 @@ class DetailSaveDateViewController: UIViewController {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
-//
-//        fetchRequest.predicate = NSPredicate(format: "date = %@",passedIndex! as CVarArg)
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
+
+        fetchRequest.predicate = NSPredicate(format: "date = %@",passedIndex! as CVarArg)
         
         do {
-//            editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
-            
-            Q2answer.text = "テスト"
+            editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
+    // save作業
             try managedContext.save()
-       
+            
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
     
-    @IBAction func deleteButton(_ sender: UIButton) {
+    
+    @IBAction func deleteButton(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "かころぐを削除しますか?", message: nil, preferredStyle: .alert)
+        
+        let cancelAction:UIAlertAction = UIAlertAction(title: "戻る", style: UIAlertActionStyle.default, handler:{
+            
+            (action:UIAlertAction!) -> Void in
+            
+        })
+        
+        let defaultAction1:UIAlertAction = UIAlertAction(title: "削除する", style: UIAlertActionStyle.default, handler:{
+            
+            (action:UIAlertAction!) -> Void in
+            
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+            }
+            
+            let managedContext = appDelegate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
+            
+            fetchRequest.predicate = NSPredicate(format: "date = %@",self.passedIndex! as CVarArg)
+            
+            do {
+                self.editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
+    // delete作業
+    //                try managedContext.delete(readKokolog)
+    //               (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                
+            } catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+            
+            let controller = self.storyboard!.instantiateViewController(withIdentifier: "logSavedate")
+            
+            self.show(controller, sender: true)
+            
+        })
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(defaultAction1)
+        
+        present(alertController, animated: true, completion: nil)
+        
         
     }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toDetail" {
+            let dateCatch:DetailSaveDateViewController = segue.destination as! DetailSaveDateViewController
+            
+        }
     }
     
 }

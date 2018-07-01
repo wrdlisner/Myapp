@@ -636,8 +636,8 @@
         <!--logSaveDate-->
         <scene sceneID="zku-fP-dNe">
             <objects>
-                <viewController title="logSaveDate" id="HbI-y4-BUm" customClass="logSaveDateViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="68l-Da-Kmd">
+                <viewController storyboardIdentifier="logSavedate" title="logSaveDate" id="HbI-y4-BUm" customClass="logSaveDateViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="logSaveDate" id="68l-Da-Kmd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -660,6 +660,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Zac-od-Mlq" kind="show" identifier="toDetail" id="u3K-Zs-2Ck"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>
@@ -685,10 +688,10 @@
                     </view>
                     <connections>
                         <outlet property="myTableView" destination="G7i-ow-Gun" id="jOe-Lo-tzk"/>
-                        <segue destination="xSr-lh-lv0" kind="show" identifier="toDetail" id="RPB-Ba-jgC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQO-R3-PGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="iye-Ff-fxq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1332" y="857.72113943028489"/>
         </scene>
@@ -920,49 +923,61 @@
             </objects>
             <point key="canvasLocation" x="6124" y="34"/>
         </scene>
-        <!--DetailSaveDate-->
-        <scene sceneID="whZ-kh-n6i">
+        <!--Detail Save Date View Controller-->
+        <scene sceneID="9G1-IC-mda">
             <objects>
-                <viewController storyboardIdentifier="detailSaveDate" title="DetailSaveDate" id="xSr-lh-lv0" customClass="DetailSaveDateViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tQi-ug-2X3">
+                <viewController storyboardIdentifier="detailSaveDate" id="Zac-od-Mlq" customClass="DetailSaveDateViewController" customModule="Kokolog" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pjn-Q0-iKc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sgy-Y9-XL2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="かころぐ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXT-HY-gCn" userLabel="かころぐ">
+                                <rect key="frame" x="0.0" y="50" width="375" height="25"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたのかころぐは以下の通りです" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9F-Ui-keD">
+                                <rect key="frame" x="0.0" y="85" width="375" height="15"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
+                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCT-TP-x66">
                                 <rect key="frame" x="0.0" y="120" width="375" height="446"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="XVi-Kf-KVh">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="uc6-Zc-u8r">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="426.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="記録時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgs-qS-kmJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記録時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iie-Bb-lP5">
                                                 <rect key="frame" x="157.5" y="0.0" width="60" height="15"/>
                                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="質問1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiu-bt-Zw1">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0G-Ni-p9g">
                                                 <rect key="frame" x="166.5" y="29" width="42" height="17"/>
                                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="質問1の回答" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS3-gz-csu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問1の回答" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIQ-6C-gdo">
                                                 <rect key="frame" x="130.5" y="60" width="114.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="質問2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6h-En-M1y">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piV-0X-H6h">
                                                 <rect key="frame" x="166.5" y="95" width="42" height="17"/>
                                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkK-iw-99l" userLabel="Text View2">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYT-zj-nRu" userLabel="Text View2">
                                                 <rect key="frame" x="50.5" y="126" width="274" height="50"/>
                                                 <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qi6-Na-r8O"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="GGr-0X-JPg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -978,13 +993,13 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="質問3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7h-Gr-w8G">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWQ-63-vB6">
                                                 <rect key="frame" x="166.5" y="190" width="42" height="17"/>
                                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2f-6P-3D3" userLabel="Text View3">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6n-Do-qn2" userLabel="Text View3">
                                                 <rect key="frame" x="50.5" y="221" width="274" height="38.5"/>
                                                 <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
@@ -1001,13 +1016,13 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="質問4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12c-dt-ukK">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMz-7q-da8">
                                                 <rect key="frame" x="166.5" y="273.5" width="42" height="17"/>
                                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0b0-Ey-6j3" userLabel="Text View4">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Q1-LD-W8t" userLabel="Text View4">
                                                 <rect key="frame" x="50.5" y="304.5" width="274" height="38.5"/>
                                                 <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
@@ -1024,13 +1039,13 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="質問5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QN-lL-yyg">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YM-og-eiI">
                                                 <rect key="frame" x="166.5" y="357" width="42" height="17"/>
                                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP5-qZ-n8p" userLabel="Text View5">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ec-bx-GLJ" userLabel="Text View5">
                                                 <rect key="frame" x="50.5" y="388" width="274" height="38.5"/>
                                                 <color key="tintColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
@@ -1050,113 +1065,115 @@
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="0b0-Ey-6j3" firstAttribute="trailing" secondItem="QkK-iw-99l" secondAttribute="trailing" id="3bA-Y5-pCV"/>
-                                            <constraint firstItem="0b0-Ey-6j3" firstAttribute="leading" secondItem="QkK-iw-99l" secondAttribute="leading" id="8yq-B1-Av6"/>
-                                            <constraint firstItem="B2f-6P-3D3" firstAttribute="leading" secondItem="QkK-iw-99l" secondAttribute="leading" id="BYx-vn-qfI"/>
-                                            <constraint firstItem="fP5-qZ-n8p" firstAttribute="trailing" secondItem="QkK-iw-99l" secondAttribute="trailing" id="ExM-sL-w4g"/>
-                                            <constraint firstItem="B2f-6P-3D3" firstAttribute="trailing" secondItem="QkK-iw-99l" secondAttribute="trailing" id="V6A-dh-OmS"/>
-                                            <constraint firstItem="fP5-qZ-n8p" firstAttribute="leading" secondItem="QkK-iw-99l" secondAttribute="leading" id="hja-Uq-lFz"/>
-                                            <constraint firstItem="QkK-iw-99l" firstAttribute="width" secondItem="XVi-Kf-KVh" secondAttribute="width" multiplier="0.73" id="kLU-dp-Gcq"/>
+                                            <constraint firstItem="3ec-bx-GLJ" firstAttribute="leading" secondItem="pYT-zj-nRu" secondAttribute="leading" id="1Yu-AT-vmq"/>
+                                            <constraint firstItem="0Q1-LD-W8t" firstAttribute="leading" secondItem="pYT-zj-nRu" secondAttribute="leading" id="K0F-CB-72p"/>
+                                            <constraint firstItem="pYT-zj-nRu" firstAttribute="width" secondItem="uc6-Zc-u8r" secondAttribute="width" multiplier="0.73" id="eTR-Sq-8RS"/>
+                                            <constraint firstItem="z6n-Do-qn2" firstAttribute="trailing" secondItem="pYT-zj-nRu" secondAttribute="trailing" id="lvi-hn-gbt"/>
+                                            <constraint firstItem="z6n-Do-qn2" firstAttribute="leading" secondItem="pYT-zj-nRu" secondAttribute="leading" id="vg6-hF-WQg"/>
+                                            <constraint firstItem="0Q1-LD-W8t" firstAttribute="trailing" secondItem="pYT-zj-nRu" secondAttribute="trailing" id="xLy-Qg-Tzj"/>
+                                            <constraint firstItem="3ec-bx-GLJ" firstAttribute="trailing" secondItem="pYT-zj-nRu" secondAttribute="trailing" id="yKY-7R-cXH"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="XVi-Kf-KVh" firstAttribute="top" secondItem="Sgy-Y9-XL2" secondAttribute="top" id="07Q-mv-OYL"/>
-                                    <constraint firstAttribute="bottom" secondItem="XVi-Kf-KVh" secondAttribute="bottom" constant="20" symbolic="YES" id="3Vw-tU-Mfg"/>
-                                    <constraint firstItem="XVi-Kf-KVh" firstAttribute="leading" secondItem="Sgy-Y9-XL2" secondAttribute="leading" id="BI6-h2-fNq"/>
-                                    <constraint firstAttribute="trailing" secondItem="XVi-Kf-KVh" secondAttribute="trailing" id="ScZ-0i-WTv"/>
-                                    <constraint firstItem="XVi-Kf-KVh" firstAttribute="width" secondItem="Sgy-Y9-XL2" secondAttribute="width" id="hAK-1O-B76"/>
+                                    <constraint firstAttribute="bottom" secondItem="uc6-Zc-u8r" secondAttribute="bottom" constant="20" symbolic="YES" id="1OL-Vq-V1T"/>
+                                    <constraint firstAttribute="trailing" secondItem="uc6-Zc-u8r" secondAttribute="trailing" id="8sH-vd-bUY"/>
+                                    <constraint firstItem="uc6-Zc-u8r" firstAttribute="width" secondItem="XCT-TP-x66" secondAttribute="width" id="BQV-mJ-ROH"/>
+                                    <constraint firstItem="uc6-Zc-u8r" firstAttribute="leading" secondItem="XCT-TP-x66" secondAttribute="leading" id="aB1-89-cGS"/>
+                                    <constraint firstItem="uc6-Zc-u8r" firstAttribute="top" secondItem="XCT-TP-x66" secondAttribute="top" id="qN3-do-Vjk"/>
                                 </constraints>
                             </scrollView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="PhD-fQ-x7B">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="O2s-92-1ei">
                                 <rect key="frame" x="0.0" y="605" width="375" height="50"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkM-Rm-rwu">
-                                        <rect key="frame" x="0.0" y="0.0" width="272" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rye-E3-K9t">
+                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
+                                        <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
+                                        <state key="normal" title="過去ろぐを見る">
+                                            <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="iye-Ff-fxq" kind="unwind" unwindAction="backtoSavedatefromDetailWithSegue:" id="T6L-U2-FxG"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCE-k2-D3S">
+                                        <rect key="frame" x="164.5" y="0.0" width="68.5" height="50"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkl-Ed-qAt">
-                                        <rect key="frame" x="273" y="0.0" width="102" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfL-NE-39q">
+                                        <rect key="frame" x="234" y="0.0" width="141" height="50"/>
                                         <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                         <state key="normal" title="トップに戻る">
                                             <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="rxo-EY-EoX" kind="unwind" unwindAction="backtoTopfromDetailWithSegue:" id="L81-Qp-VSf"/>
+                                            <segue destination="rxo-EY-EoX" kind="unwind" unwindAction="backtoTopfromDetailWithSegue:" id="thy-aR-bJN"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QWJ-QC-KVR">
-                                <rect key="frame" x="0.0" y="23" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9A-Hm-6eN">
+                                <rect key="frame" x="319" y="20" width="40" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="かころぐ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWK-4c-NAi" userLabel="かころぐ">
-                                <rect key="frame" x="0.0" y="74" width="375" height="25"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-QR-d7k">
-                                <rect key="frame" x="322" y="23" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="20"/>
                                 <state key="normal" title="編集">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="editButton:" destination="xSr-lh-lv0" eventType="touchUpInside" id="CBB-fv-cuZ"/>
+                                    <action selector="editButton:" destination="Zac-od-Mlq" eventType="touchUpInside" id="lZi-J0-XUf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-cO-PsF">
-                                <rect key="frame" x="16" y="23" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75e-A6-cxI">
+                                <rect key="frame" x="16" y="20" width="40" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="20"/>
                                 <state key="normal" title="削除">
                                     <color key="titleColor" red="0.92549019610000005" green="0.33725490200000002" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="deleteButton:" destination="xSr-lh-lv0" eventType="touchUpInside" id="wyX-kS-oed"/>
+                                    <action selector="deleteButton:" destination="Zac-od-Mlq" eventType="touchUpInside" id="Qle-pe-x08"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PhD-fQ-x7B" firstAttribute="width" secondItem="8wy-fy-PWD" secondAttribute="width" id="4r9-HH-IBf"/>
-                            <constraint firstAttribute="bottom" secondItem="PhD-fQ-x7B" secondAttribute="bottom" constant="12" id="7a7-Eq-SvR"/>
-                            <constraint firstAttribute="trailing" secondItem="PhD-fQ-x7B" secondAttribute="trailing" id="Ak5-S0-pD1"/>
-                            <constraint firstItem="Sgy-Y9-XL2" firstAttribute="leading" secondItem="8wy-fy-PWD" secondAttribute="leading" id="Ewr-Q3-5ki"/>
-                            <constraint firstItem="YWK-4c-NAi" firstAttribute="trailing" secondItem="8wy-fy-PWD" secondAttribute="trailing" id="FYF-u9-Z7r"/>
-                            <constraint firstItem="Sgy-Y9-XL2" firstAttribute="height" secondItem="tQi-ug-2X3" secondAttribute="height" multiplier="446/667" id="H8P-1s-J5Y"/>
-                            <constraint firstItem="Sgy-Y9-XL2" firstAttribute="trailing" secondItem="8wy-fy-PWD" secondAttribute="trailing" id="KVn-P2-SW5"/>
-                            <constraint firstItem="PhD-fQ-x7B" firstAttribute="leading" secondItem="8wy-fy-PWD" secondAttribute="leading" id="NUa-ji-f2F"/>
-                            <constraint firstItem="YWK-4c-NAi" firstAttribute="top" secondItem="8wy-fy-PWD" secondAttribute="top" constant="54" id="gRu-zL-LWZ"/>
-                            <constraint firstItem="YWK-4c-NAi" firstAttribute="leading" secondItem="8wy-fy-PWD" secondAttribute="leading" id="o6E-W2-lLv"/>
-                            <constraint firstItem="Sgy-Y9-XL2" firstAttribute="width" secondItem="tQi-ug-2X3" secondAttribute="width" id="r0b-Y4-aMW"/>
+                            <constraint firstItem="O2s-92-1ei" firstAttribute="leading" secondItem="AHT-4u-ttD" secondAttribute="leading" id="1Q0-4e-G6B"/>
+                            <constraint firstItem="XCT-TP-x66" firstAttribute="top" secondItem="u9F-Ui-keD" secondAttribute="bottom" constant="20" id="7Mw-ur-w81"/>
+                            <constraint firstItem="u9F-Ui-keD" firstAttribute="leading" secondItem="AHT-4u-ttD" secondAttribute="leading" id="AE1-WR-eIq"/>
+                            <constraint firstAttribute="bottom" secondItem="O2s-92-1ei" secondAttribute="bottom" constant="12" id="Axh-jf-LcF"/>
+                            <constraint firstItem="XCT-TP-x66" firstAttribute="width" secondItem="pjn-Q0-iKc" secondAttribute="width" id="FJT-0J-Vqg"/>
+                            <constraint firstItem="u9F-Ui-keD" firstAttribute="trailing" secondItem="AHT-4u-ttD" secondAttribute="trailing" id="Mwh-bn-5Mp"/>
+                            <constraint firstItem="XCT-TP-x66" firstAttribute="height" secondItem="pjn-Q0-iKc" secondAttribute="height" multiplier="446/667" id="YiG-ng-vEh"/>
+                            <constraint firstItem="XCT-TP-x66" firstAttribute="trailing" secondItem="AHT-4u-ttD" secondAttribute="trailing" id="aQ1-5f-b45"/>
+                            <constraint firstItem="BXT-HY-gCn" firstAttribute="trailing" secondItem="AHT-4u-ttD" secondAttribute="trailing" id="fb8-si-8Ph"/>
+                            <constraint firstAttribute="trailing" secondItem="O2s-92-1ei" secondAttribute="trailing" id="gCN-ym-XLt"/>
+                            <constraint firstItem="XCT-TP-x66" firstAttribute="leading" secondItem="AHT-4u-ttD" secondAttribute="leading" id="oIb-8r-rFK"/>
+                            <constraint firstItem="BXT-HY-gCn" firstAttribute="top" secondItem="AHT-4u-ttD" secondAttribute="top" constant="30" id="puh-KW-v9e"/>
+                            <constraint firstItem="u9F-Ui-keD" firstAttribute="top" secondItem="BXT-HY-gCn" secondAttribute="bottom" constant="10" id="sGO-GQ-8jf"/>
+                            <constraint firstItem="O2s-92-1ei" firstAttribute="width" secondItem="AHT-4u-ttD" secondAttribute="width" id="v7C-WO-07L"/>
+                            <constraint firstItem="BXT-HY-gCn" firstAttribute="leading" secondItem="AHT-4u-ttD" secondAttribute="leading" id="wMy-8R-8oN"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="8wy-fy-PWD"/>
+                        <viewLayoutGuide key="safeArea" id="AHT-4u-ttD"/>
                     </view>
-                    <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="Q1answer" destination="TS3-gz-csu" id="ufr-Kd-msf"/>
-                        <outlet property="Q1question" destination="Qiu-bt-Zw1" id="sLL-bj-sd8"/>
-                        <outlet property="Q2answer" destination="QkK-iw-99l" id="1Nz-yk-MXe"/>
-                        <outlet property="Q2question" destination="Q6h-En-M1y" id="eQG-zI-DUy"/>
-                        <outlet property="Q3answer" destination="B2f-6P-3D3" id="vMu-jZ-l05"/>
-                        <outlet property="Q3question" destination="p7h-Gr-w8G" id="XO9-Kc-gAK"/>
-                        <outlet property="Q4answer" destination="0b0-Ey-6j3" id="QC2-oV-3I3"/>
-                        <outlet property="Q4question" destination="12c-dt-ukK" id="45W-IR-mZm"/>
-                        <outlet property="Q5answer" destination="fP5-qZ-n8p" id="Zuq-yU-ixQ"/>
-                        <outlet property="Q5question" destination="8QN-lL-yyg" id="dcr-yi-Fjl"/>
-                        <outlet property="editLabel" destination="dyS-QR-d7k" id="3nj-1f-6Gs"/>
-                        <outlet property="myStackView" destination="XVi-Kf-KVh" id="noc-gF-h7E"/>
-                        <outlet property="saveTime" destination="Xgs-qS-kmJ" id="icG-Bt-Bs2"/>
+                        <outlet property="Q1answer" destination="NIQ-6C-gdo" id="3Hg-cE-vUX"/>
+                        <outlet property="Q1question" destination="W0G-Ni-p9g" id="9Hf-t7-c7R"/>
+                        <outlet property="Q2answer" destination="pYT-zj-nRu" id="Yt6-h6-tML"/>
+                        <outlet property="Q2question" destination="piV-0X-H6h" id="sZ8-jP-TKj"/>
+                        <outlet property="Q3answer" destination="z6n-Do-qn2" id="616-oB-csR"/>
+                        <outlet property="Q3question" destination="HWQ-63-vB6" id="1or-GL-G8Z"/>
+                        <outlet property="Q4answer" destination="0Q1-LD-W8t" id="AeI-Q9-VGu"/>
+                        <outlet property="Q4question" destination="HMz-7q-da8" id="mXO-JB-wn7"/>
+                        <outlet property="Q5answer" destination="3ec-bx-GLJ" id="iHd-5S-cZe"/>
+                        <outlet property="Q5question" destination="6YM-og-eiI" id="vqJ-2p-CTG"/>
+                        <outlet property="editLabel" destination="O9A-Hm-6eN" id="W5C-Vt-PFq"/>
+                        <outlet property="myStackView" destination="uc6-Zc-u8r" id="isy-ax-fSO"/>
+                        <outlet property="saveTime" destination="Iie-Bb-lP5" id="etb-Ix-hH8"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eZW-8G-fvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEa-Ee-rv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="1645.7271364317842"/>
+            <point key="canvasLocation" x="1332" y="1598"/>
         </scene>
     </scenes>
     <resources>
@@ -1167,6 +1184,6 @@
         <image name="topEar" width="116" height="180"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aIa-Fl-6ip"/>
+        <segue reference="YhZ-W1-iO7"/>
     </inferredMetricsTieBreakers>
 </document>

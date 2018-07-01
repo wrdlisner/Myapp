@@ -11,5 +11,5 @@ class ViewController: UIViewController{
     
     @IBAction func backtoTopfromDetail(segue:UIStoryboardSegue){
     }
-
+    
 }
