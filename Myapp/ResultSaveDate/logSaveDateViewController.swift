@@ -10,12 +10,13 @@ class logSaveDateViewController: UIViewController,UITableViewDelegate,UITableVie
         
         myTableView.delegate = self
         myTableView.dataSource = self
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     
     var readKokolog: [Results] = []
     

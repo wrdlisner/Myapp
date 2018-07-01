@@ -195,7 +195,12 @@ class DetailSaveDateViewController: UIViewController {
         
         do {
             editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
-    // save作業
+
+            editKokolog[0].question2 = Q2answer.text
+            editKokolog[0].question3 = Q3answer.text
+            editKokolog[0].question4 = Q4answer.text
+            editKokolog[0].question5 = Q5answer.text
+
             try managedContext.save()
             
         } catch let error as NSError {
@@ -218,29 +223,33 @@ class DetailSaveDateViewController: UIViewController {
             
             (action:UIAlertAction!) -> Void in
             
-            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-                return
-            }
-            
-            let managedContext = appDelegate.persistentContainer.viewContext
-            
-            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
-            
-            fetchRequest.predicate = NSPredicate(format: "date = %@",self.passedIndex! as CVarArg)
-            
-            do {
-                self.editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
-    // delete作業
-                    try managedContext.delete(readKokolog)
-                   (UIApplication.shared.delegate as! AppDelegate).saveContext()
-                
-            } catch let error as NSError {
-                print("Could not fetch. \(error), \(error.userInfo)")
-            }
-            
             let controller = self.storyboard!.instantiateViewController(withIdentifier: "logSavedate")
             
             self.show(controller, sender: true)
+            
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+            }
+
+            let managedContext = appDelegate.persistentContainer.viewContext
+
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
+
+            fetchRequest.predicate = NSPredicate(format: "date = %@",self.passedIndex! as CVarArg)
+
+            do {
+                self.editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
+    // delete作業
+                try managedContext.delete(self.editKokolog[0])
+                   (UIApplication.shared.delegate as! AppDelegate).saveContext()
+
+            } catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+//
+//            let controller = self.storyboard!.instantiateViewController(withIdentifier: "logSavedate")
+//
+//            self.show(controller, sender: true)
             
         })
         
