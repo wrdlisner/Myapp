@@ -231,8 +231,8 @@ class DetailSaveDateViewController: UIViewController {
             do {
                 self.editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
     // delete作業
-    //                try managedContext.delete(readKokolog)
-    //               (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                    try managedContext.delete(readKokolog)
+                   (UIApplication.shared.delegate as! AppDelegate).saveContext()
                 
             } catch let error as NSError {
                 print("Could not fetch. \(error), \(error.userInfo)")
