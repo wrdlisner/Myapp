@@ -176,11 +176,6 @@ class DetailSaveDateViewController: UIViewController {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        editDoneKokolog()
-    }
-    
     func editDoneKokolog() {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -239,17 +234,13 @@ class DetailSaveDateViewController: UIViewController {
 
             do {
                 self.editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
-    // delete作業
+
                 try managedContext.delete(self.editKokolog[0])
                    (UIApplication.shared.delegate as! AppDelegate).saveContext()
 
             } catch let error as NSError {
                 print("Could not fetch. \(error), \(error.userInfo)")
             }
-//
-//            let controller = self.storyboard!.instantiateViewController(withIdentifier: "logSavedate")
-//
-//            self.show(controller, sender: true)
             
         })
         

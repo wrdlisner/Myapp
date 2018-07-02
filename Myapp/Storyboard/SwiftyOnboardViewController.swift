@@ -17,6 +17,10 @@ class SwiftyOnboardViewController: UIViewController,
         return gradiant
     }()
     
+    var buildCount = 0
+    
+    let ud = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -24,6 +28,11 @@ class SwiftyOnboardViewController: UIViewController,
         view.addSubview(swiftyOnboard)
         swiftyOnboard.dataSource = self
         swiftyOnboard.delegate = self
+        
+        
+        
+        
+        
     
     }
     
