@@ -12,7 +12,7 @@ class Question2ViewController: UIViewController {
         super.viewDidLoad()
         
         name1.text = selected[choice]
-        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +46,7 @@ class Question2ViewController: UIViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         

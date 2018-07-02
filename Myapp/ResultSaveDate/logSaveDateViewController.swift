@@ -106,4 +106,8 @@ class logSaveDateViewController: UIViewController,UITableViewDelegate,UITableVie
         }
     }
     
+    @IBAction func backtoSavedatefromDetail(segue:UIStoryboardSegue){
+        
+    }
+    
 }

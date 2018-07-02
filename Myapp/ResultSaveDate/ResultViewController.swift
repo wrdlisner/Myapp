@@ -116,9 +116,9 @@ class ResultViewController: UIViewController {
             
             (action:UIAlertAction!) -> Void in
             
-            let controller = self.storyboard!.instantiateInitialViewController()
+            let controller = self.storyboard!.instantiateViewController(withIdentifier: "topPage")
             
-            self.show(controller!, sender: true)
+            self.show(controller, sender: true)
             
         })
         

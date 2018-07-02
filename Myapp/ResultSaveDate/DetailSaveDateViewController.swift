@@ -163,6 +163,9 @@ class DetailSaveDateViewController: UIViewController {
             Q4answer.isUserInteractionEnabled = false
             Q5answer.isEditable = false
             Q5answer.isUserInteractionEnabled = false
+            
+            editDoneKokolog()
+            
         }
         
         do {
@@ -249,20 +252,15 @@ class DetailSaveDateViewController: UIViewController {
         
         present(alertController, animated: true, completion: nil)
         
-        
     }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         self.view.endEditing(true)
+        self.myStackView.endEditing(true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "toDetail" {
-            let dateCatch:DetailSaveDateViewController = segue.destination as! DetailSaveDateViewController
-            
-        }
-    }
+    
     
 }

@@ -31,8 +31,22 @@ class Question1ViewController:UIViewController,
         let details = emotions[indexPath.row].components(separatedBy: "/")
      
         cell.textLabel!.text = details[0]
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 22)
         cell.detailTextLabel!.text = details[1]
         cell.backgroundColor = UIColor.rgb(r: 255, g: 255, b: 230, alpha: 1)
+        
+        switch details[0] {
+        case "喜":
+            cell.textLabel?.textColor = UIColor.rgb(r: 242, g: 162, b: 160, alpha: 1)
+        case "怒":
+            cell.textLabel?.textColor = UIColor.rgb(r: 198, g: 198, b: 255, alpha: 1)
+        case "哀":
+            cell.textLabel?.textColor = UIColor.rgb(r: 193, g: 224, b: 255, alpha: 1)
+        case "楽":
+            cell.textLabel?.textColor = UIColor.rgb(r: 255, g: 221, b: 188, alpha: 1)
+        default:
+            print("error")
+        }
         
         return cell
     }

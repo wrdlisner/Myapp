@@ -66,31 +66,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func changeSwiftyOnBoard(){
-        //UserDefaultのインスタンスを生成
         let userDefault = UserDefaults.standard
         
-        let flg = false//分岐条件
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main",bundle:nil)
         
-        let storyboard:UIStoryboard = UIStoryboard(name: "topPage",bundle:nil)
-        let viewController:UIViewController
-        
-        //前回の保存されたデータがあるかどうか判断
         if((userDefault.object(forKey: "key")) != nil){
             
-            //データの保存。今回訪れた回数に+1している。
             userDefault.set(userDefault.integer(forKey: "key") + 1, forKey: "key")
             
-            //データの同期
             userDefault.synchronize()
             
             let goTopPage = storyboard.instantiateViewController(withIdentifier: "topPage") as UIViewController
-//            self.present(goTopPage!, animated: true, completion: nil)
             UserDefaults.standard.set(true, forKey: "openApp")
-             window?.rootViewController = goTopPage
+            window?.rootViewController = goTopPage
             
         } else {
             
-            //次に訪れる回数の2を保存する
             userDefault.set(2, forKey: "key")
         }
        
