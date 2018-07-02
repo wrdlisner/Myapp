@@ -9,6 +9,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        changeSwiftyOnBoard()
+        
         return true
     }
 
@@ -24,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -32,7 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+
         self.saveContext()
+
     }
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -58,5 +64,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+    func changeSwiftyOnBoard(){
+        //UserDefaultのインスタンスを生成
+        let userDefault = UserDefaults.standard
+        
+        let flg = false//分岐条件
+        
+        let storyboard:UIStoryboard = UIStoryboard(name: "topPage",bundle:nil)
+        let viewController:UIViewController
+        
+        //前回の保存されたデータがあるかどうか判断
+        if((userDefault.object(forKey: "key")) != nil){
+            
+            //データの保存。今回訪れた回数に+1している。
+            userDefault.set(userDefault.integer(forKey: "key") + 1, forKey: "key")
+            
+            //データの同期
+            userDefault.synchronize()
+            
+            let goTopPage = storyboard.instantiateViewController(withIdentifier: "topPage") as UIViewController
+//            self.present(goTopPage!, animated: true, completion: nil)
+            UserDefaults.standard.set(true, forKey: "openApp")
+             window?.rootViewController = goTopPage
+            
+        } else {
+            
+            //次に訪れる回数の2を保存する
+            userDefault.set(2, forKey: "key")
+        }
+       
+    }
 }

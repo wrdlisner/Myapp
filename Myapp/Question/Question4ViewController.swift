@@ -40,9 +40,9 @@ class Question4ViewController: UIViewController {
             
             (action:UIAlertAction!) -> Void in
             
-            let controller = self.storyboard!.instantiateInitialViewController()
-    
-            self.show(controller!, sender: true)
+            let controller = self.storyboard!.instantiateViewController(withIdentifier: "topPage")
+            
+            self.show(controller, sender: true)
             
         })
         

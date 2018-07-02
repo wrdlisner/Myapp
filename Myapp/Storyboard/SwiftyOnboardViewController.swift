@@ -19,50 +19,12 @@ class SwiftyOnboardViewController: UIViewController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         swiftyOnboard = SwiftyOnboard(frame: view.frame, style: .light)
         view.addSubview(swiftyOnboard)
         swiftyOnboard.dataSource = self
         swiftyOnboard.delegate = self
         
-        //UserDefaultのインスタンスを生成
-        let userDefault = UserDefaults.standard
-        
-//        //UILabelのインスタンスを生成
-//        let label = UILabel()
-        
-        
-        //前回の保存されたデータがあるかどうか判断
-        if((userDefault.object(forKey: "key")) != nil){
-            
-//            //訪問回数の表示
-//            label.text = "\(userDefault.integer(forKey: "key"))回目の訪問"
-            
-            //データの保存。今回訪れた回数に+1している。
-            userDefault.set(userDefault.integer(forKey: "key") + 1, forKey: "key")
-            
-            //データの同期
-            userDefault.synchronize()
-            
-        }else{
-
-            func startPage(){
-                let goTopPage = storyboard?.instantiateViewController(withIdentifier: "topPage")
-                self.present(goTopPage!, animated: true, completion: nil)
-                UserDefaults.standard.set(true, forKey: "openApp")
-            }
-            
-//            //データがない場合、1回目の訪問とする
-//            label.text = "1回目の訪問"
-            
-            //次に訪れる回数の2を保存する
-            userDefault.set(2, forKey: "key")
-            
-        }
-        
-        
-        
-    
     }
     
     override func didReceiveMemoryWarning() {
