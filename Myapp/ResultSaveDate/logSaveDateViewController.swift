@@ -75,14 +75,19 @@ class logSaveDateViewController: UIViewController,UITableViewDelegate,UITableVie
         switch kokolog.question1 {
         case 0:
             cell.textLabel?.text = "喜"
+            cell.textLabel?.textColor = UIColor.rgb(r: 242, g: 162, b: 160, alpha: 1)
         case 1:
             cell.textLabel?.text = "怒"
+            cell.textLabel?.textColor = UIColor.rgb(r: 198, g: 198, b: 255, alpha: 1)
         case 2:
             cell.textLabel?.text = "哀"
+            cell.textLabel?.textColor = UIColor.rgb(r: 193, g: 224, b: 255, alpha: 1)
         case 3:
             cell.textLabel?.text = "楽"
+            cell.textLabel?.textColor = UIColor.rgb(r: 255, g: 221, b: 188, alpha: 1)
         default:
             print("nil")
+        
         }
         
         return cell
