@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_MyappVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_MyappVersionString[];
+FOUNDATION_EXPORT double Pods_KokologVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_KokologVersionString[];
 
