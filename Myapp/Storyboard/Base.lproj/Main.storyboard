@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,29 +37,31 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="topPage" title="TopPage" id="BYZ-38-t0r" customClass="ViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo1" translatesAutoresizingMaskIntoConstraints="NO" id="Cm7-VB-N5r">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo1" translatesAutoresizingMaskIntoConstraints="NO" id="Cm7-VB-N5r">
                                 <rect key="frame" x="212" y="42" width="115" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cm7-VB-N5r" secondAttribute="height" multiplier="115:102" id="aOg-Ln-kr8"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-8f-2Et">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-8f-2Et">
                                 <rect key="frame" x="48" y="140" width="121" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NCK-8f-2Et" secondAttribute="height" multiplier="121:103" id="AdV-kC-Pnp"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="eMF-70-UHg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="eMF-70-UHg">
                                 <rect key="frame" x="201" y="183" width="97" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="TjC-yA-3oC"/>
+                                    <constraint firstAttribute="width" secondItem="eMF-70-UHg" secondAttribute="height" multiplier="97:74" id="rtV-Gh-YVU"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo5" translatesAutoresizingMaskIntoConstraints="NO" id="ioF-Af-GmL">
-                                <rect key="frame" x="126" y="265" width="122" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wh6-CB-5Sv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wh6-CB-5Sv">
                                 <rect key="frame" x="68" y="538" width="57" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="19"/>
                                 <state key="normal" title="使い方">
                                     <color key="titleColor" red="0.94901960784313721" green="0.63529411764705879" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,16 +70,14 @@
                                     <segue destination="oDw-Gn-tyf" kind="show" id="Vwp-rr-7BJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="自分の「声」に耳を傾けてみませんか?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gee-Br-kBN">
-                                <rect key="frame" x="70" y="500" width="235" height="13"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="自分の「声」に耳を傾けてみませんか?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gee-Br-kBN">
+                                <rect key="frame" x="74" y="512" width="227" height="13"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="13"/>
                                 <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thE-7S-OqG">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thE-7S-OqG">
                                 <rect key="frame" x="241" y="538" width="57" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="19"/>
                                 <state key="normal" title="始める">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,9 +86,8 @@
                                     <segue destination="6bB-dv-XOX" kind="show" id="J47-2C-tsW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5k-6g-ijj">
-                                <rect key="frame" x="66" y="463" width="234" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5k-6g-ijj">
+                                <rect key="frame" x="66" y="486" width="234" height="13"/>
                                 <string key="text" base64-UTF8="YES">
 44CM5rCX5oyB44Gh5pW055CG44CN44Gu44GK5omL5Lyd44GE44KS44GZ44KL44Ki44OX44OqERE
 </string>
@@ -94,23 +95,25 @@
                                 <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="©︎ 2018 Kohei Sodekawa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJ6-fT-Ekd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="©︎ 2018 Kohei Sodekawa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJ6-fT-Ekd">
                                 <rect key="frame" x="136" y="645" width="103" height="10"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="こころぐ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRn-ZD-Oof">
-                                <rect key="frame" x="87" y="382" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こころぐ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRn-ZD-Oof">
+                                <rect key="frame" x="0.0" y="416" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="ICU-6B-4rx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="rbM-bS-Hhs"/>
+                                    <constraint firstAttribute="height" constant="50" id="sPy-RQ-7q1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="50"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.52549019610000003" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivy-ED-CHJ">
-                                <rect key="frame" x="128" y="600" width="119" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivy-ED-CHJ">
+                                <rect key="frame" x="0.0" y="600" width="375" height="29"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="過去ろぐを見る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,12 +122,65 @@
                                     <segue destination="HbI-y4-BUm" kind="show" id="YhZ-W1-iO7"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo4" translatesAutoresizingMaskIntoConstraints="NO" id="AMY-60-9Ft">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo4" translatesAutoresizingMaskIntoConstraints="NO" id="AMY-60-9Ft">
                                 <rect key="frame" x="48" y="42" width="91" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AMY-60-9Ft" secondAttribute="height" multiplier="91:76" id="jCV-XF-lfh"/>
+                                    <constraint firstAttribute="height" constant="76" id="q1J-7i-Whf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo5" translatesAutoresizingMaskIntoConstraints="NO" id="ioF-Af-GmL">
+                                <rect key="frame" x="114" y="274" width="147" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ioF-Af-GmL" secondAttribute="height" multiplier="153:118" id="cef-CQ-DyF"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.97647058823529409" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gee-Br-kBN" firstAttribute="top" secondItem="k5k-6g-ijj" secondAttribute="bottom" constant="13" id="23n-T8-IFl"/>
+                            <constraint firstItem="eMF-70-UHg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="97:667" id="3pL-7D-pXW"/>
+                            <constraint firstItem="ivy-ED-CHJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4fd-Wr-vDv"/>
+                            <constraint firstItem="sJ6-fT-Ekd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5WQ-EU-v8h"/>
+                            <constraint firstItem="eMF-70-UHg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="183" id="ASe-bV-5xb"/>
+                            <constraint firstItem="eMF-70-UHg" firstAttribute="top" relation="lessThanOrEqual" secondItem="Cm7-VB-N5r" secondAttribute="bottom" constant="39" id="BaM-Rg-XM9"/>
+                            <constraint firstItem="ivy-ED-CHJ" firstAttribute="top" secondItem="wh6-CB-5Sv" secondAttribute="bottom" constant="31" id="K9u-GJ-3Th"/>
+                            <constraint firstItem="NCK-8f-2Et" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="121:667" id="KEO-8M-tgp"/>
+                            <constraint firstItem="wh6-CB-5Sv" firstAttribute="top" secondItem="Gee-Br-kBN" secondAttribute="bottom" constant="13" id="KTe-ry-Hsw"/>
+                            <constraint firstItem="Gee-Br-kBN" firstAttribute="top" secondItem="k5k-6g-ijj" secondAttribute="bottom" constant="13" id="Ma0-8M-0oz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="eMF-70-UHg" secondAttribute="trailing" constant="77" id="PbH-lj-9EE"/>
+                            <constraint firstItem="ioF-Af-GmL" firstAttribute="top" relation="lessThanOrEqual" secondItem="eMF-70-UHg" secondAttribute="bottom" constant="17" id="Psg-Va-iHL"/>
+                            <constraint firstItem="cRn-ZD-Oof" firstAttribute="top" secondItem="ioF-Af-GmL" secondAttribute="bottom" constant="29" id="RDe-lc-jL5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="thE-7S-OqG" secondAttribute="trailing" constant="77" id="TrM-be-2rx"/>
+                            <constraint firstItem="cRn-ZD-Oof" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WFF-4Q-BCY"/>
+                            <constraint firstItem="Cm7-VB-N5r" firstAttribute="leading" relation="lessThanOrEqual" secondItem="AMY-60-9Ft" secondAttribute="trailing" constant="73" id="WwK-By-vR9"/>
+                            <constraint firstItem="NCK-8f-2Et" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="Xbs-jJ-Dz2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sJ6-fT-Ekd" secondAttribute="bottom" constant="12" id="ZhB-4X-ER2"/>
+                            <constraint firstItem="k5k-6g-ijj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-4.5" id="Ztr-g8-EpY"/>
+                            <constraint firstItem="ivy-ED-CHJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="amc-fm-P79"/>
+                            <constraint firstItem="ivy-ED-CHJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bcc-u4-76l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Cm7-VB-N5r" secondAttribute="trailing" constant="48" id="bhm-s7-4IY"/>
+                            <constraint firstItem="eMF-70-UHg" firstAttribute="leading" relation="lessThanOrEqual" secondItem="NCK-8f-2Et" secondAttribute="trailing" constant="32" id="bzz-fL-e7E"/>
+                            <constraint firstItem="ioF-Af-GmL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ejA-sM-sNU"/>
+                            <constraint firstItem="k5k-6g-ijj" firstAttribute="top" secondItem="cRn-ZD-Oof" secondAttribute="bottom" constant="20" id="fHA-Rh-etN"/>
+                            <constraint firstItem="AMY-60-9Ft" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="91:667" id="fdQ-aw-vku"/>
+                            <constraint firstItem="sJ6-fT-Ekd" firstAttribute="top" secondItem="ivy-ED-CHJ" secondAttribute="bottom" constant="16" id="fpD-SG-INF"/>
+                            <constraint firstItem="Cm7-VB-N5r" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="5:29" id="kz5-06-2cN"/>
+                            <constraint firstItem="ioF-Af-GmL" firstAttribute="top" relation="lessThanOrEqual" secondItem="NCK-8f-2Et" secondAttribute="bottom" constant="31" id="njD-Gq-pID"/>
+                            <constraint firstItem="thE-7S-OqG" firstAttribute="leading" secondItem="wh6-CB-5Sv" secondAttribute="trailing" constant="116" id="nle-iT-kIi"/>
+                            <constraint firstItem="Cm7-VB-N5r" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="pNR-bN-FLH"/>
+                            <constraint firstItem="AMY-60-9Ft" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="qtW-Iz-NjR"/>
+                            <constraint firstItem="AMY-60-9Ft" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="sAT-Rb-p2z"/>
+                            <constraint firstItem="Gee-Br-kBN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tZH-is-07y"/>
+                            <constraint firstItem="ivy-ED-CHJ" firstAttribute="top" secondItem="wh6-CB-5Sv" secondAttribute="bottom" constant="31" id="tan-w0-KNd"/>
+                            <constraint firstItem="thE-7S-OqG" firstAttribute="top" secondItem="Gee-Br-kBN" secondAttribute="bottom" constant="13" id="uXf-uF-YaX"/>
+                            <constraint firstItem="NCK-8f-2Et" firstAttribute="top" secondItem="AMY-60-9Ft" secondAttribute="bottom" constant="22" id="ugo-Kk-e9h"/>
+                            <constraint firstItem="wh6-CB-5Sv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="uhF-lj-OSr"/>
+                            <constraint firstItem="ivy-ED-CHJ" firstAttribute="top" secondItem="thE-7S-OqG" secondAttribute="bottom" constant="31" id="vY2-1Z-LKa"/>
+                            <constraint firstItem="AMY-60-9Ft" firstAttribute="leading" secondItem="NCK-8f-2Et" secondAttribute="leading" id="x27-Zf-iEc"/>
+                            <constraint firstItem="AMY-60-9Ft" firstAttribute="top" secondItem="Cm7-VB-N5r" secondAttribute="top" id="yF4-Vn-hWJ"/>
+                            <constraint firstItem="ioF-Af-GmL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="147:667" id="zfj-5N-QvA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="hCS-vu-ann"/>
@@ -142,30 +198,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今の気持ちに一番近いものを選んでください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvs-TO-NdL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今の気持ちに一番近いものを選んでください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvs-TO-NdL">
                                 <rect key="frame" x="37" y="151" width="300" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wU9-mZ-4UJ">
-                                <rect key="frame" x="155" y="56" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="残り4問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxj-Il-kWs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="残り4問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxj-Il-kWs">
                                 <rect key="frame" x="159" y="611" width="56" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="16"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ySJ-tW-k0r">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ySJ-tW-k0r">
                                 <rect key="frame" x="47" y="219" width="280" height="269"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="choices" id="e5Z-tx-bLc">
@@ -183,9 +229,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9f-Tw-rNb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9f-Tw-rNb">
                                 <rect key="frame" x="235" y="563" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="トップに戻る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -194,8 +239,32 @@
                                     <action selector="alertButton:" destination="6bB-dv-XOX" eventType="touchUpInside" id="OCN-iJ-OqX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wU9-mZ-4UJ">
+                                <rect key="frame" x="99" y="55" width="176" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="x1W-ZL-Vel"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0H5-9v-TFq" firstAttribute="bottom" secondItem="m9f-Tw-rNb" secondAttribute="bottom" constant="75" id="3oP-Xd-7hI"/>
+                            <constraint firstItem="ySJ-tW-k0r" firstAttribute="leading" secondItem="0H5-9v-TFq" secondAttribute="leading" constant="47" id="3sA-Jj-hKz"/>
+                            <constraint firstItem="ySJ-tW-k0r" firstAttribute="centerX" secondItem="Bxj-Il-kWs" secondAttribute="centerX" id="GT8-WC-WOi"/>
+                            <constraint firstItem="wU9-mZ-4UJ" firstAttribute="centerX" secondItem="Lvs-TO-NdL" secondAttribute="centerX" id="NHC-46-K1U"/>
+                            <constraint firstItem="wU9-mZ-4UJ" firstAttribute="leading" secondItem="0H5-9v-TFq" secondAttribute="leading" constant="99" id="W7O-QB-QgR"/>
+                            <constraint firstItem="Lvs-TO-NdL" firstAttribute="top" secondItem="wU9-mZ-4UJ" secondAttribute="bottom" constant="66" id="crs-mC-WuH"/>
+                            <constraint firstItem="m9f-Tw-rNb" firstAttribute="top" secondItem="ySJ-tW-k0r" secondAttribute="bottom" constant="75" id="dfv-8u-koh"/>
+                            <constraint firstItem="ySJ-tW-k0r" firstAttribute="top" secondItem="Lvs-TO-NdL" secondAttribute="bottom" constant="53" id="rvX-Nz-V1f"/>
+                            <constraint firstItem="0H5-9v-TFq" firstAttribute="bottom" secondItem="Bxj-Il-kWs" secondAttribute="bottom" constant="40" id="tss-e3-T3m"/>
+                            <constraint firstItem="wU9-mZ-4UJ" firstAttribute="top" secondItem="0H5-9v-TFq" secondAttribute="top" constant="35" id="urS-cc-RuW"/>
+                            <constraint firstItem="Lvs-TO-NdL" firstAttribute="centerX" secondItem="ySJ-tW-k0r" secondAttribute="centerX" id="usN-7T-uW8"/>
+                            <constraint firstItem="Lvs-TO-NdL" firstAttribute="trailing" secondItem="m9f-Tw-rNb" secondAttribute="trailing" id="wfx-c0-ny7"/>
+                            <constraint firstItem="wU9-mZ-4UJ" firstAttribute="centerX" secondItem="ppW-Ur-7j0" secondAttribute="centerX" id="zpB-XD-Gik"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0H5-9v-TFq"/>
                     </view>
                     <connections>
@@ -216,30 +285,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpn-kU-hJj">
-                                <rect key="frame" x="155" y="56" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="どんな事がありましたか？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufU-ZO-O9O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="どんな事がありましたか？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufU-ZO-O9O">
                                 <rect key="frame" x="97" y="170" width="180" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="e7g-OF-sjN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="残り3問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaH-iG-SV0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="残り3問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaH-iG-SV0">
                                 <rect key="frame" x="159" y="611" width="56" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="16"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYD-4m-B7y">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYD-4m-B7y">
                                 <rect key="frame" x="258" y="563" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="トップに戻る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -248,16 +310,14 @@
                                     <action selector="alertButton:" destination="V8Z-z6-YrM" eventType="touchUpInside" id="cHu-lW-rGU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTE-KK-MFx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTE-KK-MFx">
                                 <rect key="frame" x="44" y="102" width="286" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="23"/>
                                 <color key="textColor" red="0.96555261479999999" green="0.64563752119999995" blue="0.1968845826" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-X9-MQW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-X9-MQW">
                                 <rect key="frame" x="146" y="487" width="85" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="次の質問へ">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -266,9 +326,8 @@
                                     <segue destination="uta-jY-J8B" kind="show" identifier="segue3" id="Ez6-p8-Dwi"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uh6-hU-uSW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uh6-hU-uSW">
                                 <rect key="frame" x="44" y="210" width="286" height="246"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.90207248263888884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -278,9 +337,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsU-Wj-zMh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsU-Wj-zMh">
                                 <rect key="frame" x="16" y="563" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="一つ前に戻る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -289,8 +347,40 @@
                                     <segue destination="bz2-9Q-ofX" kind="unwind" unwindAction="backtoQ1WithSegue:" id="lqM-Cw-e0Z"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpn-kU-hJj">
+                                <rect key="frame" x="100" y="55" width="175" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FNT-HV-fcu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zHg-X9-MQW" firstAttribute="leading" secondItem="Due-5y-yAW" secondAttribute="leading" constant="146" id="1Qt-cE-EMM"/>
+                            <constraint firstItem="Due-5y-yAW" firstAttribute="trailing" secondItem="PYD-4m-B7y" secondAttribute="trailing" constant="15" id="7VV-Vi-ldz"/>
+                            <constraint firstItem="Uh6-hU-uSW" firstAttribute="centerY" secondItem="haw-Ph-oZO" secondAttribute="centerY" id="DtU-GS-Bvf"/>
+                            <constraint firstItem="sTE-KK-MFx" firstAttribute="top" secondItem="fpn-kU-hJj" secondAttribute="bottom" constant="17" id="F8z-Sn-KcG"/>
+                            <constraint firstItem="Uh6-hU-uSW" firstAttribute="centerX" secondItem="NaH-iG-SV0" secondAttribute="centerX" id="FPa-kQ-Z2d"/>
+                            <constraint firstItem="tsU-Wj-zMh" firstAttribute="baseline" secondItem="PYD-4m-B7y" secondAttribute="baseline" id="GP8-Wf-cp3"/>
+                            <constraint firstItem="fpn-kU-hJj" firstAttribute="leading" secondItem="Due-5y-yAW" secondAttribute="leading" constant="100" id="LLb-JJ-Nqg"/>
+                            <constraint firstItem="sTE-KK-MFx" firstAttribute="centerX" secondItem="haw-Ph-oZO" secondAttribute="centerX" id="SXs-1o-UQT"/>
+                            <constraint firstItem="Uh6-hU-uSW" firstAttribute="top" secondItem="ufU-ZO-O9O" secondAttribute="bottom" constant="25" id="UYm-ta-evG"/>
+                            <constraint firstItem="NaH-iG-SV0" firstAttribute="top" secondItem="zHg-X9-MQW" secondAttribute="bottom" constant="95" id="Xd7-TA-QSE"/>
+                            <constraint firstItem="Due-5y-yAW" firstAttribute="bottom" secondItem="NaH-iG-SV0" secondAttribute="bottom" constant="40" id="YyB-98-6XY"/>
+                            <constraint firstItem="sTE-KK-MFx" firstAttribute="leading" secondItem="Uh6-hU-uSW" secondAttribute="leading" id="aLB-gw-xlz"/>
+                            <constraint firstItem="fpn-kU-hJj" firstAttribute="centerX" secondItem="sTE-KK-MFx" secondAttribute="centerX" id="aPX-OJ-hsh"/>
+                            <constraint firstItem="sTE-KK-MFx" firstAttribute="trailing" secondItem="Uh6-hU-uSW" secondAttribute="trailing" id="cUj-CC-ap0"/>
+                            <constraint firstItem="ufU-ZO-O9O" firstAttribute="top" secondItem="sTE-KK-MFx" secondAttribute="bottom" constant="31" id="czJ-9C-442"/>
+                            <constraint firstItem="fpn-kU-hJj" firstAttribute="top" secondItem="Due-5y-yAW" secondAttribute="top" constant="35" id="kbZ-BX-GiZ"/>
+                            <constraint firstItem="sTE-KK-MFx" firstAttribute="centerX" secondItem="ufU-ZO-O9O" secondAttribute="centerX" id="o8q-Sj-qES"/>
+                            <constraint firstItem="tsU-Wj-zMh" firstAttribute="leading" secondItem="haw-Ph-oZO" secondAttribute="leadingMargin" id="sQD-IF-ezn"/>
+                            <constraint firstItem="sTE-KK-MFx" firstAttribute="leading" secondItem="Due-5y-yAW" secondAttribute="leading" constant="44" id="uIk-GY-bcA"/>
+                            <constraint firstItem="Due-5y-yAW" firstAttribute="bottom" secondItem="tsU-Wj-zMh" secondAttribute="bottom" constant="75" id="wCV-zT-qVj"/>
+                            <constraint firstItem="zHg-X9-MQW" firstAttribute="top" secondItem="Uh6-hU-uSW" secondAttribute="bottom" constant="31" id="yxv-7I-v45"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Due-5y-yAW"/>
                     </view>
                     <connections>
@@ -311,16 +401,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJd-BL-0Eh">
-                                <rect key="frame" x="155" y="56" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijs-S1-yp5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijs-S1-yp5">
                                 <rect key="frame" x="258" y="563" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="トップに戻る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -329,16 +411,14 @@
                                     <action selector="alertButton:" destination="uta-jY-J8B" eventType="touchUpInside" id="x1j-8d-QvF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="残り2問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-gK-Ypb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="残り2問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-gK-Ypb">
                                 <rect key="frame" x="159" y="611" width="56" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="16"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itl-9f-bqF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itl-9f-bqF">
                                 <rect key="frame" x="146" y="487" width="85" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="次の質問へ">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -347,9 +427,8 @@
                                     <segue destination="r1E-KO-JE7" kind="show" identifier="segue4" id="M7I-pK-Rcm"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6t7-T1-8fF">
-                                <rect key="frame" x="45" y="210" width="286" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6t7-T1-8fF">
+                                <rect key="frame" x="45" y="210" width="286" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.90207248259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -359,9 +438,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItP-Kq-nMz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItP-Kq-nMz">
                                 <rect key="frame" x="16" y="563" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="一つ前に戻る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -370,16 +448,45 @@
                                     <segue destination="gRw-Zq-sRd" kind="unwind" unwindAction="backtoQ2WithSegue:" id="jc7-V9-i7R"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IMM-9P-nDs">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IMM-9P-nDs">
                                 <rect key="frame" x="45" y="110" width="286" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJd-BL-0Eh">
+                                <rect key="frame" x="101" y="55" width="174" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BY7-Do-wqp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iB7-Dp-0vK" firstAttribute="bottom" secondItem="IcH-gK-Ypb" secondAttribute="bottom" constant="40" id="1dk-2f-UAX"/>
+                            <constraint firstItem="ItP-Kq-nMz" firstAttribute="leading" secondItem="DRH-Mx-yH2" secondAttribute="leadingMargin" id="3vx-Eu-rYk"/>
+                            <constraint firstItem="IMM-9P-nDs" firstAttribute="leading" secondItem="iB7-Dp-0vK" secondAttribute="leading" constant="45" id="6ce-kH-Lwu"/>
+                            <constraint firstItem="mJd-BL-0Eh" firstAttribute="top" secondItem="iB7-Dp-0vK" secondAttribute="top" constant="35" id="6wT-ZF-LBH"/>
+                            <constraint firstItem="mJd-BL-0Eh" firstAttribute="centerX" secondItem="IMM-9P-nDs" secondAttribute="centerX" id="9Wz-W2-Apo"/>
+                            <constraint firstItem="6t7-T1-8fF" firstAttribute="centerY" secondItem="DRH-Mx-yH2" secondAttribute="centerY" id="DPq-Z5-Hqg"/>
+                            <constraint firstItem="IMM-9P-nDs" firstAttribute="top" secondItem="mJd-BL-0Eh" secondAttribute="bottom" constant="25" id="GCa-qz-wzC"/>
+                            <constraint firstItem="IMM-9P-nDs" firstAttribute="trailing" secondItem="6t7-T1-8fF" secondAttribute="trailing" id="JAl-97-HdH"/>
+                            <constraint firstItem="itl-9f-bqF" firstAttribute="top" secondItem="6t7-T1-8fF" secondAttribute="bottom" constant="31" id="LUO-QR-v1j"/>
+                            <constraint firstItem="ItP-Kq-nMz" firstAttribute="baseline" secondItem="ijs-S1-yp5" secondAttribute="baseline" id="UWt-pW-6f6"/>
+                            <constraint firstItem="iB7-Dp-0vK" firstAttribute="bottom" secondItem="ItP-Kq-nMz" secondAttribute="bottom" constant="75" id="YzG-rS-Un4"/>
+                            <constraint firstItem="iB7-Dp-0vK" firstAttribute="trailing" secondItem="ijs-S1-yp5" secondAttribute="trailing" constant="15" id="dOS-rq-EYU"/>
+                            <constraint firstItem="mJd-BL-0Eh" firstAttribute="centerX" secondItem="DRH-Mx-yH2" secondAttribute="centerX" id="gDH-j9-GsJ"/>
+                            <constraint firstItem="IMM-9P-nDs" firstAttribute="leading" secondItem="6t7-T1-8fF" secondAttribute="leading" id="gbb-Us-g59"/>
+                            <constraint firstItem="IcH-gK-Ypb" firstAttribute="centerX" secondItem="DRH-Mx-yH2" secondAttribute="centerX" id="n1s-Tu-P5m"/>
+                            <constraint firstItem="6t7-T1-8fF" firstAttribute="centerX" secondItem="itl-9f-bqF" secondAttribute="centerX" id="vK0-bb-HoD"/>
+                            <constraint firstItem="6t7-T1-8fF" firstAttribute="top" secondItem="IMM-9P-nDs" secondAttribute="bottom" constant="26" id="y70-XV-f1a"/>
+                            <constraint firstItem="mJd-BL-0Eh" firstAttribute="leading" secondItem="iB7-Dp-0vK" secondAttribute="leading" constant="101" id="zGH-44-cnc"/>
+                            <constraint firstItem="IcH-gK-Ypb" firstAttribute="top" secondItem="itl-9f-bqF" secondAttribute="bottom" constant="95" id="ztF-2J-fWV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iB7-Dp-0vK"/>
                     </view>
                     <connections>
@@ -400,24 +507,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsG-hz-gcs">
-                                <rect key="frame" x="154" y="56" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Ie-Qc-CY2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Ie-Qc-CY2">
                                 <rect key="frame" x="45" y="110" width="286" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M7d-Qv-4mf">
-                                <rect key="frame" x="45" y="210" width="286" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M7d-Qv-4mf">
+                                <rect key="frame" x="45" y="210" width="286" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -427,9 +525,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iS-NZ-ZSo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iS-NZ-ZSo">
                                 <rect key="frame" x="146" y="487" width="85" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="次の質問へ">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -438,9 +535,8 @@
                                     <segue destination="IdJ-Th-g2f" kind="show" identifier="segue5" id="BRQ-p9-BEG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoR-yE-ZNX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoR-yE-ZNX">
                                 <rect key="frame" x="258" y="563" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="トップに戻る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -449,9 +545,8 @@
                                     <action selector="alertButton:" destination="r1E-KO-JE7" eventType="touchUpInside" id="agO-XX-I06"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIH-lP-sI3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIH-lP-sI3">
                                 <rect key="frame" x="16" y="563" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="一つ前に戻る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -460,15 +555,44 @@
                                     <segue destination="kGF-GI-pt3" kind="unwind" unwindAction="backtoQ3WithSegue:" id="GBD-Fq-ihh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="残り1問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwn-Ui-Ozk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="残り1問" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwn-Ui-Ozk">
                                 <rect key="frame" x="159" y="611" width="56" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="16"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsG-hz-gcs">
+                                <rect key="frame" x="77" y="55" width="221" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hh1-6L-1oC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7iS-NZ-ZSo" firstAttribute="top" secondItem="M7d-Qv-4mf" secondAttribute="bottom" constant="31" id="0pb-bv-FL9"/>
+                            <constraint firstItem="Cwn-Ui-Ozk" firstAttribute="top" secondItem="7iS-NZ-ZSo" secondAttribute="bottom" constant="95" id="419-Iq-7sa"/>
+                            <constraint firstItem="qsG-hz-gcs" firstAttribute="top" secondItem="RLW-dY-iSs" secondAttribute="top" constant="35" id="8Mt-R7-7qs"/>
+                            <constraint firstItem="M7d-Qv-4mf" firstAttribute="top" secondItem="4Ie-Qc-CY2" secondAttribute="bottom" constant="26" id="FCl-Me-jxt"/>
+                            <constraint firstItem="M7d-Qv-4mf" firstAttribute="centerY" secondItem="vba-O9-hgi" secondAttribute="centerY" id="Ge7-N7-wHj"/>
+                            <constraint firstItem="nIH-lP-sI3" firstAttribute="baseline" secondItem="ZoR-yE-ZNX" secondAttribute="baseline" id="KSo-KH-8Hn"/>
+                            <constraint firstItem="qsG-hz-gcs" firstAttribute="centerX" secondItem="4Ie-Qc-CY2" secondAttribute="centerX" id="NlM-Bg-Uf0"/>
+                            <constraint firstItem="RLW-dY-iSs" firstAttribute="bottom" secondItem="Cwn-Ui-Ozk" secondAttribute="bottom" constant="40" id="ORl-PR-LOy"/>
+                            <constraint firstItem="nIH-lP-sI3" firstAttribute="leading" secondItem="vba-O9-hgi" secondAttribute="leadingMargin" id="bUJ-bG-r94"/>
+                            <constraint firstItem="4Ie-Qc-CY2" firstAttribute="trailing" secondItem="M7d-Qv-4mf" secondAttribute="trailing" id="eSa-Jf-HJy"/>
+                            <constraint firstItem="4Ie-Qc-CY2" firstAttribute="leading" secondItem="M7d-Qv-4mf" secondAttribute="leading" id="eeT-Og-zVB"/>
+                            <constraint firstItem="qsG-hz-gcs" firstAttribute="leading" secondItem="RLW-dY-iSs" secondAttribute="leading" constant="77" id="gHK-5e-obs"/>
+                            <constraint firstItem="RLW-dY-iSs" firstAttribute="bottom" secondItem="nIH-lP-sI3" secondAttribute="bottom" constant="75" id="liR-ZT-q7H"/>
+                            <constraint firstItem="qsG-hz-gcs" firstAttribute="centerX" secondItem="Cwn-Ui-Ozk" secondAttribute="centerX" id="nDg-tc-hQW"/>
+                            <constraint firstItem="4Ie-Qc-CY2" firstAttribute="top" secondItem="qsG-hz-gcs" secondAttribute="bottom" constant="25" id="pfY-mG-COd"/>
+                            <constraint firstItem="M7d-Qv-4mf" firstAttribute="centerX" secondItem="7iS-NZ-ZSo" secondAttribute="centerX" id="rbJ-Fd-uMj"/>
+                            <constraint firstItem="Cwn-Ui-Ozk" firstAttribute="centerX" secondItem="vba-O9-hgi" secondAttribute="centerX" id="s3Z-Fb-kHN"/>
+                            <constraint firstItem="4Ie-Qc-CY2" firstAttribute="leading" secondItem="RLW-dY-iSs" secondAttribute="leading" constant="45" id="s6e-Bc-QV6"/>
+                            <constraint firstItem="RLW-dY-iSs" firstAttribute="trailing" secondItem="ZoR-yE-ZNX" secondAttribute="trailing" constant="15" id="wDI-Hy-hvU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RLW-dY-iSs"/>
                     </view>
                     <connections>
@@ -479,7 +603,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejK-89-tDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ucO-KF-CvM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4394" y="34"/>
+            <point key="canvasLocation" x="4392.8000000000002" y="33.733133433283363"/>
         </scene>
         <!--Question5 View Controller-->
         <scene sceneID="adu-mK-g6K">
@@ -489,24 +613,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBG-8b-fIN">
-                                <rect key="frame" x="154" y="56" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DKX-Cn-Tic">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DKX-Cn-Tic">
                                 <rect key="frame" x="45" y="110" width="286" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wPr-GU-LAX">
-                                <rect key="frame" x="45" y="210" width="286" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wPr-GU-LAX">
+                                <rect key="frame" x="45" y="210" width="286" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -516,9 +631,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EER-AP-wqM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EER-AP-wqM">
                                 <rect key="frame" x="258" y="563" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="トップに戻る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -528,9 +642,8 @@
                                     <action selector="alertButton:" destination="IdJ-Th-g2f" eventType="touchUpInside" id="uT4-4C-tpu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diV-f9-Ebd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diV-f9-Ebd">
                                 <rect key="frame" x="16" y="563" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="一つ前に戻る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -539,9 +652,8 @@
                                     <segue destination="ucO-KF-CvM" kind="unwind" unwindAction="backtoQ4WithSegue:" id="vKI-H9-mJ1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obe-3Z-V5C">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obe-3Z-V5C">
                                 <rect key="frame" x="146" y="487" width="85" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="結果を見る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -550,8 +662,36 @@
                                     <action selector="resultAlert:" destination="IdJ-Th-g2f" eventType="touchUpInside" id="Y08-Pc-XXh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBG-8b-fIN">
+                                <rect key="frame" x="57" y="55" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7Kg-66-vOy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DKX-Cn-Tic" firstAttribute="trailing" secondItem="wPr-GU-LAX" secondAttribute="trailing" id="355-Yb-zfv"/>
+                            <constraint firstItem="fb6-vK-uDU" firstAttribute="bottom" secondItem="obe-3Z-V5C" secondAttribute="bottom" constant="151" id="41L-yK-wV1"/>
+                            <constraint firstItem="wPr-GU-LAX" firstAttribute="centerY" secondItem="MyC-jt-MVz" secondAttribute="centerY" id="7f1-n3-4Ox"/>
+                            <constraint firstItem="fb6-vK-uDU" firstAttribute="bottom" secondItem="diV-f9-Ebd" secondAttribute="bottom" constant="75" id="8sf-E3-Y3O"/>
+                            <constraint firstItem="diV-f9-Ebd" firstAttribute="baseline" secondItem="EER-AP-wqM" secondAttribute="baseline" id="A3e-vw-gQ9"/>
+                            <constraint firstItem="oBG-8b-fIN" firstAttribute="top" secondItem="fb6-vK-uDU" secondAttribute="top" constant="35" id="Gos-Ur-tQE"/>
+                            <constraint firstItem="oBG-8b-fIN" firstAttribute="centerX" secondItem="MyC-jt-MVz" secondAttribute="centerX" id="PDf-xa-vWY"/>
+                            <constraint firstItem="oBG-8b-fIN" firstAttribute="leading" secondItem="fb6-vK-uDU" secondAttribute="leading" constant="57" id="WZ5-wg-cHd"/>
+                            <constraint firstItem="wPr-GU-LAX" firstAttribute="top" secondItem="DKX-Cn-Tic" secondAttribute="bottom" constant="26" id="X74-av-xSE"/>
+                            <constraint firstItem="diV-f9-Ebd" firstAttribute="leading" secondItem="MyC-jt-MVz" secondAttribute="leadingMargin" id="X80-q9-PET"/>
+                            <constraint firstItem="fb6-vK-uDU" firstAttribute="trailing" secondItem="EER-AP-wqM" secondAttribute="trailing" constant="15" id="Xqm-Fr-G0J"/>
+                            <constraint firstItem="wPr-GU-LAX" firstAttribute="centerX" secondItem="obe-3Z-V5C" secondAttribute="centerX" id="aYq-wc-j3J"/>
+                            <constraint firstItem="DKX-Cn-Tic" firstAttribute="centerX" secondItem="MyC-jt-MVz" secondAttribute="centerX" id="fCj-uG-uFV"/>
+                            <constraint firstItem="DKX-Cn-Tic" firstAttribute="top" secondItem="oBG-8b-fIN" secondAttribute="bottom" constant="25" id="hOR-6C-fge"/>
+                            <constraint firstItem="obe-3Z-V5C" firstAttribute="top" secondItem="wPr-GU-LAX" secondAttribute="bottom" constant="31" id="hfD-Vo-8WX"/>
+                            <constraint firstItem="DKX-Cn-Tic" firstAttribute="leading" secondItem="wPr-GU-LAX" secondAttribute="leading" id="whE-TQ-YsE"/>
+                            <constraint firstItem="DKX-Cn-Tic" firstAttribute="leading" secondItem="fb6-vK-uDU" secondAttribute="leading" constant="45" id="y4U-vQ-DbE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fb6-vK-uDU"/>
                     </view>
                     <connections>
@@ -561,7 +701,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsX-rR-mbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5254" y="34"/>
+            <point key="canvasLocation" x="5253.6000000000004" y="33.733133433283363"/>
         </scene>
         <!--logSaveDate-->
         <scene sceneID="zku-fP-dNe">
@@ -571,16 +711,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="過去ろぐ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoU-12-n01">
-                                <rect key="frame" x="137" y="56" width="100" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G7i-ow-Gun">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G7i-ow-Gun">
                                 <rect key="frame" x="47" y="109" width="280" height="469"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellSaveDate" id="s6s-u6-9E6">
@@ -601,9 +733,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeo-KN-MoG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeo-KN-MoG">
                                 <rect key="frame" x="137" y="618" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="トップに戻る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -612,8 +743,25 @@
                                     <segue destination="rxo-EY-EoX" kind="unwind" unwindAction="backtoTopfromLogWithSegue:" id="EIw-I4-noz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="過去ろぐ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoU-12-n01">
+                                <rect key="frame" x="86" y="56" width="204" height="25"/>
+                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xoU-12-n01" firstAttribute="centerX" secondItem="eeo-KN-MoG" secondAttribute="centerX" id="3Gw-Wb-MYY"/>
+                            <constraint firstItem="xoU-12-n01" firstAttribute="centerX" secondItem="68l-Da-Kmd" secondAttribute="centerX" id="6Vk-ed-0NG"/>
+                            <constraint firstAttribute="bottom" secondItem="eeo-KN-MoG" secondAttribute="bottom" constant="20" symbolic="YES" id="8v1-NY-wQB"/>
+                            <constraint firstItem="G7i-ow-Gun" firstAttribute="top" secondItem="xoU-12-n01" secondAttribute="bottom" constant="28" id="EKd-P1-EJi"/>
+                            <constraint firstItem="eeo-KN-MoG" firstAttribute="top" secondItem="G7i-ow-Gun" secondAttribute="bottom" constant="40" id="R0Z-nP-O9s"/>
+                            <constraint firstItem="G7i-ow-Gun" firstAttribute="centerX" secondItem="68l-Da-Kmd" secondAttribute="centerX" id="dkx-Vw-lvM"/>
+                            <constraint firstItem="xoU-12-n01" firstAttribute="leading" secondItem="IVx-XA-SDY" secondAttribute="leading" constant="86" id="ibg-y2-T8J"/>
+                            <constraint firstItem="G7i-ow-Gun" firstAttribute="leading" secondItem="IVx-XA-SDY" secondAttribute="leading" constant="47" id="t3W-t7-fWj"/>
+                            <constraint firstItem="xoU-12-n01" firstAttribute="top" secondItem="IVx-XA-SDY" secondAttribute="top" constant="36" id="zpM-c7-RjN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IVx-XA-SDY"/>
                     </view>
                     <connections>
@@ -1018,7 +1166,7 @@
                                 <rect key="frame" x="0.0" y="605" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rye-E3-K9t">
-                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="50"/>
                                         <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                         <state key="normal" title="過去ろぐを見る">
                                             <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1028,10 +1176,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCE-k2-D3S">
-                                        <rect key="frame" x="164.5" y="0.0" width="68.5" height="50"/>
+                                        <rect key="frame" x="154" y="0.0" width="0.0" height="50"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfL-NE-39q">
-                                        <rect key="frame" x="234" y="0.0" width="141" height="50"/>
+                                        <rect key="frame" x="155" y="0.0" width="220" height="50"/>
                                         <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                         <state key="normal" title="トップに戻る">
                                             <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1042,9 +1190,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9A-Hm-6eN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9A-Hm-6eN">
                                 <rect key="frame" x="319" y="20" width="40" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="20"/>
                                 <state key="normal" title="編集">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1053,9 +1200,8 @@
                                     <action selector="editButton:" destination="Zac-od-Mlq" eventType="touchUpInside" id="lZi-J0-XUf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75e-A6-cxI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75e-A6-cxI">
                                 <rect key="frame" x="16" y="20" width="40" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="20"/>
                                 <state key="normal" title="削除">
                                     <color key="titleColor" red="0.92549019610000005" green="0.33725490200000002" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1069,14 +1215,22 @@
                         <constraints>
                             <constraint firstItem="O2s-92-1ei" firstAttribute="leading" secondItem="AHT-4u-ttD" secondAttribute="leading" id="1Q0-4e-G6B"/>
                             <constraint firstItem="XCT-TP-x66" firstAttribute="top" secondItem="u9F-Ui-keD" secondAttribute="bottom" constant="20" id="7Mw-ur-w81"/>
+                            <constraint firstItem="75e-A6-cxI" firstAttribute="top" secondItem="AHT-4u-ttD" secondAttribute="top" id="8E8-YH-ERh"/>
                             <constraint firstItem="u9F-Ui-keD" firstAttribute="leading" secondItem="AHT-4u-ttD" secondAttribute="leading" id="AE1-WR-eIq"/>
                             <constraint firstAttribute="bottom" secondItem="O2s-92-1ei" secondAttribute="bottom" constant="12" id="Axh-jf-LcF"/>
                             <constraint firstItem="XCT-TP-x66" firstAttribute="width" secondItem="pjn-Q0-iKc" secondAttribute="width" id="FJT-0J-Vqg"/>
+                            <constraint firstItem="AHT-4u-ttD" firstAttribute="trailing" secondItem="O9A-Hm-6eN" secondAttribute="trailing" constant="16" id="LcK-cv-eb9"/>
                             <constraint firstItem="u9F-Ui-keD" firstAttribute="trailing" secondItem="AHT-4u-ttD" secondAttribute="trailing" id="Mwh-bn-5Mp"/>
+                            <constraint firstItem="u9F-Ui-keD" firstAttribute="top" secondItem="O9A-Hm-6eN" secondAttribute="bottom" constant="33" id="Ozn-QO-aKO"/>
                             <constraint firstItem="XCT-TP-x66" firstAttribute="height" secondItem="pjn-Q0-iKc" secondAttribute="height" multiplier="446/667" id="YiG-ng-vEh"/>
                             <constraint firstItem="XCT-TP-x66" firstAttribute="trailing" secondItem="AHT-4u-ttD" secondAttribute="trailing" id="aQ1-5f-b45"/>
+                            <constraint firstItem="O9A-Hm-6eN" firstAttribute="leading" secondItem="75e-A6-cxI" secondAttribute="trailing" constant="263" id="ex1-CI-QKE"/>
+                            <constraint firstItem="75e-A6-cxI" firstAttribute="leading" secondItem="AHT-4u-ttD" secondAttribute="leading" constant="16" id="f2r-sy-pev"/>
                             <constraint firstItem="BXT-HY-gCn" firstAttribute="trailing" secondItem="AHT-4u-ttD" secondAttribute="trailing" id="fb8-si-8Ph"/>
                             <constraint firstAttribute="trailing" secondItem="O2s-92-1ei" secondAttribute="trailing" id="gCN-ym-XLt"/>
+                            <constraint firstItem="O9A-Hm-6eN" firstAttribute="leading" secondItem="75e-A6-cxI" secondAttribute="trailing" constant="263" id="i97-mI-WwQ"/>
+                            <constraint firstItem="O9A-Hm-6eN" firstAttribute="top" secondItem="AHT-4u-ttD" secondAttribute="top" id="inn-dl-5OD"/>
+                            <constraint firstItem="u9F-Ui-keD" firstAttribute="top" secondItem="75e-A6-cxI" secondAttribute="bottom" constant="33" id="lfN-ac-fxv"/>
                             <constraint firstItem="XCT-TP-x66" firstAttribute="leading" secondItem="AHT-4u-ttD" secondAttribute="leading" id="oIb-8r-rFK"/>
                             <constraint firstItem="BXT-HY-gCn" firstAttribute="top" secondItem="AHT-4u-ttD" secondAttribute="top" constant="30" id="puh-KW-v9e"/>
                             <constraint firstItem="u9F-Ui-keD" firstAttribute="top" secondItem="BXT-HY-gCn" secondAttribute="bottom" constant="10" id="sGO-GQ-8jf"/>
@@ -1114,6 +1268,6 @@
         <image name="logo5" width="151" height="151"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aIa-Fl-6ip"/>
+        <segue reference="YhZ-W1-iO7"/>
     </inferredMetricsTieBreakers>
 </document>
