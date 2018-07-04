@@ -259,6 +259,7 @@ class DetailSaveDateViewController: UIViewController {
         
         self.view.endEditing(true)
         self.myStackView.endEditing(true)
+        
     }
     
     

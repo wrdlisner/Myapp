@@ -1,11 +1,3 @@
-//
-//  myExtension.swift
-//  sampleUIkit
-//
-//  Created by 袖川航平 on 2018/05/22.
-//  Copyright © 2018 袖川航平. All rights reserved.
-//
-
 import UIKit
 
 extension UIColor {
