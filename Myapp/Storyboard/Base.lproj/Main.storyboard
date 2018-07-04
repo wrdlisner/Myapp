@@ -271,7 +271,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-X9-MQW">
-                                <rect key="frame" x="146" y="487" width="85" height="29"/>
+                                <rect key="frame" x="145" y="487" width="85" height="29"/>
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <state key="normal" title="次の質問へ">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -313,7 +313,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zHg-X9-MQW" firstAttribute="leading" secondItem="Due-5y-yAW" secondAttribute="leading" constant="146" id="1Qt-cE-EMM"/>
                             <constraint firstItem="Due-5y-yAW" firstAttribute="trailing" secondItem="PYD-4m-B7y" secondAttribute="trailing" constant="15" id="7VV-Vi-ldz"/>
                             <constraint firstItem="Uh6-hU-uSW" firstAttribute="centerY" secondItem="haw-Ph-oZO" secondAttribute="centerY" id="DtU-GS-Bvf"/>
                             <constraint firstItem="sTE-KK-MFx" firstAttribute="top" secondItem="fpn-kU-hJj" secondAttribute="bottom" constant="17" id="F8z-Sn-KcG"/>
@@ -331,6 +330,7 @@
                             <constraint firstItem="fpn-kU-hJj" firstAttribute="top" secondItem="Due-5y-yAW" secondAttribute="top" constant="35" id="kbZ-BX-GiZ"/>
                             <constraint firstItem="sTE-KK-MFx" firstAttribute="centerX" secondItem="ufU-ZO-O9O" secondAttribute="centerX" id="o8q-Sj-qES"/>
                             <constraint firstItem="tsU-Wj-zMh" firstAttribute="leading" secondItem="haw-Ph-oZO" secondAttribute="leadingMargin" id="sQD-IF-ezn"/>
+                            <constraint firstItem="zHg-X9-MQW" firstAttribute="centerX" secondItem="haw-Ph-oZO" secondAttribute="centerX" id="uAj-pO-PED"/>
                             <constraint firstItem="sTE-KK-MFx" firstAttribute="leading" secondItem="Due-5y-yAW" secondAttribute="leading" constant="44" id="uIk-GY-bcA"/>
                             <constraint firstItem="Due-5y-yAW" firstAttribute="bottom" secondItem="tsU-Wj-zMh" secondAttribute="bottom" constant="75" id="wCV-zT-qVj"/>
                             <constraint firstItem="zHg-X9-MQW" firstAttribute="top" secondItem="Uh6-hU-uSW" secondAttribute="bottom" constant="31" id="yxv-7I-v45"/>
@@ -402,7 +402,7 @@
                                     <segue destination="gRw-Zq-sRd" kind="unwind" unwindAction="backtoQ2WithSegue:" id="jc7-V9-i7R"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IMM-9P-nDs">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IMM-9P-nDs">
                                 <rect key="frame" x="45" y="110" width="286" height="74"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -461,7 +461,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Ie-Qc-CY2">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Ie-Qc-CY2">
                                 <rect key="frame" x="45" y="110" width="286" height="74"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -567,7 +567,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DKX-Cn-Tic">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DKX-Cn-Tic">
                                 <rect key="frame" x="45" y="110" width="286" height="74"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

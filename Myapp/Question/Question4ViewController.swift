@@ -22,6 +22,8 @@ class Question4ViewController: UIViewController {
         default:
             print("nil")
         }
+        
+        textField.text! = question4Answer
     }
     
     @IBOutlet weak var textField: UITextView!
@@ -39,6 +41,11 @@ class Question4ViewController: UIViewController {
         let defaultAction1:UIAlertAction = UIAlertAction(title: "戻る", style: UIAlertActionStyle.default, handler:{
             
             (action:UIAlertAction!) -> Void in
+            
+            question2Answer = ""
+            question3Answer = ""
+            question4Answer = ""
+            question5Answer = ""
             
             let controller = self.storyboard!.instantiateViewController(withIdentifier: "topPage")
             
@@ -63,7 +70,15 @@ class Question4ViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        question4Answer = textField.text!
+        
+    }
+    
     @IBAction func backtoQ4(segue:UIStoryboardSegue){
+        
+        question4Answer = textField.text!
         
     }
 

@@ -13,6 +13,7 @@ class Question2ViewController: UIViewController {
         
         name1.text = selected[choice]
 
+        textField.text! = question2Answer
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +36,11 @@ class Question2ViewController: UIViewController {
             
             (action:UIAlertAction!) -> Void in
             
+            question2Answer = ""
+            question3Answer = ""
+            question4Answer = ""
+            question5Answer = ""
+            
             let controller = self.storyboard!.instantiateViewController(withIdentifier: "topPage")
             
             self.show(controller, sender: true)
@@ -54,7 +60,16 @@ class Question2ViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        question2Answer = textField.text!
+        
+    }
+    
     @IBAction func backtoQ2(segue:UIStoryboardSegue){
+        
+        question2Answer = textField.text!
+        
     }
 
 }

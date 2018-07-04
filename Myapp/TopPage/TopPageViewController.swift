@@ -3,6 +3,12 @@ import UIKit
 class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        choice = -1
+        question2Answer = ""
+        question3Answer = ""
+        question4Answer = ""
+        question5Answer = ""
         
     }
     

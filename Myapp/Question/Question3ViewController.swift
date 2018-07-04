@@ -30,6 +30,8 @@ class Question3ViewController: UIViewController{
             print("nil")
         }
         
+        textField.text! = question3Answer
+        
     }
 
     @IBOutlet weak var textField: UITextView!
@@ -53,6 +55,11 @@ class Question3ViewController: UIViewController{
             
             (action:UIAlertAction!) -> Void in
             
+            question2Answer = ""
+            question3Answer = ""
+            question4Answer = ""
+            question5Answer = ""
+            
             let controller = self.storyboard!.instantiateViewController(withIdentifier: "topPage")
             
             self.show(controller, sender: true)
@@ -73,8 +80,15 @@ class Question3ViewController: UIViewController{
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        question3Answer = textField.text!
+
+    }
+    
     @IBAction func backtoQ3(segue:UIStoryboardSegue){
         
+        question3Answer = textField.text!
+    
     }
     
 }

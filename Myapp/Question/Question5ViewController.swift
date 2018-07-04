@@ -41,6 +41,11 @@ class Question5ViewController: UIViewController {
         
         (action:UIAlertAction!) -> Void in
         
+        question2Answer = ""
+        question3Answer = ""
+        question4Answer = ""
+        question5Answer = ""
+        
         let controller = self.storyboard!.instantiateViewController(withIdentifier: "topPage")
         
         self.show(controller, sender: true)
