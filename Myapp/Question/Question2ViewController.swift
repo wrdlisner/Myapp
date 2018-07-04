@@ -35,12 +35,7 @@ class Question2ViewController: UIViewController {
         let defaultAction1:UIAlertAction = UIAlertAction(title: "戻る", style: UIAlertActionStyle.default, handler:{
             
             (action:UIAlertAction!) -> Void in
-            
-            question2Answer = ""
-            question3Answer = ""
-            question4Answer = ""
-            question5Answer = ""
-            
+
             let controller = self.storyboard!.instantiateViewController(withIdentifier: "topPage")
             
             self.show(controller, sender: true)
