@@ -6,6 +6,7 @@ var choice:Int = -1
 
 class Question1ViewController:UIViewController,
     UITableViewDataSource, UITableViewDelegate
+    
     {
     
     override func viewDidLoad() {

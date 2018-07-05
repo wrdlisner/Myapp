@@ -51,7 +51,7 @@ class Question5ViewController: UIViewController {
     alertController.addAction(defaultAction1)
     
     present(alertController, animated: true, completion: nil)
-}
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
