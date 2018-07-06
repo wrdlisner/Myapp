@@ -125,4 +125,11 @@ class Question5ViewController: UIViewController {
         question5Answer = textField.text!
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        question5Answer = textField.text!
+        
+    }
+
 }
