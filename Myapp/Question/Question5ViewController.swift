@@ -72,6 +72,8 @@ class Question5ViewController: UIViewController {
 
             (action:UIAlertAction!) -> Void in
             
+            question5Answer = self.textField.text!
+            
             self.saveKokolog()
             
             let storyboard: UIStoryboard = self.storyboard!

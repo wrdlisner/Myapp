@@ -5,4 +5,6 @@ target 'Kokolog' do
 
 	pod 'SwiftyOnboard'
 	pod 'IQKeyboardManagerSwift'
+	pod 'FSCalendar'
+	pod 'CalculateCalendarLogic'
 end
