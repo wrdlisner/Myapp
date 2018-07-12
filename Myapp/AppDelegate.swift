@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-  
+        
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -76,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let goTopPage = storyboard.instantiateViewController(withIdentifier: "topPage") as UIViewController
             UserDefaults.standard.set(true, forKey: "openApp")
             window?.rootViewController = goTopPage
-            
+//            topPage
         } else {
             
             userDefault.set(2, forKey: "key")
