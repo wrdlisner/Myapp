@@ -68,7 +68,7 @@ class Question5ViewController: UIViewController {
             
         })
         
-        let defaultAction1:UIAlertAction = UIAlertAction(title: "ろぐを見る", style: UIAlertActionStyle.default, handler:{
+        let defaultAction1:UIAlertAction = UIAlertAction(title: "記録する", style: UIAlertActionStyle.default, handler:{
 
             (action:UIAlertAction!) -> Void in
             

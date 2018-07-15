@@ -18,6 +18,7 @@
 		5519FC6E20CA89B300E28D8F /* SwiftyOnboardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519FC6B20CA89B300E28D8F /* SwiftyOnboardPage.swift */; };
 		551B6CE620EB58790019DE1C /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B6CE520EB58790019DE1C /* IQKeyboardManagerSwift.framework */; };
 		55202F4C20CC12D3009DEB85 /* Question3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55202F4B20CC12D3009DEB85 /* Question3ViewController.swift */; };
+		55329C0D20FB7F6000F1F96B /* RangeQ1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55329C0C20FB7F6000F1F96B /* RangeQ1ViewController.swift */; };
 		5535646120C0193B00090CA6 /* Hannari.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5535646020C0193B00090CA6 /* Hannari.otf */; };
 		5535646220C033E700090CA6 /* Hannari.otf in Sources */ = {isa = PBXBuildFile; fileRef = 5535646020C0193B00090CA6 /* Hannari.otf */; };
 		5536FF6E20C754FB0003A639 /* Question2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536FF6D20C754FB0003A639 /* Question2ViewController.swift */; };
@@ -52,6 +53,7 @@
 		5519FC6B20CA89B300E28D8F /* SwiftyOnboardPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboardPage.swift; sourceTree = "<group>"; };
 		551B6CE520EB58790019DE1C /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55202F4B20CC12D3009DEB85 /* Question3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question3ViewController.swift; sourceTree = "<group>"; };
+		55329C0C20FB7F6000F1F96B /* RangeQ1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeQ1ViewController.swift; sourceTree = "<group>"; };
 		5535646020C0193B00090CA6 /* Hannari.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hannari.otf; sourceTree = "<group>"; };
 		5536FF6D20C754FB0003A639 /* Question2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question2ViewController.swift; sourceTree = "<group>"; };
 		55372A9020E1224400AA19DF /* DetailSaveDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSaveDateViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				55202F4B20CC12D3009DEB85 /* Question3ViewController.swift */,
 				5536FF6D20C754FB0003A639 /* Question2ViewController.swift */,
 				5511E5C320C2E1C100902854 /* Question1ViewController.swift */,
+				55329C0C20FB7F6000F1F96B /* RangeQ1ViewController.swift */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				55E79BBA20DF1C5F0094E5BE /* logSaveDateViewController.swift in Sources */,
 				55202F4C20CC12D3009DEB85 /* Question3ViewController.swift in Sources */,
 				5519FC6D20CA89B300E28D8F /* SwiftyOnboardOverlay.swift in Sources */,
+				55329C0D20FB7F6000F1F96B /* RangeQ1ViewController.swift in Sources */,
 				558D81FC20F742EA007AC493 /* CalenderViewController.swift in Sources */,
 				550889D120BE9FD000241F10 /* AppDelegate.swift in Sources */,
 				55DB8ED320D1117700A2CB64 /* Question4ViewController.swift in Sources */,
