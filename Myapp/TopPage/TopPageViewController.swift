@@ -16,16 +16,15 @@ class ViewController: UIViewController {
         let center = UNUserNotificationCenter.current()
         
         center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-            // Enable or disable features based on authorization.
         }
         
         let content = UNMutableNotificationContent()
-        content.title = "Hello!"
-        content.body = "It's time!"
+        content.title = "こころぐを書く時間です"
+        content.body = "今日のこころぐは書きましたか？日々の感情を記録に録りましょう。"
         content.sound = UNNotificationSound.default()
         
         let date = DateComponents(month:7, day:7, hour:12, minute:0)
-        let trigger = UNCalendarNotificationTrigger.init(dateMatching: date, repeats: false)
+        let trigger = UNCalendarNotificationTrigger.init(dateMatching: date, repeats: true)
         
         let request = UNNotificationRequest.init(identifier: "CalendarNotification", content: content, trigger: trigger);          center.add(request)
     }

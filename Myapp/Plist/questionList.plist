@@ -4,47 +4,57 @@
 <dict>
 	<key>喜</key>
 	<dict>
-		<key>joy1</key>
+		<key>joy</key>
 		<string>どんな事がありましたか？</string>
-		<key>joy2</key>
+		<key>joy2-1</key>
 		<string>どうして今日は「喜」の気分でしたか？</string>
-		<key>joy3</key>
+		<key>joy2-2</key>
 		<string>今日の気分を人に伝える時何を一番伝えたいですか?</string>
-		<key>joy4</key>
+		<key>joy2-3</key>
 		<string>今日は最高の日でしたか？そうでない場合、それはなぜですか？</string>
 	</dict>
 	<key>怒</key>
 	<dict>
-		<key>angry1</key>
+		<key>angry</key>
 		<string>どんな事がありましたか？</string>
-		<key>angry2</key>
+		<key>angry2-1</key>
 		<string>今日の出来事にタイトルを付けるとしたら何になりますか？</string>
-		<key>angry3</key>
+		<key>angry2-2</key>
 		<string>今と真逆の感情の時の自分は今のあなたにどんな言葉をかけそうですか？</string>
-		<key>angry4</key>
+		<key>angry2-3</key>
 		<string>明日の自分と話せるとしたらどんな言葉をかけますか？</string>
+		<key>angry1-1</key>
+		<string>どうして今日は「怒」の気分でしたか？</string>
+		<key>angry1-2</key>
+		<string></string>
 	</dict>
 	<key>哀</key>
 	<dict>
-		<key>sad1</key>
+		<key>sad</key>
 		<string>どんな事がありましたか？</string>
-		<key>sad2</key>
+		<key>sad3-1</key>
 		<string>今自分が一番行きたい場所はどんな景色が広がっていますか？</string>
-		<key>sad3</key>
+		<key>sad3-2</key>
 		<string>あなたの一番親しい人はあなたにどんな言葉をかけてくれそうですか？</string>
-		<key>sad4</key>
+		<key>sad3-3</key>
 		<string>深呼吸をして、明日の自分へのメッセージをしたためてください</string>
+		<key>sad1-1</key>
+		<string>今日のことを</string>
 	</dict>
 	<key>楽</key>
 	<dict>
-		<key>fun1</key>
+		<key>fun</key>
 		<string>どんな事がありましたか？</string>
-		<key>fun2</key>
+		<key>fun2-1</key>
 		<string>どうして今日は「楽」の気分でしたか？</string>
-		<key>fun3</key>
+		<key>fun2-2</key>
 		<string>今日の気分を人に伝える時何を一番伝えたいですか？</string>
-		<key>fun4</key>
+		<key>fun2-3</key>
 		<string>今日は最高の日でしたか？そうでない場合、それはなぜですか？</string>
+		<key>fun1-1</key>
+		<string>どうして今日は「楽」の気分でしたか？</string>
+		<key>fun1-2</key>
+		<string>今日のような気分を感じたのは</string>
 	</dict>
 </dict>
 </plist>

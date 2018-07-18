@@ -74,29 +74,33 @@ class DetailSaveDateViewController: UIViewController {
         Q3answer.text = readKokolog[0].question3
         Q4answer.text = readKokolog[0].question4
         Q5answer.text = readKokolog[0].question5
-        Q1answer.textColor = UIColor.rgb(r: 242, g: 162, b: 160, alpha: 1)
+        Q1answer.font = UIFont.boldSystemFont(ofSize: 20)
         
         switch readKokolog[0].question1 {
         case 0:
             Q1answer.text = "喜"
+            Q1answer.textColor = UIColor.joy
             Q2question.text = dic1["joy1"] as? String
             Q3question.text = dic1["joy2"] as? String
             Q4question.text = dic1["joy3"] as? String
             Q5question.text = dic1["joy4"] as? String
         case 1:
             Q1answer.text = "怒"
+            Q1answer.textColor = UIColor.anger
             Q2question.text = dic2["angry1"] as? String
             Q3question.text = dic2["angry2"] as? String
             Q4question.text = dic2["angry3"] as? String
             Q5question.text = dic2["angry4"] as? String
         case 2:
             Q1answer.text = "哀"
+            Q1answer.textColor = UIColor.sad
             Q2question.text = dic3["sad1"] as? String
             Q3question.text = dic3["sad2"] as? String
             Q4question.text = dic3["sad3"] as? String
             Q5question.text = dic3["sad4"] as? String
         case 3:
             Q1answer.text = "楽"
+            Q1answer.textColor = UIColor.happy
             Q2question.text = dic4["fun1"] as? String
             Q3question.text = dic4["fun2"] as? String
             Q4question.text = dic4["fun3"] as? String

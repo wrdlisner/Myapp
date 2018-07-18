@@ -34,6 +34,7 @@
 		55DB8ED320D1117700A2CB64 /* Question4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */; };
 		55DB8ED520D2562800A2CB64 /* Question5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */; };
 		55DB8ED720D2A7DE00A2CB64 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8ED620D2A7DE00A2CB64 /* ResultViewController.swift */; };
+		55E639B920FF38CD00D88C26 /* userSettingTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E639B820FF38CD00D88C26 /* userSettingTopViewController.swift */; };
 		55E79BBA20DF1C5F0094E5BE /* logSaveDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E79BB920DF1C5F0094E5BE /* logSaveDateViewController.swift */; };
 		6855382211459D37C46B83E0 /* Pods_Kokolog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0DC3C61B04E912DFC28811 /* Pods_Kokolog.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question4ViewController.swift; sourceTree = "<group>"; };
 		55DB8ED420D2562800A2CB64 /* Question5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question5ViewController.swift; sourceTree = "<group>"; };
 		55DB8ED620D2A7DE00A2CB64 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		55E639B820FF38CD00D88C26 /* userSettingTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userSettingTopViewController.swift; sourceTree = "<group>"; };
 		55E79BB920DF1C5F0094E5BE /* logSaveDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logSaveDateViewController.swift; sourceTree = "<group>"; };
 		59CCE14A340099305BD84A8D /* Pods-Kokolog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kokolog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kokolog/Pods-Kokolog.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0DC3C61B04E912DFC28811 /* Pods_Kokolog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kokolog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 				550889D020BE9FD000241F10 /* AppDelegate.swift */,
 				550889DC20BE9FD200241F10 /* Info.plist */,
 				55372A9420E1227F00AA19DF /* Storyboard */,
+				55E639BA20FF38EB00D88C26 /* userSetting */,
 				558D81FA20F741F0007AC493 /* Calender */,
 				55372A9520E122C100AA19DF /* TopPage */,
 				55372A9320E1226B00AA19DF /* Extention */,
@@ -223,6 +226,14 @@
 				5535646020C0193B00090CA6 /* Hannari.otf */,
 			);
 			path = font;
+			sourceTree = "<group>";
+		};
+		55E639BA20FF38EB00D88C26 /* userSetting */ = {
+			isa = PBXGroup;
+			children = (
+				55E639B820FF38CD00D88C26 /* userSettingTopViewController.swift */,
+			);
+			path = userSetting;
 			sourceTree = "<group>";
 		};
 		A15ED130E192D07A74001C36 /* Frameworks */ = {
@@ -373,6 +384,7 @@
 				55DB8ED520D2562800A2CB64 /* Question5ViewController.swift in Sources */,
 				55D1D5DA20BF6FFE00AA3B74 /* Kokolog.app in Sources */,
 				55B9560620DE0DCE00DE787E /* Results+CoreDataClass copy.swift in Sources */,
+				55E639B920FF38CD00D88C26 /* userSettingTopViewController.swift in Sources */,
 				559E095720DA7B5A00451B4C /* result.xcdatamodeld in Sources */,
 				5536FF6E20C754FB0003A639 /* Question2ViewController.swift in Sources */,
 				55D9A34B20BF6A8B003087A6 /* myExtension.swift in Sources */,
