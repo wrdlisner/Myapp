@@ -1,12 +1,15 @@
 import UIKit
 
-var Title = [ ["設定1", "Detail 1-1", "Detail 1-2"],
-              
-              ["設定2", "Detail 2-1", "Detail 2-2"],
-              
-              ["設定3", "Detail 3-1", "Detail 3-2"]]
+// 設定画面に追加するもの
+// 通知機能,作者ブログ,「こころぐ」のレビュー
 
-class userSettingTopViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+var Title = [ ["通知", "通知を設定する"],
+              
+              ["デベロッパーについて", "デベッロパーのブログ"],
+              
+              ["レビュー", "こころぐのレビューを書く"] ]
+
+class userSettingTopViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,WKNavigationDelegate {
     
     @IBOutlet weak var myTableVIew: UITableView!
 
@@ -15,7 +18,7 @@ class userSettingTopViewController: UIViewController,UITableViewDelegate,UITable
         
         myTableVIew.delegate = self
         myTableVIew.dataSource = self
-        
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,12 +31,14 @@ class userSettingTopViewController: UIViewController,UITableViewDelegate,UITable
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        myTableVIew.backgroundColor = UIColor.yellow
         return Title[section].count - 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
         cell.textLabel?.text = Title[indexPath.section][indexPath.row + 1]
+        cell.contentView.backgroundColor = UIColor.rgb(r: 255, g: 255, b: 232, alpha: 1)
         return cell
     }
     
@@ -42,8 +47,18 @@ class userSettingTopViewController: UIViewController,UITableViewDelegate,UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedData = indexPath.row
+        let request = NSURLRequest(url: NSURL(string: "sodekoo.com")! as URL)
         
+        switch selectedData {
+        case 1:
+            UIWebView.loadRequest(request)
+        default:
+            <#code#>
+        }
     }
+    
+    
 
 
 }

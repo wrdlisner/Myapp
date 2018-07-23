@@ -121,7 +121,7 @@
 				559E095220DA6B0400451B4C /* Question */,
 				55372A9220E1225400AA19DF /* ResultSaveDate */,
 				559E095320DA6B3300451B4C /* SwiftyOnboard */,
-				55372A9620E122E200AA19DF /* Plist */,
+				55372A9620E122E200AA19DF /* ListQuestion */,
 				55372A9720E1230200AA19DF /* Media */,
 				55372A9820E1231500AA19DF /* CoreDate */,
 				559E095420DA6B4D00451B4C /* font */,
@@ -165,12 +165,12 @@
 			path = TopPage;
 			sourceTree = "<group>";
 		};
-		55372A9620E122E200AA19DF /* Plist */ = {
+		55372A9620E122E200AA19DF /* ListQuestion */ = {
 			isa = PBXGroup;
 			children = (
 				5537DB6120C910210045BD41 /* questionList.plist */,
 			);
-			path = Plist;
+			path = ListQuestion;
 			sourceTree = "<group>";
 		};
 		55372A9720E1230200AA19DF /* Media */ = {
