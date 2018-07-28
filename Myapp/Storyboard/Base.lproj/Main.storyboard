@@ -1030,7 +1030,7 @@
                                 <rect key="frame" x="0.0" y="605" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDh-hb-Fqk">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="50"/>
                                         <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                         <state key="normal" title="過去ろぐ">
                                             <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1040,10 +1040,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAU-E2-gFs">
-                                        <rect key="frame" x="116" y="0.0" width="84.5" height="50"/>
+                                        <rect key="frame" x="100.5" y="0.0" width="0.0" height="50"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nv-bw-Ndy">
-                                        <rect key="frame" x="201.5" y="0.0" width="173.5" height="50"/>
+                                        <rect key="frame" x="101.5" y="0.0" width="273.5" height="50"/>
                                         <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                         <state key="normal" title="トップに戻る">
                                             <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1094,10 +1094,10 @@
             </objects>
             <point key="canvasLocation" x="6825" y="34"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View View Controller-->
         <scene sceneID="hjf-57-hMc">
             <objects>
-                <viewController id="qIq-fR-6w6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebVIew" id="qIq-fR-6w6" customClass="WebViewViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZYX-N7-Ky4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1110,14 +1110,26 @@
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v2b-cF-aEw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="590"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.97647058819999999" blue="0.78320057190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="vxv-TR-u9N"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="v2b-cF-aEw" id="BUL-I3-o5b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKs-mC-5kI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="537" y="1737"/>
+            <point key="canvasLocation" x="536.79999999999995" y="1736.5817091454273"/>
         </scene>
         <!--Detail Save Date View Controller-->
         <scene sceneID="9G1-IC-mda">
@@ -1284,7 +1296,7 @@
                                 <rect key="frame" x="0.0" y="605" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rye-E3-K9t">
-                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="50"/>
                                         <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                         <state key="normal" title="過去ろぐ">
                                             <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1294,10 +1306,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCE-k2-D3S">
-                                        <rect key="frame" x="100.5" y="0.0" width="0.0" height="50"/>
+                                        <rect key="frame" x="116" y="0.0" width="84.5" height="50"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfL-NE-39q">
-                                        <rect key="frame" x="101.5" y="0.0" width="273.5" height="50"/>
+                                        <rect key="frame" x="201.5" y="0.0" width="173.5" height="50"/>
                                         <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                         <state key="normal" title="トップに戻る">
                                             <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1400,6 +1412,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enA-Ij-Uwt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2226" y="1737"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tvP-sW-Hv9">
+            <objects>
+                <viewController id="and-zv-ON9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3se-yH-mfs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCU-df-jW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

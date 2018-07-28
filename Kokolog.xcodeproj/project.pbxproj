@@ -37,6 +37,7 @@
 		55E639B920FF38CD00D88C26 /* userSettingTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E639B820FF38CD00D88C26 /* userSettingTopViewController.swift */; };
 		55E79BBA20DF1C5F0094E5BE /* logSaveDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E79BB920DF1C5F0094E5BE /* logSaveDateViewController.swift */; };
 		6855382211459D37C46B83E0 /* Pods_Kokolog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0DC3C61B04E912DFC28811 /* Pods_Kokolog.framework */; };
+		B04C0D9C2109B1C90042A484 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04C0D9B2109B1C90042A484 /* WebViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		55E79BB920DF1C5F0094E5BE /* logSaveDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logSaveDateViewController.swift; sourceTree = "<group>"; };
 		59CCE14A340099305BD84A8D /* Pods-Kokolog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kokolog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kokolog/Pods-Kokolog.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0DC3C61B04E912DFC28811 /* Pods_Kokolog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kokolog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B04C0D9B2109B1C90042A484 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		CA3CC04155B92A3BD5C9DF0A /* Pods-Kokolog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kokolog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kokolog/Pods-Kokolog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				55E639B820FF38CD00D88C26 /* userSettingTopViewController.swift */,
+				B04C0D9B2109B1C90042A484 /* WebViewViewController.swift */,
 			);
 			path = userSetting;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				55329C0D20FB7F6000F1F96B /* RangeQ1ViewController.swift in Sources */,
 				558D81FC20F742EA007AC493 /* CalenderViewController.swift in Sources */,
 				550889D120BE9FD000241F10 /* AppDelegate.swift in Sources */,
+				B04C0D9C2109B1C90042A484 /* WebViewViewController.swift in Sources */,
 				55DB8ED320D1117700A2CB64 /* Question4ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

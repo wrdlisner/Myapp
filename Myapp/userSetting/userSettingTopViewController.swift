@@ -9,22 +9,23 @@ var Title = [ ["通知", "通知を設定する"],
               
               ["レビュー", "こころぐのレビューを書く"] ]
 
-class userSettingTopViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,WKNavigationDelegate {
+class userSettingTopViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var myTableVIew: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         myTableVIew.delegate = self
         myTableVIew.dataSource = self
-    
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return Title.count
     }
@@ -48,17 +49,7 @@ class userSettingTopViewController: UIViewController,UITableViewDelegate,UITable
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedData = indexPath.row
-        let request = NSURLRequest(url: NSURL(string: "sodekoo.com")! as URL)
-        
-        switch selectedData {
-        case 1:
-            UIWebView.loadRequest(request)
-        default:
-            <#code#>
-        }
     }
-    
-    
 
 
 }
