@@ -67,13 +67,13 @@ class Question1ViewController:UIViewController,
         
         let alertController = UIAlertController(title: "トップに戻ります", message: nil, preferredStyle: .alert)
         
-        let cancelAction:UIAlertAction = UIAlertAction(title: "戻らない", style: UIAlertActionStyle.default, handler:{
+        let cancelAction:UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertActionStyle.default, handler:{
             
         (action:UIAlertAction!) -> Void in
             
         })
         
-        let defaultAction1:UIAlertAction = UIAlertAction(title: "戻る", style: UIAlertActionStyle.default, handler:{
+        let defaultAction1:UIAlertAction = UIAlertAction(title: "はい", style: UIAlertActionStyle.default, handler:{
             
         (action:UIAlertAction!) -> Void in
                                                             

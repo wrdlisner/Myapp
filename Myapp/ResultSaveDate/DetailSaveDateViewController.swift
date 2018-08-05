@@ -215,13 +215,13 @@ class DetailSaveDateViewController: UIViewController {
         
         let alertController = UIAlertController(title: "かころぐを削除しますか?", message: nil, preferredStyle: .alert)
         
-        let cancelAction:UIAlertAction = UIAlertAction(title: "戻る", style: UIAlertActionStyle.default, handler:{
+        let cancelAction:UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertActionStyle.default, handler:{
             
             (action:UIAlertAction!) -> Void in
             
         })
         
-        let defaultAction1:UIAlertAction = UIAlertAction(title: "削除する", style: UIAlertActionStyle.default, handler:{
+        let defaultAction1:UIAlertAction = UIAlertAction(title: "はい", style: UIAlertActionStyle.default, handler:{
             
             (action:UIAlertAction!) -> Void in
             

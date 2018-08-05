@@ -1,13 +1,10 @@
 import UIKit
+import UserNotifications
 
 // 設定画面に追加するもの
 // 通知機能,作者ブログ,「こころぐ」のレビュー
 
-var Title = [ ["通知", "通知を設定する"],
-              
-              ["デベロッパーについて", "デベッロパーのブログ"],
-              
-              ["レビュー", "こころぐのレビューを書く"] ]
+var Title = [ ["通知", "通知を設定する"] ]
 
 class userSettingTopViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -18,6 +15,18 @@ class userSettingTopViewController: UIViewController,UITableViewDelegate,UITable
         
         myTableVIew.delegate = self
         myTableVIew.dataSource = self
+        
+        let center = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+            content.title = "こころぐを書く時間です"
+            content.body = "今日のこころぐは書きましたか？日々の感情を記録に録りましょう。"
+            content.sound = UNNotificationSound.default()
+        
+        let date = DateComponents(month:7, day:30, hour:17, minute:20)
+        let trigger = UNCalendarNotificationTrigger.init(dateMatching: date, repeats: true)
+        
+        let request = UNNotificationRequest.init(identifier: "CalendarNotification", content: content, trigger: trigger);          center.add(request)
         
     }
 
