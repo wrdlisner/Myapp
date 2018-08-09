@@ -5,6 +5,7 @@ class NotificationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,9 +25,17 @@ class NotificationViewController: UIViewController {
                 content.title = "こころぐを書く時間です"
                 content.body = "今日のこころぐは書きましたか？日々の感情を記録に録りましょう。"
                 content.sound = UNNotificationSound.default()
+        
+            func myCalender() {
+                
+            }
             
-            let date = DateComponents(month:7, day:30, hour:17, minute:20)
-            let trigger = UNCalendarNotificationTrigger.init(dateMatching: date, repeats: true)
+            let calendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
+            let now = NSDate()
+            let date:NSDateComponents = calendar!.components(NSCalendar.Unit.HourCalendarUnit|NSCalendar.Unit.MinuteCalendarUnit|NSCalendar.Unit.SecondCalendarUnit,fromDate: now)
+            date.calendar = calendar as! Calendar;
+//                DateComponents(month:7, day:30, hour:17, minute:20)
+            let trigger = UNCalendarNotificationTrigger.init(dateMatching: date as DateComponents, repeats: true)
             
             let request = UNNotificationRequest.init(identifier: "CalendarNotification", content: content, trigger: trigger);
                 center.add(request)
@@ -36,22 +45,15 @@ class NotificationViewController: UIViewController {
         }
     }
     
-    @IBAction func myDatePicker(_ sender: UIDatePicker) {
+    internal func changeDate(sender: UIDatePicker){
         
         let df = DateFormatter()
         df.dateFormat = "H時m分"
         df.locale = Locale(identifier: "ja_JP")
         
         let SettingDate = df.string(from: sender.date)
-
+        
     }
     
-//    // フォーマットを生成.
-//    let myDateFormatter: DateFormatter = DateFormatter()
-//    myDateFormatter.dateFormat = "yyyy/MM/dd hh:mm"
-//
-//    // 日付をフォーマットに則って取得.
-//    let mySelectedDate: NSString = myDateFormatter.string(from: sender.date)
-//    myTextField.text = mySelectedDate as String
-    
+
 }
