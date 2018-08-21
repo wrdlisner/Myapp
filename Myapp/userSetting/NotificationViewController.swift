@@ -25,14 +25,11 @@ class NotificationViewController: UIViewController {
                 content.title = "こころぐを書く時間です"
                 content.body = "今日のこころぐは書きましたか？日々の感情を記録に録りましょう。"
                 content.sound = UNNotificationSound.default()
-        
-            func myCalender() {
-                
-            }
             
             let calendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
             let now = NSDate()
             let date:NSDateComponents = calendar!.components(NSCalendar.Unit.HourCalendarUnit|NSCalendar.Unit.MinuteCalendarUnit|NSCalendar.Unit.SecondCalendarUnit,fromDate: now)
+            let
             date.calendar = calendar as! Calendar;
 //                DateComponents(month:7, day:30, hour:17, minute:20)
             let trigger = UNCalendarNotificationTrigger.init(dateMatching: date as DateComponents, repeats: true)
