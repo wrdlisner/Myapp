@@ -6,12 +6,20 @@
 	<dict>
 		<key>joy</key>
 		<string>どんな事がありましたか？</string>
+		<key>joy1-1</key>
+		<string>どうして今日は「喜」の気分でしたか？</string>
 		<key>joy2-1</key>
 		<string>どうして今日は「喜」の気分でしたか？</string>
 		<key>joy2-2</key>
 		<string>今日の気分を人に伝える時何を一番伝えたいですか?</string>
 		<key>joy2-3</key>
 		<string>今日は最高の日でしたか？そうでない場合、それはなぜですか？</string>
+		<key>joy3-1</key>
+		<string>今日の気分を誰と一番共有したいですか？</string>
+		<key>joy3-2</key>
+		<string>その人は今日の出来事のどこに共感を示してくれそうですか？</string>
+		<key>joy3-3</key>
+		<string>ここからやる！</string>
 	</dict>
 	<key>怒</key>
 	<dict>

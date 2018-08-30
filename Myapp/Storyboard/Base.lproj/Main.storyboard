@@ -70,6 +70,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="kKy-aP-lBp" kind="show" id="bxc-q5-iNn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -83,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJ1-hi-IjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-252" y="1647"/>
+            <point key="canvasLocation" x="564" y="858"/>
         </scene>
         <!--TopPage-->
         <scene sceneID="tne-QT-ifu">
@@ -165,7 +168,7 @@
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rVc-ke-VpC" kind="show" id="sda-kI-VXW"/>
+                                    <segue destination="rkQ-E1-wtp" kind="show" id="Ygy-Jt-9kQ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo1" translatesAutoresizingMaskIntoConstraints="NO" id="7JA-ll-1Tu">
@@ -1048,7 +1051,7 @@
                                 <rect key="frame" x="0.0" y="605" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDh-hb-Fqk">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="50"/>
                                         <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                         <state key="normal" title="過去ろぐ">
                                             <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1058,10 +1061,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAU-E2-gFs">
-                                        <rect key="frame" x="116" y="0.0" width="84.5" height="50"/>
+                                        <rect key="frame" x="100.5" y="0.0" width="0.0" height="50"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nv-bw-Ndy">
-                                        <rect key="frame" x="201.5" y="0.0" width="173.5" height="50"/>
+                                        <rect key="frame" x="101.5" y="0.0" width="273.5" height="50"/>
                                         <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                         <state key="normal" title="トップに戻る">
                                             <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1113,69 +1116,9 @@
             <point key="canvasLocation" x="6825" y="34"/>
         </scene>
         <!--Notification-->
-        <scene sceneID="PaF-9W-ciN">
-            <objects>
-                <viewController storyboardIdentifier="Notification" title="Notification" id="rVc-ke-VpC" customClass="NotificationViewController" customModule="CalculateCalendarLogic" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wt9-pP-gvK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <datePicker userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Alm-hW-mq7">
-                                <rect key="frame" x="0.0" y="252" width="375" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="554814321.031039">
-                                    <!--2018-08-01 11:05:21 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="DateSelector:" destination="rVc-ke-VpC" eventType="valueChanged" id="lRV-6U-eQo"/>
-                                </connections>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fw6-fe-bLU">
-                                <rect key="frame" x="136" y="618" width="102" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
-                                <state key="normal" title="トップに戻る">
-                                    <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X8K-Cc-zbN">
-                                <rect key="frame" x="278" y="140" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="mySwitch:" destination="rVc-ke-VpC" eventType="valueChanged" id="xuV-sJ-xzv"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="通知" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rst-KU-vFq">
-                                <rect key="frame" x="88" y="56" width="203" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="25"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.65098039220000004" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="通知オフ/オン" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fD4-eC-z1L">
-                                <rect key="frame" x="42" y="146" width="180" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" red="0.99607843137254903" green="0.97647058823529409" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Qll-mS-hAh"/>
-                    </view>
-                    <connections>
-                        <outlet property="mySwitch" destination="X8K-Cc-zbN" id="auv-lI-MtO"/>
-                        <outlet property="mydatepicker" destination="Alm-hW-mq7" id="GAf-hY-odg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OEN-8a-Big" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="564" y="858"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="GYT-q0-z6P">
             <objects>
-                <viewController id="kKy-aP-lBp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Notification" title="Notification" id="kKy-aP-lBp" customClass="Notification2ViewController" customModule="Kokolog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a8R-B7-woi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1194,12 +1137,15 @@
                                 <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tpW-7d-7Rj">
+                            <datePicker userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tpW-7d-7Rj">
                                 <rect key="frame" x="0.0" y="252" width="375" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="557277445.42463601">
                                     <!--2018-08-29 23:17:25 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="DateSelector:" destination="kKy-aP-lBp" eventType="valueChanged" id="le3-Qs-8fo"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTO-64-I5k">
                                 <rect key="frame" x="136" y="618" width="102" height="29"/>
@@ -1212,11 +1158,18 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hxl-il-vgG">
                                 <rect key="frame" x="266" y="140" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="mySwitch:" destination="kKy-aP-lBp" eventType="valueChanged" id="tbf-ZV-2rI"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.97647058823529409" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="qJK-xz-g48"/>
                     </view>
+                    <connections>
+                        <outlet property="mySwitch" destination="hxl-il-vgG" id="EDa-te-8Lc"/>
+                        <outlet property="mydatepicker" destination="tpW-7d-7Rj" id="Oi3-Pl-YhX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89E-1N-hta" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1387,7 +1340,7 @@
                                 <rect key="frame" x="0.0" y="605" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rye-E3-K9t">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="50"/>
                                         <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                         <state key="normal" title="過去ろぐ">
                                             <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1397,10 +1350,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCE-k2-D3S">
-                                        <rect key="frame" x="116" y="0.0" width="84.5" height="50"/>
+                                        <rect key="frame" x="100.5" y="0.0" width="0.0" height="50"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfL-NE-39q">
-                                        <rect key="frame" x="201.5" y="0.0" width="173.5" height="50"/>
+                                        <rect key="frame" x="101.5" y="0.0" width="273.5" height="50"/>
                                         <fontDescription key="fontDescription" name="HannariMincho" family="HannariMincho" pointSize="17"/>
                                         <state key="normal" title="トップに戻る">
                                             <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

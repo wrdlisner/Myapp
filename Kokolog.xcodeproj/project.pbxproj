@@ -37,7 +37,7 @@
 		55E639B920FF38CD00D88C26 /* userSettingTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E639B820FF38CD00D88C26 /* userSettingTopViewController.swift */; };
 		55E79BBA20DF1C5F0094E5BE /* logSaveDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E79BB920DF1C5F0094E5BE /* logSaveDateViewController.swift */; };
 		6855382211459D37C46B83E0 /* Pods_Kokolog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0DC3C61B04E912DFC28811 /* Pods_Kokolog.framework */; };
-		B01F217C2116E78D0016F2E4 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01F217B2116E78D0016F2E4 /* NotificationViewController.swift */; };
+		B08A1C6D2137626B003E8C5E /* Notification2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A1C6C2137626B003E8C5E /* Notification2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +73,7 @@
 		55E79BB920DF1C5F0094E5BE /* logSaveDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logSaveDateViewController.swift; sourceTree = "<group>"; };
 		59CCE14A340099305BD84A8D /* Pods-Kokolog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kokolog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kokolog/Pods-Kokolog.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0DC3C61B04E912DFC28811 /* Pods_Kokolog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kokolog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B01F217B2116E78D0016F2E4 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		B08A1C6C2137626B003E8C5E /* Notification2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification2ViewController.swift; sourceTree = "<group>"; };
 		CA3CC04155B92A3BD5C9DF0A /* Pods-Kokolog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kokolog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kokolog/Pods-Kokolog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +123,7 @@
 				559E095220DA6B0400451B4C /* Question */,
 				55372A9220E1225400AA19DF /* ResultSaveDate */,
 				559E095320DA6B3300451B4C /* SwiftyOnboard */,
-				55372A9620E122E200AA19DF /* ListQuestion */,
+				55372A9620E122E200AA19DF /* QuestionList */,
 				55372A9720E1230200AA19DF /* Media */,
 				55372A9820E1231500AA19DF /* CoreDate */,
 				559E095420DA6B4D00451B4C /* font */,
@@ -167,12 +167,12 @@
 			path = TopPage;
 			sourceTree = "<group>";
 		};
-		55372A9620E122E200AA19DF /* ListQuestion */ = {
+		55372A9620E122E200AA19DF /* QuestionList */ = {
 			isa = PBXGroup;
 			children = (
 				5537DB6120C910210045BD41 /* questionList.plist */,
 			);
-			path = ListQuestion;
+			path = QuestionList;
 			sourceTree = "<group>";
 		};
 		55372A9720E1230200AA19DF /* Media */ = {
@@ -234,7 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				55E639B820FF38CD00D88C26 /* userSettingTopViewController.swift */,
-				B01F217B2116E78D0016F2E4 /* NotificationViewController.swift */,
+				B08A1C6C2137626B003E8C5E /* Notification2ViewController.swift */,
 			);
 			path = userSetting;
 			sourceTree = "<group>";
@@ -380,7 +380,7 @@
 			files = (
 				5511E5C420C2E1C100902854 /* Question1ViewController.swift in Sources */,
 				55B9560520DE0DCE00DE787E /* Results+CoreDataProperties copy.swift in Sources */,
-				B01F217C2116E78D0016F2E4 /* NotificationViewController.swift in Sources */,
+				B08A1C6D2137626B003E8C5E /* Notification2ViewController.swift in Sources */,
 				5519FC6C20CA89B300E28D8F /* SwiftyOnboard.swift in Sources */,
 				559E095120DA61AC00451B4C /* SwiftyOnboardViewController.swift in Sources */,
 				5519FC6E20CA89B300E28D8F /* SwiftyOnboardPage.swift in Sources */,
