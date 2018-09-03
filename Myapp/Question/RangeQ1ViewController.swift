@@ -2,13 +2,13 @@ import UIKit
 
 var selectMind = ["喜","怒","哀","楽"]
 
-var ranges = ["小/度合いは酷くない、小さい","中/ふつう","大/度合いが酷い、大きい"]
+var ranges = ["小/度合い、程度が小さい","中/ふつう","大/度合い、程度が大きい"]
 
 var rangeChoice:Int = -1
 
 class RangeQ1ViewController: UIViewController,
     UITableViewDataSource, UITableViewDelegate
-
+    
 {
     @IBOutlet weak var rangeMind: UILabel!
     
@@ -18,7 +18,8 @@ class RangeQ1ViewController: UIViewController,
         tableView.delegate = self
         tableView.dataSource = self
         
-    rangeMind.text = selectMind[choice]
+        rangeMind.text = selectMind[choice]
+        rangeMind.font = UIFont.boldSystemFont(ofSize: 22)
         
         switch choice {
         case 0:
@@ -30,7 +31,7 @@ class RangeQ1ViewController: UIViewController,
         case 3:
             rangeMind.textColor = UIColor.happy
         default:
-            print("nil")
+            print("error")
         }
         
     }
@@ -57,7 +58,7 @@ class RangeQ1ViewController: UIViewController,
         
         return cell
     }
-
+    
     var selectedIndex:Int!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -69,7 +70,7 @@ class RangeQ1ViewController: UIViewController,
     
     
     @IBAction func alertButton(_ sender: UIButton) {
-    
+        
         let alertController = UIAlertController(title: "トップに戻ります", message: nil, preferredStyle: .alert)
         
         let cancelAction:UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertActionStyle.default, handler:{
@@ -92,11 +93,11 @@ class RangeQ1ViewController: UIViewController,
         alertController.addAction(defaultAction1)
         
         present(alertController, animated: true, completion: nil)
-    
+        
     }
     
     @IBAction func backtoRangeQ1(segue:UIStoryboardSegue){
         
     }
-
+    
 }

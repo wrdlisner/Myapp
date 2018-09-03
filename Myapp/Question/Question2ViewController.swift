@@ -10,7 +10,6 @@ class Question2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(rangeChoice)
         name1.text = selected[choice]
 
         textField.text! = question2Answer

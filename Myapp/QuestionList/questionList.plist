@@ -8,6 +8,10 @@
 		<string>どんな事がありましたか？</string>
 		<key>joy1-1</key>
 		<string>どうして今日は「喜」の気分でしたか？</string>
+		<key>joy1-2</key>
+		<string>今日の「喜」の気分に名前を付けるとしたら何になりますか？また、それはなぜですか？</string>
+		<key>joy1-3</key>
+		<string>明日はどんな日になりそうですか？また、それはなぜですか？</string>
 		<key>joy2-1</key>
 		<string>どうして今日は「喜」の気分でしたか？</string>
 		<key>joy2-2</key>
@@ -19,22 +23,30 @@
 		<key>joy3-2</key>
 		<string>その人は今日の出来事のどこに共感を示してくれそうですか？</string>
 		<key>joy3-3</key>
-		<string>ここからやる！</string>
+		<string>明日から誰かと今日のような気分を共有するために、どんなことをしたいですか？</string>
 	</dict>
 	<key>怒</key>
 	<dict>
 		<key>angry</key>
 		<string>どんな事がありましたか？</string>
-		<key>angry2-1</key>
-		<string>今日の出来事にタイトルを付けるとしたら何になりますか？</string>
-		<key>angry2-2</key>
-		<string>今と真逆の感情の時の自分は今のあなたにどんな言葉をかけそうですか？</string>
-		<key>angry2-3</key>
-		<string>明日の自分と話せるとしたらどんな言葉をかけますか？</string>
 		<key>angry1-1</key>
 		<string>どうして今日は「怒」の気分でしたか？</string>
 		<key>angry1-2</key>
 		<string></string>
+		<key>angry1-3</key>
+		<string></string>
+		<key>angry2-1</key>
+		<string>どうして今日は「怒」の気分でしたか？</string>
+		<key>angry2-2</key>
+		<string>「怒」の対象と向かい合ったとして、それにどんな言葉をかけますか？</string>
+		<key>angry2-3</key>
+		<string>その対象は、今のあなたにどんな言葉をかけそうですか？</string>
+		<key>angry3-1</key>
+		<string>今日の出来事にタイトルを付けるとしたら何になりますか？</string>
+		<key>angry3-2</key>
+		<string>今と真逆の感情の時の自分は今のあなたにどんな言葉をかけそうですか？</string>
+		<key>angry3-3</key>
+		<string>明日の自分と話せるとしたらどんな言葉をかけますか？</string>
 	</dict>
 	<key>哀</key>
 	<dict>
