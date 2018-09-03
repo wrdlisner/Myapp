@@ -106,6 +106,7 @@ class Question5ViewController: UIViewController {
                                      insertInto: managedContext)
 
         result.setValue(Date(), forKeyPath: "date")
+        result.setValue(rangeChoice, forKey: "rangeQ1")
         result.setValue(choice, forKeyPath: "question1")
         result.setValue(question2Answer, forKeyPath: "question2")
         result.setValue(question3Answer, forKeyPath: "question3")

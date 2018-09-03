@@ -206,8 +206,8 @@
 				55DB8ED220D1117700A2CB64 /* Question4ViewController.swift */,
 				55202F4B20CC12D3009DEB85 /* Question3ViewController.swift */,
 				5536FF6D20C754FB0003A639 /* Question2ViewController.swift */,
-				5511E5C320C2E1C100902854 /* Question1ViewController.swift */,
 				55329C0C20FB7F6000F1F96B /* RangeQ1ViewController.swift */,
+				5511E5C320C2E1C100902854 /* Question1ViewController.swift */,
 			);
 			path = Question;
 			sourceTree = "<group>";

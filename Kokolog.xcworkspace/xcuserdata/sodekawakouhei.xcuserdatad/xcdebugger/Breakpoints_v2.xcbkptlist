@@ -21,5 +21,83 @@
             continueAfterRunningActions = "No">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Myapp/Question/Question3ViewController.swift"
+            timestampString = "557709886.688859"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "Question3ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kokolog.Question3ViewController.textField.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextView&gt;"
+                  moduleName = "Kokolog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sodekawakouhei/Documents/Programing/Nexseed/iOSBatch42/Myapp/Myapp/Question/Question3ViewController.swift"
+                  timestampString = "557709886.898855"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kokolog.Question3ViewController.textField.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextView&gt;"
+                  moduleName = "Kokolog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sodekawakouhei/Documents/Programing/Nexseed/iOSBatch42/Myapp/Myapp/Question/Question3ViewController.swift"
+                  timestampString = "557709886.901204"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kokolog.Question3ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Kokolog.Question3ViewController"
+                  moduleName = "Kokolog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sodekawakouhei/Documents/Programing/Nexseed/iOSBatch42/Myapp/Myapp/Question/Question3ViewController.swift"
+                  timestampString = "557709886.903504"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "251">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kokolog.Question3ViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Kokolog.Question3ViewController&gt;"
+                  moduleName = "Kokolog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sodekawakouhei/Documents/Programing/Nexseed/iOSBatch42/Myapp/Myapp/Question/Question3ViewController.swift"
+                  timestampString = "557709886.905848"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "173">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

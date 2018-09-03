@@ -9,6 +9,7 @@ extension Results {
     }
 
     @NSManaged public var date: NSDate?
+    @NSManaged public var rangeQ1: Int16
     @NSManaged public var question1: Int16
     @NSManaged public var question2: String?
     @NSManaged public var question3: String?
