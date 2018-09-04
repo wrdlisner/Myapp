@@ -7,7 +7,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
         choice = -1
         rangeChoice = -1
         question2Answer = ""
@@ -15,10 +15,14 @@ class ViewController: UIViewController {
         question4Answer = ""
         question5Answer = ""
         
+//        Q1andRangeSelected = (choice,rangeChoice)
+//        
+//        print("Q1andRangeSelectedは",Q1andRangeSelected,"です")
+//
         center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
             
         }
-
+        
     }
     
     @IBAction func backtoTopfromLog(segue:UIStoryboardSegue){

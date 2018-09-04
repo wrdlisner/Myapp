@@ -10,16 +10,24 @@ let dic = NSDictionary(contentsOfFile:filePath!)
 
 var question3Answer = ""
 
-var Q1andRangeSelected : (Int,Int) = (choice,rangeChoice)
+//var Q1andRangeSelected : (Int,Int) = (choice,rangeChoice)
 
 class Question3ViewController: UIViewController{
     
     @IBOutlet weak var questionView: UITextView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Q1andRangeSelectedは",Q1andRangeSelected,"です")
+        let Q1andRangeSelected : (Int,Int) = (choice,rangeChoice)
+        
+        print("choiceの値は",choice)
+        print("rangeChoiceの値は",rangeChoice)
+        print("Q1andRangeSelectedの値は",Q1andRangeSelected)
         
         switch Q1andRangeSelected {
         case (0,0):
