@@ -1,7 +1,7 @@
 import UIKit
 import UserNotifications
 
-let center = UNUserNotificationCenter.current()
+
 
 class ViewController: UIViewController {
     
@@ -15,14 +15,6 @@ class ViewController: UIViewController {
         question4Answer = ""
         question5Answer = ""
         
-//        Q1andRangeSelected = (choice,rangeChoice)
-//        
-//        print("Q1andRangeSelectedは",Q1andRangeSelected,"です")
-//
-        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-            
-        }
-        
     }
     
     @IBAction func backtoTopfromLog(segue:UIStoryboardSegue){
@@ -32,5 +24,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func backtoTopfromSetting(segue:UIStoryboardSegue){
+    }
+    
+    @IBAction func backtoTopfromNotification(segue:UIStoryboardSegue){
     }
 }

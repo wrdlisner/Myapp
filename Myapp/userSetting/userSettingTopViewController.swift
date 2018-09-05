@@ -1,8 +1,6 @@
 import UIKit
 import UserNotifications
 
-// セルタップしてから画面遷移
-
 // 設定画面に追加するもの
 // 通知機能,作者ブログ,「こころぐ」のレビュー
 
@@ -49,7 +47,6 @@ class userSettingTopViewController: UIViewController,UITableViewDelegate,UITable
         let next = storyboard!.instantiateViewController(withIdentifier: "Notification")
         self.present(next,animated: true, completion: nil)
         
-        //        performSegue(withIdentifier: "toNotification", sender: nil)
     }
 
 }

@@ -4,38 +4,38 @@ import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+        
         changeSwiftyOnBoard()
         IQKeyboardManager.shared.enable = true
         
         return true
         
     }
-
+    
     func applicationWillResignActive(_ application: UIApplication) {
-       
+        
     }
-
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         
     }
-
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
-       
+        
     }
-
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
         
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
-   
+        
         self.saveContext()
-
+        
     }
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -81,6 +81,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             userDefault.set(2, forKey: "key")
         }
-       
+        
     }
 }

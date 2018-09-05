@@ -1154,6 +1154,9 @@
                                 <state key="normal" title="トップに戻る">
                                     <color key="titleColor" red="0.94901960780000005" green="0.63529411759999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="rxo-EY-EoX" kind="unwind" unwindAction="backtoTopfromNotificationWithSegue:" id="bZz-98-AHJ"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hxl-il-vgG">
                                 <rect key="frame" x="266" y="140" width="49" height="31"/>

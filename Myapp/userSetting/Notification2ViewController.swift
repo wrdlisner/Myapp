@@ -1,6 +1,8 @@
 import UIKit
 import UserNotifications
 
+let center = UNUserNotificationCenter.current()
+
 class Notification2ViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -30,6 +32,9 @@ class Notification2ViewController: UIViewController {
             mydatepicker.isMultipleTouchEnabled = true
             mydatepicker.isUserInteractionEnabled = true
             mydatepicker.setValue(UIColor.black, forKey: "textColor")
+            
+            center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            }
         } else {
             mydatepicker.isMultipleTouchEnabled = false
             mydatepicker.isUserInteractionEnabled = false
@@ -39,7 +44,6 @@ class Notification2ViewController: UIViewController {
     }
     
     func changeDate(date:Date){
-        
         
         let df = DateFormatter()
         df.dateFormat = "yyyy/MM/dd HH:mm"

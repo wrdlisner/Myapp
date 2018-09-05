@@ -10,8 +10,6 @@ let dic = NSDictionary(contentsOfFile:filePath!)
 
 var question3Answer = ""
 
-//var Q1andRangeSelected : (Int,Int) = (choice,rangeChoice)
-
 class Question3ViewController: UIViewController{
     
     @IBOutlet weak var questionView: UITextView!
