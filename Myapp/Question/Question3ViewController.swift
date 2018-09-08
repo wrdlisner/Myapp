@@ -9,6 +9,7 @@ let dic = NSDictionary(contentsOfFile:filePath!)
     let dic4 = dic!["楽"] as! NSDictionary
 
 var question3Answer = ""
+var Q1andRangeSelected : (Int,Int) = (choice,rangeChoice)
 
 class Question3ViewController: UIViewController{
     
@@ -20,9 +21,7 @@ class Question3ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let Q1andRangeSelected : (Int,Int) = (choice,rangeChoice)
-        
+        var Q1andRangeSelected : (Int,Int) = (choice,rangeChoice)
         print("choiceの値は",choice)
         print("rangeChoiceの値は",rangeChoice)
         print("Q1andRangeSelectedの値は",Q1andRangeSelected)

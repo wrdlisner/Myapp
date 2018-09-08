@@ -5,6 +5,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var saveTime: UILabel!
     @IBOutlet weak var Q1question: UILabel!
+    @IBOutlet weak var rangeQuestion: UILabel!
     @IBOutlet weak var Q1answer: UILabel!
     @IBOutlet weak var Q2question: UILabel!
     @IBOutlet weak var Q2answer: UITextView!
@@ -69,6 +70,8 @@ class ResultViewController: UIViewController {
         default:
             print("nil")
         }
+        
+        
         
         Q1question.text = "今の感情に一番近いものを選んでください"
         Q1answer.font = UIFont.boldSystemFont(ofSize: 20)

@@ -32,9 +32,9 @@
 		<key>angry1-1</key>
 		<string>どうして今日は「怒」の気分でしたか？</string>
 		<key>angry1-2</key>
-		<string></string>
+		<string>「怒」の気分によって得られたもの、学んだことは何ですか？</string>
 		<key>angry1-3</key>
-		<string></string>
+		<string>自分と似たような気分の人と出会ったとしたら、どんな言葉をかけますか？</string>
 		<key>angry2-1</key>
 		<string>どうして今日は「怒」の気分でしたか？</string>
 		<key>angry2-2</key>
@@ -52,29 +52,47 @@
 	<dict>
 		<key>sad</key>
 		<string>どんな事がありましたか？</string>
+		<key>sad1-1</key>
+		<string>どうして今日は「哀」の気分でしたか？</string>
+		<key>sad1-2</key>
+		<string>自分に甘えられるとしたら、どんな風に甘えたいですか？</string>
+		<key>sad1-3</key>
+		<string></string>
+		<key>sad2-1</key>
+		<string>どうして今日は「哀」の気分でしたか？</string>
+		<key>sad2-2</key>
+		<string>今日の出来事を人に話す時、特にどんな事を話したいですか？</string>
+		<key>sad2-3</key>
+		<string>「哀」の気分によって抑えられている感情はありますか？例えば、今一番したい事は何ですか？</string>
 		<key>sad3-1</key>
 		<string>今自分が一番行きたい場所はどんな景色が広がっていますか？</string>
 		<key>sad3-2</key>
 		<string>あなたの一番親しい人はあなたにどんな言葉をかけてくれそうですか？</string>
 		<key>sad3-3</key>
 		<string>深呼吸をして、明日の自分へのメッセージをしたためてください</string>
-		<key>sad1-1</key>
-		<string>今日のことを</string>
 	</dict>
 	<key>楽</key>
 	<dict>
 		<key>fun</key>
 		<string>どんな事がありましたか？</string>
+		<key>fun1-1</key>
+		<string>どうして今日は「楽」の気分でしたか？</string>
+		<key>fun1-2</key>
+		<string>今日の出来事で日記を書く時、タイトルは何になりますか？また、それはなぜですか？</string>
+		<key>fun1-3</key>
+		<string>明日はどんな日にしたいですか？また、それはなぜですか？</string>
 		<key>fun2-1</key>
 		<string>どうして今日は「楽」の気分でしたか？</string>
 		<key>fun2-2</key>
 		<string>今日の気分を人に伝える時何を一番伝えたいですか？</string>
 		<key>fun2-3</key>
 		<string>今日は最高の日でしたか？そうでない場合、それはなぜですか？</string>
-		<key>fun1-1</key>
-		<string>どうして今日は「楽」の気分でしたか？</string>
-		<key>fun1-2</key>
-		<string>今日のような気分を感じたのは</string>
+		<key>fun3-1</key>
+		<string>今日の出来事にタイトルを付けるとしたら何になりますか？</string>
+		<key>fun3-2</key>
+		<string>今日の気分を誰かと共有出来るとしたら誰としたいですか？また、それはなぜですか？</string>
+		<key>fun3-3</key>
+		<string>その人と特に共有したい、今日の出来事や気分は何ですか？</string>
 	</dict>
 </dict>
 </plist>
