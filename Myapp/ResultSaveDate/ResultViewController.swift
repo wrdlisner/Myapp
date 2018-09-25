@@ -5,7 +5,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var saveTime: UILabel!
     @IBOutlet weak var Q1question: UILabel!
-    @IBOutlet weak var rangeQuestion: UILabel!
+    @IBOutlet weak var rangeAnswer: UILabel!
     @IBOutlet weak var Q1answer: UILabel!
     @IBOutlet weak var Q2question: UILabel!
     @IBOutlet weak var Q2answer: UITextView!
@@ -38,43 +38,79 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch choice {
-        case 0:
-            Q1answer.text = "喜"
-            Q1answer.textColor = UIColor.joy
-            Q2question.text = dic1["joy1"] as? String
-            Q3question.text = dic1["joy2"] as? String
-            Q4question.text = dic1["joy3"] as? String
-            Q5question.text = dic1["joy4"] as? String
-        case 1:
-            Q1answer.text = "怒"
-            Q1answer.textColor = UIColor.anger
-            Q2question.text = dic2["angry1"] as? String
-            Q3question.text = dic2["angry2"] as? String
-            Q4question.text = dic2["angry3"] as? String
-            Q5question.text = dic2["angry4"] as? String
-        case 2:
-            Q1answer.text = "哀"
-            Q1answer.textColor = UIColor.sad
-            Q2question.text = dic3["sad1"] as? String
-            Q3question.text = dic3["sad2"] as? String
-            Q4question.text = dic3["sad3"] as? String
-            Q5question.text = dic3["sad4"] as? String
-        case 3:
-            Q1answer.text = "楽"
-            Q1answer.textColor = UIColor.happy
-            Q2question.text = dic4["fun1"] as? String
-            Q3question.text = dic4["fun2"] as? String
-            Q4question.text = dic4["fun3"] as? String
-            Q5question.text = dic4["fun4"] as? String
+        switch Q1andRangeSelected {
+        case(0,0):
+            Q3question.text = dic1["joy1-1"] as? String
+            Q4question.text = dic1["joy1-2"] as? String
+            Q5question.text = dic1["joy1-3"] as? String
+        case(0,1):
+            Q3question.text = dic1["joy2-1"] as? String
+            Q4question.text = dic1["joy2-2"] as? String
+            Q5question.text = dic1["joy2-3"] as? String
+        case(0,2):
+            Q3question.text = dic1["joy3-1"] as? String
+            Q4question.text = dic1["joy3-2"] as? String
+            Q5question.text = dic1["joy3-3"] as? String
+        case(1,0):
+            Q3question.text = dic1["angry1-1"] as? String
+            Q4question.text = dic1["angry1-2"] as? String
+            Q5question.text = dic1["angry1-3"] as? String
+        case(1,1):
+            Q3question.text = dic1["angry2-1"] as? String
+            Q4question.text = dic1["angry2-2"] as? String
+            Q5question.text = dic1["angry2-3"] as? String
+        case(1,2):
+            Q3question.text = dic1["angry2-1"] as? String
+            Q4question.text = dic1["angry2-2"] as? String
+            Q5question.text = dic1["angry2-3"] as? String
+        case(2,0):
+            Q3question.text = dic1["sad1-1"] as? String
+            Q4question.text = dic1["sad1-2"] as? String
+            Q5question.text = dic1["sad1-3"] as? String
+        case(2,1):
+            Q3question.text = dic1["sad2-1"] as? String
+            Q4question.text = dic1["sad2-2"] as? String
+            Q5question.text = dic1["sad2-3"] as? String
+        case(2,2):
+            Q3question.text = dic1["sad2-1"] as? String
+            Q4question.text = dic1["sad2-2"] as? String
+            Q5question.text = dic1["sad2-3"] as? String
         default:
             print("nil")
         }
         
+        switch choice {
+        case 0:
+            Q1answer.text = "喜"
+            Q1answer.textColor = UIColor.joy
+        case 1:
+            Q1answer.text = "怒"
+            Q1answer.textColor = UIColor.anger
+        case 2:
+            Q1answer.text = "哀"
+            Q1answer.textColor = UIColor.sad
+        case 3:
+            Q1answer.text = "楽"
+            Q1answer.textColor = UIColor.happy
+        default:
+            print("nil")
+        }
         
+        switch rangeChoice {
+        case 0:
+            rangeAnswer.text = "1"
+        case 1:
+            rangeAnswer.text = "2"
+        case 2:
+             rangeAnswer.text = "3"
+        default:
+            print("nil")
+        }
         
         Q1question.text = "今の感情に一番近いものを選んでください"
         Q1answer.font = UIFont.boldSystemFont(ofSize: 20)
+        Q2question.text = "どんな事がありましたか？"
+        rangeAnswer.textColor = UIColor.rgb(r: 246, g: 165, b: 50, alpha: 1)
         
         Q1question.numberOfLines = 0
         Q1question.sizeToFit()
