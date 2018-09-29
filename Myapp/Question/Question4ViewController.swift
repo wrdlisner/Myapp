@@ -10,15 +10,36 @@ class Question4ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        switch choice {
-        case 0:
-            questionView.text = dic1["joy3"] as? String
-        case 1:
-            questionView.text = dic2["angry3"] as? String
-        case 2:
-            questionView.text = dic3["sad3"] as? String
-        case 3:
-            questionView.text = dic4["fun3"] as? String
+        var Q1andRangeSelected : (Int,Int) = (choice,rangeChoice)
+        print("choiceの値は",choice)
+        print("rangeChoiceの値は",rangeChoice)
+        print("Q1andRangeSelectedの値は",Q1andRangeSelected)
+        
+        switch Q1andRangeSelected {
+        case (0,0):
+            questionView.text = dic1["joy1-2"] as? String
+        case (0,1):
+            questionView.text = dic1["joy2-2"] as? String
+        case (0,2):
+            questionView.text = dic1["joy3-2"] as? String
+        case (1,0):
+            questionView.text = dic2["angry1-2"] as? String
+        case (1,1):
+            questionView.text = dic2["angry2-2"] as? String
+        case (1,2):
+            questionView.text = dic2["angry3-2"] as? String
+        case (2,0):
+            questionView.text = dic3["sad1-2"] as? String
+        case (2,1):
+            questionView.text = dic3["sad2-2"] as? String
+        case (2,2):
+            questionView.text = dic3["sad3-2"] as? String
+        case (3,0):
+            questionView.text = dic4["fun1-2"] as? String
+        case (3,1):
+            questionView.text = dic4["fun2-2"] as? String
+        case (3,2):
+            questionView.text = dic4["fun3-2"] as? String
         default:
             print("nil")
         }
