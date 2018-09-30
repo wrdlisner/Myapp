@@ -52,29 +52,41 @@ class ResultViewController: UIViewController {
             Q4question.text = dic1["joy3-2"] as? String
             Q5question.text = dic1["joy3-3"] as? String
         case(1,0):
-            Q3question.text = dic1["angry1-1"] as? String
-            Q4question.text = dic1["angry1-2"] as? String
-            Q5question.text = dic1["angry1-3"] as? String
+            Q3question.text = dic2["angry1-1"] as? String
+            Q4question.text = dic2["angry1-2"] as? String
+            Q5question.text = dic2["angry1-3"] as? String
         case(1,1):
-            Q3question.text = dic1["angry2-1"] as? String
-            Q4question.text = dic1["angry2-2"] as? String
-            Q5question.text = dic1["angry2-3"] as? String
+            Q3question.text = dic2["angry2-1"] as? String
+            Q4question.text = dic2["angry2-2"] as? String
+            Q5question.text = dic2["angry2-3"] as? String
         case(1,2):
-            Q3question.text = dic1["angry2-1"] as? String
-            Q4question.text = dic1["angry2-2"] as? String
-            Q5question.text = dic1["angry2-3"] as? String
+            Q3question.text = dic2["angry2-1"] as? String
+            Q4question.text = dic2["angry2-2"] as? String
+            Q5question.text = dic2["angry2-3"] as? String
         case(2,0):
-            Q3question.text = dic1["sad1-1"] as? String
-            Q4question.text = dic1["sad1-2"] as? String
-            Q5question.text = dic1["sad1-3"] as? String
+            Q3question.text = dic3["sad1-1"] as? String
+            Q4question.text = dic3["sad1-2"] as? String
+            Q5question.text = dic3["sad1-3"] as? String
         case(2,1):
-            Q3question.text = dic1["sad2-1"] as? String
-            Q4question.text = dic1["sad2-2"] as? String
-            Q5question.text = dic1["sad2-3"] as? String
+            Q3question.text = dic3["sad2-1"] as? String
+            Q4question.text = dic3["sad2-2"] as? String
+            Q5question.text = dic3["sad2-3"] as? String
         case(2,2):
-            Q3question.text = dic1["sad2-1"] as? String
-            Q4question.text = dic1["sad2-2"] as? String
-            Q5question.text = dic1["sad2-3"] as? String
+            Q3question.text = dic3["sad2-1"] as? String
+            Q4question.text = dic3["sad2-2"] as? String
+            Q5question.text = dic3["sad2-3"] as? String
+        case(3,0):
+            Q3question.text = dic4["fun1-1"] as? String
+            Q4question.text = dic4["fun1-2"] as? String
+            Q5question.text = dic4["fun1-3"] as? String
+        case(3,1):
+            Q3question.text = dic4["fun2-1"] as? String
+            Q4question.text = dic4["fun2-2"] as? String
+            Q5question.text = dic4["fun2-3"] as? String
+        case(3,2):
+            Q3question.text = dic4["fun3-1"] as? String
+            Q4question.text = dic4["fun3-2"] as? String
+            Q5question.text = dic4["fun3-3"] as? String
         default:
             print("nil")
         }
@@ -108,9 +120,10 @@ class ResultViewController: UIViewController {
         }
         
         Q1question.text = "今の感情に一番近いものを選んでください"
-        Q1answer.font = UIFont.boldSystemFont(ofSize: 20)
+        Q1answer.font = UIFont.boldSystemFont(ofSize: 25)
         Q2question.text = "どんな事がありましたか？"
         rangeAnswer.textColor = UIColor.rgb(r: 246, g: 165, b: 50, alpha: 1)
+        rangeAnswer.font = UIFont.boldSystemFont(ofSize: 25)
         
         Q1question.numberOfLines = 0
         Q1question.sizeToFit()
