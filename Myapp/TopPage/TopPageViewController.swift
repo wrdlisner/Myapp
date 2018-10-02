@@ -6,6 +6,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("choiceの値は",choice)
+        print("rangeChoiceの値は",rangeChoice)
+        print("Q1andRangeSelectedの値は",Q1andRangeSelected)
+        
         choice = -1
         rangeChoice = -1
         question2Answer = ""

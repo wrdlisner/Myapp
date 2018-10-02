@@ -38,6 +38,11 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var Q1andRangeSelected : (Int,Int) = (choice,rangeChoice)
+        print("choiceの値は",choice)
+        print("rangeChoiceの値は",rangeChoice)
+        print("Q1andRangeSelectedの値は",Q1andRangeSelected)
+        
         switch Q1andRangeSelected {
         case(0,0):
             Q3question.text = dic1["joy1-1"] as? String
@@ -110,11 +115,11 @@ class ResultViewController: UIViewController {
         
         switch rangeChoice {
         case 0:
-            rangeAnswer.text = "1"
+            rangeAnswer.text = "小"
         case 1:
-            rangeAnswer.text = "2"
+            rangeAnswer.text = "中"
         case 2:
-             rangeAnswer.text = "3"
+            rangeAnswer.text = "大"
         default:
             print("nil")
         }
@@ -148,7 +153,7 @@ class ResultViewController: UIViewController {
         
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         print(urls[urls.count-1] as URL)
-
+        
         let df = DateFormatter()
         df.dateFormat = "yyyy年MM月dd日(EEEEE) H時m分"
         df.locale = Locale(identifier: "ja_JP")
@@ -157,7 +162,7 @@ class ResultViewController: UIViewController {
         saveTime.text = df.string(from: now)
         saveTime.font = UIFont.systemFont(ofSize: 17)
     }
-
+    
     @IBAction func alertButton(_ sender: UIButton) {
         
         let alertController = UIAlertController(title: "トップに戻ります", message: nil, preferredStyle: .alert)
@@ -182,7 +187,7 @@ class ResultViewController: UIViewController {
         alertController.addAction(defaultAction1)
         
         present(alertController, animated: true, completion: nil)
-    
+        
     }
     
     override func didReceiveMemoryWarning() {

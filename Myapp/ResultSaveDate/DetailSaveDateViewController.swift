@@ -23,7 +23,7 @@ class DetailSaveDateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         self.resetCount()
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -57,7 +57,7 @@ class DetailSaveDateViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     var passedIndex:Date? = nil
     
     func viewKokolog() {
@@ -65,10 +65,13 @@ class DetailSaveDateViewController: UIViewController {
         let df = DateFormatter()
         df.dateFormat = "yyyy年MM月dd日(EEEEE) H時m分"
         df.locale = Locale(identifier: "ja_JP")
-
+        
         saveTime.text = "\(String(describing: readKokolog[0].date!))"
         saveTime.text = df.string(from: readKokolog[0].date! as Date)
         saveTime.font = UIFont(name: "HannariMincho", size: 18)
+        
+        var Q1andRangeSelected : (Int,Int) = (Int(readKokolog[0].question1),Int(readKokolog[0].rangeQ1))
+        //ここまで、ここから
         
         Q2answer.text = readKokolog[0].question2
         Q3answer.text = readKokolog[0].question3
@@ -129,18 +132,18 @@ class DetailSaveDateViewController: UIViewController {
     var editKokolog : [Results]  = []
     
     @IBAction func editButton(_ sender: Any) {
-
+        
         self.tapCount += 1
-
-    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
-            
+        
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
-            
-            fetchRequest.predicate = NSPredicate(format: "date = %@",passedIndex! as CVarArg)
+        
+        fetchRequest.predicate = NSPredicate(format: "date = %@",passedIndex! as CVarArg)
         
         if ( tapCount % 2 == 0 ){
             editLabel.setTitle("完了", for: .normal)
@@ -173,7 +176,7 @@ class DetailSaveDateViewController: UIViewController {
         }
         
         do {
-         
+            
             editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
             
             try managedContext.save()
@@ -192,17 +195,17 @@ class DetailSaveDateViewController: UIViewController {
         let managedContext = appDelegate.persistentContainer.viewContext
         
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
-
+        
         fetchRequest.predicate = NSPredicate(format: "date = %@",passedIndex! as CVarArg)
         
         do {
             editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
-
+            
             editKokolog[0].question2 = Q2answer.text
             editKokolog[0].question3 = Q3answer.text
             editKokolog[0].question4 = Q4answer.text
             editKokolog[0].question5 = Q5answer.text
-
+            
             try managedContext.save()
             
         } catch let error as NSError {
@@ -213,7 +216,7 @@ class DetailSaveDateViewController: UIViewController {
     
     @IBAction func deleteButton(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "かころぐを削除しますか?", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "ろぐを削除しますか?", message: nil, preferredStyle: .alert)
         
         let cancelAction:UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertActionStyle.default, handler:{
             
@@ -232,19 +235,19 @@ class DetailSaveDateViewController: UIViewController {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
                 return
             }
-
+            
             let managedContext = appDelegate.persistentContainer.viewContext
-
+            
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Results")
-
+            
             fetchRequest.predicate = NSPredicate(format: "date = %@",self.passedIndex! as CVarArg)
-
+            
             do {
                 self.editKokolog = try managedContext.fetch(fetchRequest) as! [Results]
-
+                
                 try managedContext.delete(self.editKokolog[0])
-                   (UIApplication.shared.delegate as! AppDelegate).saveContext()
-
+                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                
             } catch let error as NSError {
                 print("Could not fetch. \(error), \(error.userInfo)")
             }
