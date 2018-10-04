@@ -7,7 +7,7 @@ class SwiftyOnboardViewController: UIViewController,
     var swiftyOnboard: SwiftyOnboard!
     let colors:[UIColor] = [#colorLiteral(red: 0.9960784314, green: 0.9764705882, blue: 0.7832005719, alpha: 1),#colorLiteral(red: 0.9960784314, green: 0.9764705882, blue: 0.7832005719, alpha: 1),#colorLiteral(red: 0.9960784314, green: 0.9764705882, blue: 0.7832005719, alpha: 1)]
     var titleArray: [String] = ["「こころぐ」へようこそ","使い方は簡単です","日記のようにお使いください"]
-    var subTitleArray: [String] = ["「こころぐ」は質問に答えていくことで今の気持ちを整理できる、感情整理アプリです","最初に今の感情に一番近いものを4つの中から選び、質問に答えていくだけです","記録されたこころぐは「過去ろぐ」からいつでも読み返せます"]
+    var subTitleArray: [String] = ["「こころぐ」は質問に答えていくことで今の気持ちを整理できる、感情整理アプリです","最初に今の感情に一番近いものを4つの中から選び、質問に答えていくだけです","記録されたこころぐは「かころぐ」からいつでも読み返せます"]
     
     var gradiant: CAGradientLayer = {
         let mainColor = UIColor.rgb(r: 254, g: 249, b: 184, alpha: 1)

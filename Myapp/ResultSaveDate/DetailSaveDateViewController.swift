@@ -6,6 +6,7 @@ class DetailSaveDateViewController: UIViewController {
     @IBOutlet weak var saveTime: UILabel!
     @IBOutlet weak var Q1question: UILabel!
     @IBOutlet weak var Q1answer: UILabel!
+    @IBOutlet weak var rangeAnswer: UILabel!
     @IBOutlet weak var Q2question: UILabel!
     @IBOutlet weak var Q2answer: UITextView!
     @IBOutlet weak var Q3question: UILabel!
@@ -71,43 +72,102 @@ class DetailSaveDateViewController: UIViewController {
         saveTime.font = UIFont(name: "HannariMincho", size: 18)
         
         var Q1andRangeSelected : (Int,Int) = (Int(readKokolog[0].question1),Int(readKokolog[0].rangeQ1))
-        //ここまで、ここから
         
         Q2answer.text = readKokolog[0].question2
         Q3answer.text = readKokolog[0].question3
         Q4answer.text = readKokolog[0].question4
         Q5answer.text = readKokolog[0].question5
-        Q1answer.font = UIFont.boldSystemFont(ofSize: 20)
+        Q1question.text = "今の感情に一番近いものを選んでください"
+        Q1answer.font = UIFont.boldSystemFont(ofSize: 25)
+        Q2question.text = "どんな事がありましたか？"
+        rangeAnswer.textColor = UIColor.rgb(r: 246, g: 165, b: 50, alpha: 1)
+        rangeAnswer.font = UIFont.boldSystemFont(ofSize: 25)
         
-        switch readKokolog[0].question1 {
-        case 0:
+        switch Q1andRangeSelected {
+        case(0,0):
             Q1answer.text = "喜"
             Q1answer.textColor = UIColor.joy
-            Q2question.text = dic1["joy1"] as? String
-            Q3question.text = dic1["joy2"] as? String
-            Q4question.text = dic1["joy3"] as? String
-            Q5question.text = dic1["joy4"] as? String
-        case 1:
+            rangeAnswer.text = "小"
+            Q3question.text = dic1["joy1-1"] as? String
+            Q4question.text = dic1["joy1-2"] as? String
+            Q5question.text = dic1["joy1-3"] as? String
+        case(0,1):
+            Q1answer.text = "喜"
+            Q1answer.textColor = UIColor.joy
+            rangeAnswer.text = "中"
+            Q3question.text = dic1["joy2-1"] as? String
+            Q4question.text = dic1["joy2-2"] as? String
+            Q5question.text = dic1["joy2-3"] as? String
+        case(0,2):
+            Q1answer.text = "喜"
+            Q1answer.textColor = UIColor.joy
+            rangeAnswer.text = "大"
+            Q3question.text = dic1["joy3-1"] as? String
+            Q4question.text = dic1["joy3-2"] as? String
+            Q5question.text = dic1["joy3-3"] as? String
+        case(1,0):
             Q1answer.text = "怒"
             Q1answer.textColor = UIColor.anger
-            Q2question.text = dic2["angry1"] as? String
-            Q3question.text = dic2["angry2"] as? String
-            Q4question.text = dic2["angry3"] as? String
-            Q5question.text = dic2["angry4"] as? String
-        case 2:
+            rangeAnswer.text = "小"
+            Q3question.text = dic2["angry1-1"] as? String
+            Q4question.text = dic2["angry1-2"] as? String
+            Q5question.text = dic2["angry1-3"] as? String
+        case(1,1):
+            Q1answer.text = "怒"
+            Q1answer.textColor = UIColor.anger
+            rangeAnswer.text = "中"
+            Q3question.text = dic2["angry2-1"] as? String
+            Q4question.text = dic2["angry2-2"] as? String
+            Q5question.text = dic2["angry2-3"] as? String
+        case(1,2):
+            Q1answer.text = "怒"
+            Q1answer.textColor = UIColor.anger
+            rangeAnswer.text = "大"
+            Q3question.text = dic2["angry2-1"] as? String
+            Q4question.text = dic2["angry2-2"] as? String
+            Q5question.text = dic2["angry2-3"] as? String
+        case(2,0):
             Q1answer.text = "哀"
             Q1answer.textColor = UIColor.sad
-            Q2question.text = dic3["sad1"] as? String
-            Q3question.text = dic3["sad2"] as? String
-            Q4question.text = dic3["sad3"] as? String
-            Q5question.text = dic3["sad4"] as? String
-        case 3:
+            rangeAnswer.text = "小"
+            Q3question.text = dic3["sad1-1"] as? String
+            Q4question.text = dic3["sad1-2"] as? String
+            Q5question.text = dic3["sad1-3"] as? String
+        case(2,1):
+            Q1answer.text = "哀"
+            Q1answer.textColor = UIColor.sad
+            rangeAnswer.text = "中"
+            Q3question.text = dic3["sad2-1"] as? String
+            Q4question.text = dic3["sad2-2"] as? String
+            Q5question.text = dic3["sad2-3"] as? String
+        case(2,2):
+            Q1answer.text = "哀"
+            Q1answer.textColor = UIColor.sad
+            rangeAnswer.text = "大"
+            Q3question.text = dic3["sad2-1"] as? String
+            Q4question.text = dic3["sad2-2"] as? String
+            Q5question.text = dic3["sad2-3"] as? String
+        case(3,0):
             Q1answer.text = "楽"
-            Q1answer.textColor = UIColor.happy
-            Q2question.text = dic4["fun1"] as? String
-            Q3question.text = dic4["fun2"] as? String
-            Q4question.text = dic4["fun3"] as? String
-            Q5question.text = dic4["fun4"] as? String
+            Q1answer.textColor = UIColor.joy
+            rangeAnswer.text = "小"
+            Q3question.text = dic4["fun1-1"] as? String
+            Q4question.text = dic4["fun1-2"] as? String
+            Q5question.text = dic4["fun1-3"] as? String
+        case(3,1):
+            Q1answer.text = "楽"
+            Q1answer.textColor = UIColor.joy
+            rangeAnswer.text = "中"
+            Q3question.text = dic4["fun2-1"] as? String
+            Q4question.text = dic4["fun2-2"] as? String
+            Q5question.text = dic4["fun2-3"] as? String
+        case(3,2):
+            Q1answer.text = "楽"
+            Q1answer.textColor = UIColor.joy
+            rangeAnswer.text = "大"
+            Q3question.text = dic4["fun3-1"] as? String
+            Q4question.text = dic4["fun3-2"] as? String
+            Q5question.text = dic4["fun3-3"] as? String
         default:
             print("nil")
         }
@@ -158,6 +218,8 @@ class DetailSaveDateViewController: UIViewController {
             Q5answer.isEditable = true
             Q5answer.isUserInteractionEnabled = true
             
+            editStart()
+            
         } else {
             editLabel.setTitle("編集", for: .normal)
             editLabel.setTitleColor(UIColor.rgb(r: 242, g: 162, b: 160, alpha: 1), for: .normal)
@@ -171,7 +233,8 @@ class DetailSaveDateViewController: UIViewController {
             Q5answer.isEditable = false
             Q5answer.isUserInteractionEnabled = false
             
-            editDoneKokolog()
+            editDone()
+            editSaveKokolog()
             
         }
         
@@ -186,7 +249,25 @@ class DetailSaveDateViewController: UIViewController {
         }
     }
     
-    func editDoneKokolog() {
+    func editStart() {
+        
+        Q2answer.backgroundColor = UIColor.white
+        Q3answer.backgroundColor = UIColor.white
+        Q4answer.backgroundColor = UIColor.white
+        Q5answer.backgroundColor = UIColor.white
+    }
+    
+    func editDone() {
+        
+        Q2answer.backgroundColor = UIColor.rgb(r: 255, g: 255, b: 234, alpha: 1.0)
+        Q3answer.backgroundColor = UIColor.rgb(r: 255, g: 255, b: 234, alpha: 1.0)
+        Q4answer.backgroundColor = UIColor.rgb(r: 255, g: 255, b: 234, alpha: 1.0)
+        Q5answer.backgroundColor = UIColor.rgb(r: 255, g: 255, b: 234, alpha: 1.0)
+        
+    }
+    
+    
+    func editSaveKokolog() {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
