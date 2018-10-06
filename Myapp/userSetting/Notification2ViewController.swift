@@ -9,7 +9,7 @@ class Notification2ViewController: UIViewController {
         super.viewDidLoad()
         
         mydatepicker.setValue(UIColor.lightGray, forKey: "textColor")
-        
+
     }
     
     override func didReceiveMemoryWarning() {

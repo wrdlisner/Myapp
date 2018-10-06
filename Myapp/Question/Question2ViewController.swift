@@ -10,6 +10,9 @@ class Question2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        question2Answer = ""
+        
         var Q1andRangeSelected : (Int,Int) = (choice,rangeChoice)
         print("choiceの値は",choice)
         print("rangeChoiceの値は",rangeChoice)

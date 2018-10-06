@@ -149,21 +149,21 @@ class DetailSaveDateViewController: UIViewController {
             Q5question.text = dic3["sad2-3"] as? String
         case(3,0):
             Q1answer.text = "楽"
-            Q1answer.textColor = UIColor.joy
+            Q1answer.textColor = UIColor.happy
             rangeAnswer.text = "小"
             Q3question.text = dic4["fun1-1"] as? String
             Q4question.text = dic4["fun1-2"] as? String
             Q5question.text = dic4["fun1-3"] as? String
         case(3,1):
             Q1answer.text = "楽"
-            Q1answer.textColor = UIColor.joy
+            Q1answer.textColor = UIColor.happy
             rangeAnswer.text = "中"
             Q3question.text = dic4["fun2-1"] as? String
             Q4question.text = dic4["fun2-2"] as? String
             Q5question.text = dic4["fun2-3"] as? String
         case(3,2):
             Q1answer.text = "楽"
-            Q1answer.textColor = UIColor.joy
+            Q1answer.textColor = UIColor.happy
             rangeAnswer.text = "大"
             Q3question.text = dic4["fun3-1"] as? String
             Q4question.text = dic4["fun3-2"] as? String

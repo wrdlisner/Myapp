@@ -15,6 +15,8 @@ class Question4ViewController: UIViewController {
         print("rangeChoiceの値は",rangeChoice)
         print("Q1andRangeSelectedの値は",Q1andRangeSelected)
         
+        question4Answer = ""
+        
         switch Q1andRangeSelected {
         case (0,0):
             questionView.text = dic1["joy1-2"] as? String

@@ -2,7 +2,7 @@ import UIKit
 import SwiftyOnboard
 
 class SwiftyOnboardViewController: UIViewController,
-    SwiftyOnboardDataSource,SwiftyOnboardDelegate {
+SwiftyOnboardDataSource,SwiftyOnboardDelegate {
     
     var swiftyOnboard: SwiftyOnboard!
     let colors:[UIColor] = [#colorLiteral(red: 0.9960784314, green: 0.9764705882, blue: 0.7832005719, alpha: 1),#colorLiteral(red: 0.9960784314, green: 0.9764705882, blue: 0.7832005719, alpha: 1),#colorLiteral(red: 0.9960784314, green: 0.9764705882, blue: 0.7832005719, alpha: 1)]
@@ -24,7 +24,7 @@ class SwiftyOnboardViewController: UIViewController,
         view.addSubview(swiftyOnboard)
         swiftyOnboard.dataSource = self
         swiftyOnboard.delegate = self
-        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -73,7 +73,7 @@ class SwiftyOnboardViewController: UIViewController,
     
     func swiftyOnboardPageForIndex(_ swiftyOnboard: SwiftyOnboard, index: Int) -> SwiftyOnboardPage? {
         let view = SwiftyOnboardPage()
-       
+        
         //Set the image on the page:
         view.imageView.image = UIImage(named: "onboard\(index)")
         view.frame.size = CGSize(width: 15, height: 10)
@@ -100,11 +100,13 @@ class SwiftyOnboardViewController: UIViewController,
         
         if currentPage == 0.0 || currentPage == 1.0 {
             overlay.continueButton.setTitle("次へ", for: .normal)
+            overlay.continueButton.setTitleColor(UIColor.rgb(r: 64, g: 64, b: 64, alpha: 1.0), for: .normal)
             overlay.skipButton.setTitle("スキップ", for: .normal)
             overlay.skipButton.isHidden = false
         } else {
             overlay.continueButton.addTarget(self, action: #selector(startPage), for: .touchUpInside)
             overlay.continueButton.setTitle("こころぐを始める", for: .normal)
+            overlay.continueButton.setTitleColor(UIColor.rgb(r: 246, g: 165, b: 50, alpha: 1.0), for: .normal)
             overlay.skipButton.isHidden = true
         }
         
@@ -117,5 +119,5 @@ class SwiftyOnboardViewController: UIViewController,
         UserDefaults.standard.set(true, forKey: "openApp")
         
     }
-
+    
 }
