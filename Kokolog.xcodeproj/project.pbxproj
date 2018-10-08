@@ -36,6 +36,7 @@
 		55E639B920FF38CD00D88C26 /* userSettingTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E639B820FF38CD00D88C26 /* userSettingTopViewController.swift */; };
 		55E79BBA20DF1C5F0094E5BE /* logSaveDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E79BB920DF1C5F0094E5BE /* logSaveDateViewController.swift */; };
 		6855382211459D37C46B83E0 /* Pods_Kokolog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0DC3C61B04E912DFC28811 /* Pods_Kokolog.framework */; };
+		B01ACA90216A51FB009186CB /* SwiftyOnboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01ACA8F216A51FB009186CB /* SwiftyOnboard.framework */; };
 		B08A1C6D2137626B003E8C5E /* Notification2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08A1C6C2137626B003E8C5E /* Notification2ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		55E79BB920DF1C5F0094E5BE /* logSaveDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logSaveDateViewController.swift; sourceTree = "<group>"; };
 		59CCE14A340099305BD84A8D /* Pods-Kokolog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kokolog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kokolog/Pods-Kokolog.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0DC3C61B04E912DFC28811 /* Pods_Kokolog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kokolog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B01ACA8F216A51FB009186CB /* SwiftyOnboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyOnboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08A1C6C2137626B003E8C5E /* Notification2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification2ViewController.swift; sourceTree = "<group>"; };
 		CA3CC04155B92A3BD5C9DF0A /* Pods-Kokolog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kokolog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kokolog/Pods-Kokolog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B01ACA90216A51FB009186CB /* SwiftyOnboard.framework in Frameworks */,
 				551B6CE620EB58790019DE1C /* IQKeyboardManagerSwift.framework in Frameworks */,
 				6855382211459D37C46B83E0 /* Pods_Kokolog.framework in Frameworks */,
 			);
@@ -231,6 +234,7 @@
 		A15ED130E192D07A74001C36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B01ACA8F216A51FB009186CB /* SwiftyOnboard.framework */,
 				551B6CE520EB58790019DE1C /* IQKeyboardManagerSwift.framework */,
 				417CEE6BAFF894D0F4F5F98B /* Pods_Myapp.framework */,
 				AA0DC3C61B04E912DFC28811 /* Pods_Kokolog.framework */,
